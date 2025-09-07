@@ -1,0 +1,124 @@
+body {
+  --heading-spacing: 1em;
+  --p-spacing: 1rem;
+  --tag-addition: 0px;
+}
+/* get rid of property keys for our custom properties */
+[data-property-key=icon i] .metadata-property-key, [data-property-key=title i] .metadata-property-key, [data-property-key=tags i] .metadata-property-key {
+  display: none;
+}
+
+/* === make properties display-able always (so icons and such don't disappear when collapsed) === */
+.metadata-content {
+  display: unset !important;
+}
+.metadata-container.is-collapsed .metadata-add-button.text-icon-button {
+  display : none !important;
+}
+
+/* === Icons === */
+
+/* put icons in a position relative to inline title */
+/* also responds to inline title size (may break at high sizes)*/
+[data-property-key=icon i]{
+  position: absolute;
+  display: block !important;
+  margin-top: calc(calc(-130px - var(--tag-addition)) - calc(var(--inline-title-size) / 2)) !important;
+  z-index: 300!important;
+  padding: 0px;
+  height: fit-content;
+  font-size: calc(var(--inline-title-size) * 1.3);
+  left: 0;
+}
+
+
+/* make some room above the inline title */
+[data-type=markdown]:has([data-property-key=tags i]) .inline-title {
+  margin-bottom: calc(20px + var(--tag-addition)) !important;
+}
+[data-type=markdown]:has([data-property-key=icon i]) .inline-title{
+  margin-top: calc(calc(70px + var(--tag-addition)) + calc(var(--inline-title-size) / 8)) !important;
+  font-size: var(--inline-title-size) !important;
+  text-align: left !important;
+
+}
+
+/* ==== Custom Titles ==== */
+[data-type=markdown]:has([data-property-key=title i]) .inline-title {
+  opacity: 0; /* make the REAL title disappear! */
+}
+[data-property-key=title i]{
+  position: absolute;
+  display: block !important;
+  margin-top: calc(calc(-70px - var(--tag-addition)) - calc(var(--inline-title-size) / 2)) !important;
+  z-index: 300 !important;
+  padding: 0px !important;
+  margin-left: 0 !important;
+  height: fit-content;
+  left: 0;
+  font-weight: var(--inline-title-weight);
+  font-size: calc(var(--inline-title-size) + 0.3em) !important;
+  line-height: var(--inline-title-line-height) !important;
+  font-style: var(--inline-title-style) !important;
+  font-variant: var(--inline-title-variant);
+  font-family: var(--inline-title-font) !important;
+  letter-spacing: -0.015em !important;
+  color: var(--inline-title-color) !important;
+}
+[data-property-key=title i] .metadata-input-longtext {
+  padding: 0;
+  overflow: hidden;
+  width: var(--file-line-width);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+/* ==== Pretty Tags ==== */
+[data-property-key=tags i]{
+  position: absolute;
+  display: block !important;
+  margin-top: calc(-60px - calc(var(--inline-title-size) / 2)) !important;
+  z-index: 300!important;
+  padding: 0px;
+  height: fit-content;
+  left: 0; 
+  
+}
+[data-type=markdown]:has([data-property-key=tags i]) {
+--tag-addition: 20px;
+}
+[data-property-key=tags i] .multi-select-container {
+  padding: 0;
+}
+[data-property-key=tags i]:hover {
+    box-shadow: none;
+}
+
+/* ==== Table ==== */
+.cm-line:has(+ .cm-embed-block.cm-table-widget) br {
+  display: none;
+}
+
+img[alt*="center"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img[alt*="right"] {
+  float:right;
+  clear:right;
+  margin-left: 1rem;
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+.markdown-preview-view table {
+  display: block;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: 0 auto;
+  overflow-x: auto;
+  white-space: nowrap;
+}

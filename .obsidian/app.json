@@ -1,0 +1,13 @@
+{
+  "promptDelete": false,
+  "foldHeading": true,
+  "livePreview": true,
+  "propertiesInDocument": "visible",
+  "alwaysUpdateLinks": true,
+  "pdfExportSettings": {
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  }
+}

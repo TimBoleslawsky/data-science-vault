@@ -1,0 +1,245 @@
+{
+  "main": {
+    "id": "df0b39c9d5740301",
+    "type": "split",
+    "children": [
+      {
+        "id": "d8be9bae7b03e443",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a50bfa8c84ec91c1",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "23e4ff019f2f3859",
+    "type": "split",
+    "children": [
+      {
+        "id": "dcc44b55679ed6f3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "285493115e5a7666",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "ddac7e50c368076e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "Anova",
+                "matchingCase": false,
+                "explainSearch": true,
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "98869f2f2e6bd322",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 393.5024719238281
+  },
+  "right": {
+    "id": "de58b8299c130ee9",
+    "type": "split",
+    "children": [
+      {
+        "id": "c13186475fdbd9f0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7da23ccce2ebb2ff",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "49c3e28094df3236",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Deep Learning Topics.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Deep Learning Topics"
+            }
+          },
+          {
+            "id": "c28c27d29c8fdf01",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": false,
+                "showSearch": true,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "ee038c7492260096",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          },
+          {
+            "id": "81aec8ce58341963",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "a8f712975262386d",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "Notes/ANN's and Deep Learning.md"
+              },
+              "icon": "lucide-info",
+              "title": "File properties for ANN's and Deep Learning"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 301.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Create new base": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "vscode-editor:Create Code File": false,
+      "obsidian-excalidraw-plugin:New drawing": false
+    }
+  },
+  "active": "285493115e5a7666",
+  "lastOpenFiles": [
+    "Notes/Icons in Markdown.md",
+    "Atlas/Obsidian.md",
+    "Atlas/University.md",
+    "Chapter 1 Statistical Rethinking.md",
+    "Atlas/Data Science.md",
+    "Notes/Books Overview.md",
+    "Notes/Series (Fantasy).md",
+    "Atlas/Private.md",
+    "Notes/Obsidian and Jupyter Notebooks.md",
+    "Notes/Mathematical Modeling in Data Science.md",
+    "Notes/Different Types of Hypothesis Tests.md",
+    "Notes/Random Variables.md",
+    "Notes/Basics of Probability and Statistics for Data Science.md",
+    "Excalidraw/Drawing 2025-09-07 10.38.37.excalidraw.md",
+    "Notes/Basics of Logic.md",
+    "Notes/Basics of Sets.md",
+    "Linear Models.md",
+    "Notes/Functions.md",
+    "Notes/Deep Learning Models.md",
+    "Literature/data_science_manual.pdf",
+    "Notes/The Learning Process in Neural Networks.md",
+    "Notes/Sort Algorithms.md",
+    "Notes/Basics of Algorithms.md",
+    "Notes/Inference.md",
+    "Notes/Optimization and Gradient Descent.md",
+    "Untitled.base",
+    "Notes/Advanced Data Structures in Python.md",
+    "Notes/Optimization Problems.md",
+    "Projects/Image Classification with CNN/Image Classification with CNN.py",
+    "Untitled.canvas",
+    "Diagram.svg",
+    "Excalidraw",
+    "Diagram.svg.xml",
+    "Diagrams",
+    "Untitled Diagram.svg",
+    "Projects/Untitled Diagram.svg",
+    "Projects/Image Classification with CNN",
+    "Projects/MCTS and Deep Learning/MCTS and Deep Learning Report.pdf",
+    "Projects/MCTS and Deep Learning/MCTS and Deep Learning Code.py",
+    "Projects/MCTS and Deep Learning/MCTS.py",
+    "Images/Pasted image 20250325113138.png",
+    "Images/Pasted image 20250325113027.png",
+    "Images/Pasted image 20250325100633.png",
+    "Pasted image 20250325100401.png",
+    "Images/Pasted image 20250308092504.png",
+    "Images/Pasted image 20250302094520.png",
+    "Images/Pasted image 20250301161841.png",
+    "Untitled 1.canvas"
+  ]
+}
