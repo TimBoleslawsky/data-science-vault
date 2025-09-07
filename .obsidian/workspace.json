@@ -170,13 +170,23 @@
               "icon": "lucide-info",
               "title": "File properties for ANN's and Deep Learning"
             }
+          },
+          {
+            "id": "2019eff9c8be2d3d",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
-    "width": 301.5
+    "width": 629.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -188,7 +198,8 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "vscode-editor:Create Code File": false,
-      "obsidian-excalidraw-plugin:New drawing": false
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "285493115e5a7666",
