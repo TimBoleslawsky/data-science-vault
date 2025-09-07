@@ -1,4 +1,4 @@
-Data Science is my main topic of study while studying at Gothenburg University. In this Map of Content everything from basic theory to relevant programming languages regarding the topic of "Data Science" is documented.
+Data Science is my main topic of study while studying at Gothenburg University. In this Map of Content everything from basic theory to relevant programming languages regarding the topic of "Data Science" is documented. test
 ## Theory
 ### Principles of Data Science
 Firstly a definition of what Data Science is: [[Data Science, a Definition]]. Now we obviously need to take a closer look at what data is, and how we can describe it: [[Data]].

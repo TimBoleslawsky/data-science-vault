@@ -11,10 +11,14 @@
             "id": "a50bfa8c84ec91c1",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Atlas/Data Science.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Data Science"
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Atlas/Data Science.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Data Science"
             }
           },
           {
@@ -137,12 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Atlas/Data Science.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Data Science"
             }
           },
           {
@@ -202,13 +208,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "285493115e5a7666",
+  "active": "a50bfa8c84ec91c1",
   "lastOpenFiles": [
+    "Linear Models.md",
+    "Atlas/Data Science.md",
     "Notes/Icons in Markdown.md",
     "Atlas/Obsidian.md",
     "Atlas/University.md",
     "Chapter 1 Statistical Rethinking.md",
-    "Atlas/Data Science.md",
     "Notes/Books Overview.md",
     "Notes/Series (Fantasy).md",
     "Atlas/Private.md",
@@ -220,7 +227,6 @@
     "Excalidraw/Drawing 2025-09-07 10.38.37.excalidraw.md",
     "Notes/Basics of Logic.md",
     "Notes/Basics of Sets.md",
-    "Linear Models.md",
     "Notes/Functions.md",
     "Notes/Deep Learning Models.md",
     "Literature/data_science_manual.pdf",
