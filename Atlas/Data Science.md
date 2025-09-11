@@ -1,21 +1,17 @@
-Data Science is my main topic of study while studying at Gothenburg University. In this Map of Content everything from basic theory to relevant programming languages regarding the topic of "Data Science" is documented. test
+Data Science is my main topic of study while studying at Gothenburg University. In this Map of Content everything from basic theory to relevant programming languages regarding the topic of "Data Science" is documented. 
 ## Theory
 ### Principles of Data Science
 Firstly a definition of what Data Science is: [[Data Science, a Definition]]. Now we obviously need to take a closer look at what data is, and how we can describe it: [[Data]].
 #### The Goals of Data Science
 Data science is about **building and using models of the world** to support decision-making. These models help us extract insights, forecast outcomes, and guide actions.
 
-A big part of data science is to mathematically represent real world problems. For this we use *modeling*. The basics of this idea can be found here: [[Mathematical Modeling in Data Science]]. To categorize these models we usually define these different types: [[Types of Models]]. 
+A big part of data science is to mathematically represent real world problems. For this we use *modeling*. The basics of this idea can be found here: [[Mathematical Modeling in Data Science]]. To categorize these models we usually define these different types: [[Types of Models]]. There are also some general philosophies we want to follow, when modeling problems: [[Philosophies of Modeling]].
 
-[[Data Science#Data Science, Machine Learning and AI|Machine learning]] provides algorithms and frameworks to construct models ([[Basic Intuition for Modeling in ML]]). The line between *traditional* mathematical modeling and machine learning can be confusing. For a general definition, the difference is really one of intention:
-- Build a linear regression with explicit causal assumptions → that’s mathematical modeling.
-- Train a linear regression purely to minimize error on test data → that’s machine learning.
-Same math, different framing.
-
-Data science uses these models for **extracting insights from data and solving problems** in two primary ways:
-1. [[Inference]]: learning about unknowns in the model (parameters, causal effects).
-2. Prediction: predicting or simulating data that hasn't been observed (more in this, see here [[Data Science#Theory behind Machine and Deep Learning]]). 
-Both are complementary: inference provides understanding, prediction provides foresight. Together, they inform **decision-making**, the overarching purpose of most data science projects. 
+Data science uses these models for **extracting insights from data and solving problems** in two primary ways: [[Inference]] and [[Prediction]]. 
+- **Core foundation:** Both inference and prediction start from a model of the **data-generating distribution**, which has parameters that we try to estimate ([[Parameter Estimation for Deterministic Models]] and [[Parameter Estimation for Probabilistic Models]]).
+- **Inference:** We use the estimated parameters to **answer questions about the underlying process** (e.g., “Does weight influence height?” or “What’s the average height in the city?”).
+- **Prediction:** We use the estimated parameters to **generate outcomes for new, unseen data points** (e.g., “Given weight = 80 kg, predict height”).
+So the heart of both is the same — modeling the data-generating distribution — but the **goal differs**: Inference = **understanding**; Prediction = **forecasting**. Together, they inform **decision-making**, the overarching purpose of most data science projects. 
 
 Beyond these, data science also involves preparing data for analysis, ensuring ethical use, communicating findings effectively, and often generating new insights or questions through exploration.
 - [[Data Munging]]
@@ -87,20 +83,20 @@ Optimization problems, dynamic programming, and constraint satisfaction problems
 - [[Optimization Problems]]
 - [[Basics of Algorithms#Dynamic Programming|Dynamic Programming]]
 ### Mathematical Concepts of Data Science
-Here I want to lay to mathematical foundation for almost all the data science problems and approaches. The foundational mathematical concepts of mathematical modeling and data science are sets, logic, and functions. Upon these probability and statistics are built. We also have supporting but central concepts. Lastly I also want to emphasize [[Data Science#Mathematical Thinking|mathematical thinking]].
+Here I want to lay to mathematical foundation for almost all the data science problems and approaches. The foundational mathematical concepts of mathematical modeling and data science are sets, logic, and functions. Upon these probability and statistics are built. We also have supporting but central concepts. Lastly I also want to emphasize mathematical thinking.
 #### Foundational Concepts
 Basically all of data science is built upon sets, logic, and functions. **Sets** provide the universe of objects we reason about (sample spaces, datasets, feature sets). **Logic** rules for combining and reasoning about statements (algorithms, inference, queries). **Functions**, as the backbone of mathematical modeling, formalize mappings and transformations (models, feature engineering, predictions).
 ##### Sets
 Sets are a basic mathematical concept that underpins most data structures and operations in data science: [[Basics of Sets]].
-- [[Special sets]]
+- [[Special Sets]]
 - Relations extend the idea of sets by linking elements from two or more sets, which is key in structuring and analyzing data: [[Relations]].
 ##### Logic
 Mathematical logic is the backbone of reasoning and formalization in data science: [[Basics of Logic]].
 ##### Functions
 Functions describe relationships between variables and are at the heart of mathematical modeling and mapping in data science: [[Functions]].
-- [[Special functions]]
+- [[Special Functions]]
 #### Statistics & Probability
-Statistics is at the heart of Data Science. From characterizing data sets to making predictions based on probability and inferential statistics, without statistics data science is worthless. The basics of statistics for data science can be found here: [[Basics of Probability and Statistics for Data Science]].
+Statistics is at the heart of data science. From characterizing data sets to making predictions based on probability and inferential statistics, without statistics data science is worthless. The basics of statistics for data science can be found here: [[Basics of Probability and Statistics for Data Science]].
 #### Supportive Mathematical Concepts
 These concepts are less of a backbone and more serve more specific purposes. Nonetheless they are essential for data science. 
 - [[Distances|Distances]] needed for geometry of data. These are important because they, for example, tell us how far apart and therefore how different two points are. This comes especially in handy when dealing with [[Approaches for creating Clustering Models|clustering]].

@@ -2,10 +2,10 @@ In this chapter, we discuss the distribution functions of discrete and continuou
 ## Distribution Functions
 Distribution functions answer the questions: *What is the probability of a specific value or range of values occurring?* and *What is the probability that the value is less than or equal to a certain number?*
 ### Probability Mass Function for Discrete Random Variables
-The probability mass function (PMF) gives the probability of each possible outcome for a **discrete** random variable 𝐹 ∶ 𝑆 → \[0,1], it gives the probability $p(𝑥) = 𝑃(𝑋 = 𝑥)$. It answers the question: **What is the probability of a specific value occurring?**
+The probability mass function (PMF) gives the probability of each possible outcome for a **discrete** random variable $𝐹 ∶ 𝑆 → [0,1]$, it gives the probability $p(𝑥) = 𝑃(𝑋 = 𝑥)$. It answers the question: **What is the probability of a specific value occurring?**
 ### Cumulative Distribution Function for Discrete Random Variables
 The cumulative distribution function (CDF) of **discrete** random variables  
-𝐹 ∶ 𝑆 → \[0,1], it  gives the probability 𝐹(𝑥) = 𝑃(𝑋 ≤ 𝑥). It answers the question: **What is the probability that the value is less than or equal to a certain number?**
+$𝐹 ∶ 𝑆 → [0,1]$, it  gives the probability 𝐹(𝑥) = 𝑃(𝑋 ≤ 𝑥). It answers the question: **What is the probability that the value is less than or equal to a certain number?**
 
 Example:
 Let the random variable $X$ map the sums of two fair dice to their probability. 
@@ -48,7 +48,7 @@ Example, suppose you have a categorical distribution with categories (e.g., “R
 Let 𝑋 be the sum of 𝑛 independent and identically distributed Bernoulli variables, that is, each $𝑋 ∼ Bernoulli(𝑝)$ and they are independent. We then say that 𝑋 has a Binomial distribution, denoted $𝑋 ∼ Bin(𝑛, 𝑝)$
 
 Example, let us toss a coin five times:
-- $𝑋 ∼ Bin(𝑛, 𝑝)$ wich $n=10$ and $p=1/2$
+- $𝑋 ∼ Bin(𝑛, 𝑝)$ which $n=10$ and $p=1/2$
 - The probability of observing $k$ heads is: $(noverk) * (p)^k * (1-p)^{n-k}$
 - The PMF would look something like this: ![[Pasted image 20241030141744.png|400]]
 ### Multinomial Distribution for Discrete Random Variables

@@ -1,4 +1,3 @@
-In general, regression models are used for making predictions, but they can also be used for inference. In this case they serve a similar function like [[Hypothesis Testing|hypothesis testing]]. For more on inference and regression, look here: [[Inference and Regression]]
 ## Linear Regression
 Linear regression is a bread-and-butter modeling technique that should serve as your baseline approach to building data-driven models for regression problems. These models are typically easy to build, straightforward to interpret, and often do quite well in practice. With enough skill and toil, more advanced machine learning techniques might yield better performance, but the possible payoff is often not worth the effort. Build your linear regression models first, then decide whether it is worth working harder to achieve better results. For some examples of creating simple regression models using Python look here: [[Regression in Python]]
 

@@ -1,6 +1,6 @@
 When we do sample size calculation, we have two possible goals:
 - To achieve a certain power in the test (see here: [[Metrics of Hypothesis Tests]])
-- To achieve a certain precision for the CI (see here: [[Hypothesis Testing#Basic statistical Idea behind Hypothesis Testing and Connection to CI]])
+- To achieve a certain precision for the CI (see here: [[Sampling#Confidence Intervals]])
 ## What to Specify for Sample Size Calculation?
 Before we begin with sample size calculation we need to make a few notes on what we actually want to test. The necessary input is: 
 - Primary variable/endpoint

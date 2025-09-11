@@ -44,7 +44,7 @@ The behavior of the classifier is often characterized by the Area Under Curve (A
 ![File:Roc curve.svg](https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Roc_curve.svg/512px-Roc_curve.svg.png?20210909040029)
 
 **Hypothesis Testing as a Tool to evaluate Classification Models**
-Hypothesis testing, as discussed here: [[Hypothesis Testing]], provides a framework for understanding whether the observed performance differences are due to the *models’ real capabilities* or due to *random chance*. It helps you assess whether the observed improvements in evaluation metrics are statistically significant or not.
+Hypothesis testing, as discussed here: [[Inference]], provides a framework for understanding whether the observed performance differences are due to the *models’ real capabilities* or due to *random chance*. It helps you assess whether the observed improvements in evaluation metrics are statistically significant or not.
 ## Evaluating Regression Models
 The main problem for evaluating regression models is that we don't have a one size fits all solution. But we have some good candidates. Suppose ($x$ is the predicted value and 𝑦 is the correct value.
 

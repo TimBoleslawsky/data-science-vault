@@ -36,6 +36,6 @@ Implicit regularization refers to any effect during training that reduces overfi
 - **Data Augmentation**: Exposes the model to more data variation, which prevents overfitting and forces the model to be less sensitive to small perturbations. One example would be *noising*, where we add small noise to inputs or hidden layers during training.
 - **Early Stopping**: Prevents the model from overfitting to training data by stopping before full convergence. The condition of when to stop can be flexible. 
 - **Dropout**: Randomly turn off neurons during training (set their output to zero). This forces the network to learn redundant, more robust representations.
-- [[Optimization and Gradient Descent#Stochastic Gradient Descent|Stochastic Gradient Descent]]
+- [[The Learning Process in Neural Networks#Stochastic Gradient Descent]]
 - **Batch Normalization**: Is a [[Data Transformation and Scaling#Normalization|normalization]] technique that normalizes the activations (outputs) of each layer within a mini-batch to have zero mean and unit variance, helping stabilize and speed up training. This means that one, this can only properly be done with mini-batch gradient descent and two, this is usually placed after linear or convolutional layers, and before the activation function (like ReLU).
 

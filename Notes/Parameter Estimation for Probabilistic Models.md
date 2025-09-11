@@ -1,4 +1,6 @@
-If we have some data sample, and we know what underlying distribution this data follows, how do we know the parameter of this distribution? In other words: Suppose we have 𝑛 samples 𝑋1, 𝑋2, ... , 𝑋𝑛 from a probability distribution with a parameter 𝜃 (e.g., 𝑝 for Bernoulli(𝑝) distribution, or 𝜆 for Exp(𝜆) distribution). Now, what is the most likely value $\hat{𝜃}$ for the parameter to have generated the observations?
+If we have some data sample, and we know what underlying distribution this data follows (how this can be for example known: [[Q-Q Plot]]), how do we know the parameter of this distribution? In other words: Suppose we have 𝑛 samples 𝑋1, 𝑋2, ... , 𝑋𝑛 from a probability distribution with a parameter 𝜃 (e.g., 𝑝 for Bernoulli(𝑝) distribution, or 𝜆 for Exp(𝜆) distribution). Now, what is the most likely value $\hat{𝜃}$ for the parameter to have generated the observations?
+
+The probabilistic topics discussed here built upon the basics laid out here: [[Basics of Probability and Statistics for Data Science#Probability and Statistics]].
 
 Short note on the function: $P(C_k | X) \propto P(C_k) \cdot P(X | C_k)$. We use the "proportional to" ($\propto$) symbol because we omit the normalization factor we usually know from the Baysian formula        ($P(X)$). So the function means that $P(C_k | X)$ is proportional to $P(C_k) \cdot P(X | C_k)$.
 ## Maximum Likelihood Estimation (MLE)
@@ -33,4 +35,6 @@ If we want to use MAP, sometimes the prior is given, for example, when we have d
 
 **MLE vs. MAP**
 The big difference between MLE and MAP is that MLE is a frequentist approach ([[Two Approaches to Statistics]]), while MAP is a bayesian approach. This means that MLE does not assume $θ$ to be drawn from a random distribution, but MAP does. This also means that MAP has hyperparameters, while MLE does not. The objective functions are relatively similar with the exception of the **regularization** ($f_θ(θ)$)
+## MCMC
+TBD
 
