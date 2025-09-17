@@ -1,6 +1,16 @@
 After defining a mathematical model and estimating its parameters ([[Basics of Probability and Statistics for Data Science#Connecting Probability and Statistics to Modeling]]) we can use it to do inference. Inference is the _interpretation of parameter estimates under uncertainty_:
 - Frequentist → uncertainty comes from sampling distribution. 
 - Bayesian → uncertainty comes from both the sample and what you knew before seeing the data (the prior).
+## Different Types of Inference
+Based on the goal of the inference, we can differentiate between three major branches of inference: 
+### Descriptive / Statistical Inference
+Here the goal is to purely summarize or characterize the data and estimate parameters of a model. We would for example estimate the average effect of a drug on blood pressure, along with a 95% confidence interval.
+### Associational / Correlational Inference
+Now we want to also identify associations or correlations between variables, often using regression or correlation measures. Hypotheses might be about whether two variables are correlated, or whether a regression coefficient is significantly different from zero.
+### Causal Inference
+Goal here is to estimate the effect of interventions, counterfactual outcomes, or treatment effects. While correlational inference only tells us “$X$ and $Y$ move together", causal inference asks: _"What would $Y$ have been if we had intervened on $X$?"_.
+
+More on causal inference here: [[Causal Inference]].
 ## Bayesian Inference
 In this example I describe the basic intuitions behind Bayesian inference and how it connects to the statistical modeling approach. 
 
@@ -13,10 +23,10 @@ In this example I describe the basic intuitions behind Bayesian inference and ho
 	•	$n$ is the sample size
 	•	$\bar{y}$ is the sample mean
 	•	$\sigma^2$ is the known variance of the data
-- Fifth, using this posterior distribution, we can directly infer about point estimates and interval estimates. For instance:
-	- Posterior mean → point estimate
-	- 95% posterior interval → interval estimate
-	You can also compute probabilities for statements like $P(\mu > 4500\,g \mid \text{data})$.
+- Fifth, using this posterior distribution, we can directly infer about point estimates and interval estimates. In reality it is often useful to use sampling to summarize the posterior, rather than relying solely on closed-form analytical solutions. This gives a practical, flexible way to perform Bayesian inference:
+	- Point estimations: You can summarize the posterior by a single representative value of a parameter. Through sampling this is just computing the mean or median of your posterior samples.    
+	- Interval estimations: Instead of just a point, you summarize the **uncertainty** around a parameter (credible intervals). Sampling lets you directly compute intervals: e.g., take the 2.5th and 97.5th percentiles of your posterior samples.
+	- Probability estimations (probabilistic statements): This could for example be: $P(μ > 4500,g \mid \text{data})$. Using samples, you simply count the fraction of posterior draws satisfying the condition.
 => The results are our general assumptions about the population given our assumptions, previous knowledge and the data we observed.
 ## Frequentist Inference
 In this example, I describe the basic intuitions behind frequentist inference and how it connects to the statistical modeling approach.

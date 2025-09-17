@@ -1,0 +1,7 @@
+This is why so much effort is devoted to multiple regression, using
+more than one predictor variable to simultaneously model an outcome. Reasons given for
+multiple regression models include:
+1. Statistical “control” for confounds. A confound is something that misleads us about a causal influence. Usually we say that a **confounder** is a variable that causally influences both a predictor and the outcome. In a DAG: $Z → X$ and $Z → Y$. But confounds are diverse. They can hide real important variables just as easily as they can produce false ones.
+2. Multiple causation. A phenomenon may arise from multiple causes. Measurement of each cause is useful, so when we can use the same data to estimate more than one type of influence, we should. Furthermore, when causation is multiple, one cause can hide another. This kind of problem tends to arise when there are two predictor variables that are correlated with one another. However, one of these is positively correlated with the outcome and the other is negatively correlated with it. We define these type of relations as *masked relationships*.
+3. Interactions. The importance of one variable may depend upon another. For example, plants benefit from both light and water. But in the absence of either, the other is no benefit at all. Such interactions occur very often. Effective inference about one variable will often depend upon consideration of others.
+

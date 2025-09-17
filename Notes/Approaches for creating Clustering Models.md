@@ -1,19 +1,5 @@
-## Clustering
-Clustering is the problem of assigning meaningful labels to unlabeled points by grouping them. The difference between clustering and classification is that in classification we know our labels beforehand, in clustering, we do not. Therefore, clustering is unsupervised learning.
-
-Clustering can be useful for a number of reasons. When dealing with millions or billions of records, clustering can be a good way to perform *data reduction*. The idea is to cluster the points by similarity and then appoint the centroid of each cluster to represent the entire cluster. *Outlier detection* is the problem of ridding a data set of discordant items, so the remainder better reflects the desired population. Clustering is a useful first step to finding outliers. The cluster elements furthest from their assigned cluster center don’t really fit well there but also don’t fit better anywhere else. This makes them candidates to be outliers. Another useful application for clustering is image compression. 
-
-**Is data "clusterable"?**
-The general idea is to compare the data distribution with a theoretical distribution with no clustering tendency! This can be done with a QQ-plot, which is difficult for higher dimensions, or by computing the pairwise distance.
-
-We can categorize our clustering models into four categories:
-- Centroid clustering 
-- Distribution clustering
-- Density clustering 
-	=> These three are sometimes more generally categorized into *partitional* clustering.
-- Hierarchical clustering
-### Centroid Clustering
-#### $k$-means Clustering
+## Centroid Clustering
+### $k$-means Clustering
 The idea behind $k$-means clustering is to take $k$ cluster centers, for example at random. Then we map the points to the nearest cluster center and compute a new cluster center. We repeat this until we cannot improve the cluster centers (this can be seen as a simplified version of the Expectation-Maximization algorithm). We call this convergence. Important is that $k$-means clustering solves for the **local optimum** and not the **global optimum**. 
 
 **Model Definition of Form $y = g(x;θ | h)$**
@@ -30,8 +16,8 @@ There are at two possible criteria for computing a new estimate for the center p
 
 **How to determine $k$ and our initial centroids/medioids?**
 For more on hyperparameter tuning, see here [[Model Selection & Hyperparameter Tuning]].
-### Distribution Clustering
-#### Gaussian Mixture Model (GMM)
+## Distribution Clustering
+### Gaussian Mixture Model (GMM)
 The idea behind the GMM is similar to the [[Approaches for creating Classification Models#Naïve Bayes Classification|naive Bayes classifier]]. We calculate a set of K posterior probabilities. Each data point $x$ is assigned to all clusters with a posterior probability. One major difference between GMM and naïve Bayes, is that we do not assume independence for the feature dimensions in GMM! 
 
 In contrast to k-means clustering, the Gaussian mixture model is *soft clustering*, meaning that $x$ is assigned to all clusters with a probability - the posterior. 

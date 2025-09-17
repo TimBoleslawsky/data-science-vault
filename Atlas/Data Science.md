@@ -5,40 +5,56 @@ Firstly a definition of what Data Science is: [[Data Science, a Definition]]. No
 #### The Goals of Data Science
 Data science is about **building and using models of the world** to support decision-making. These models help us extract insights, forecast outcomes, and guide actions.
 
-A big part of data science is to mathematically represent real world problems. For this we use *modeling*. The basics of this idea can be found here: [[Mathematical Modeling in Data Science]]. To categorize these models we usually define these different types: [[Types of Models]]. There are also some general philosophies we want to follow, when modeling problems: [[Philosophies of Modeling]].
+A big part of data science is to mathematically represent real world problems. For this we use the already mentioned *mathematical modeling*. For more on mathematical modeling look here: [[Data Science#Mathematical Modeling]].
 
-Data science uses these models for **extracting insights from data and solving problems** in two primary ways: [[Inference]] and [[Prediction]]. 
-- **Core foundation:** Both inference and prediction start from a model of the **data-generating distribution**, which has parameters that we try to estimate ([[Parameter Estimation for Deterministic Models]] and [[Parameter Estimation for Probabilistic Models]]).
-- **Inference:** We use the estimated parameters to **answer questions about the underlying process** (e.g., “Does weight influence height?” or “What’s the average height in the city?”).
-- **Prediction:** We use the estimated parameters to **generate outcomes for new, unseen data points** (e.g., “Given weight = 80 kg, predict height”).
-So the heart of both is the same — modeling the data-generating distribution — but the **goal differs**: Inference = **understanding**; Prediction = **forecasting**. Together, they inform **decision-making**, the overarching purpose of most data science projects. 
-
-Beyond these, data science also involves preparing data for analysis, ensuring ethical use, communicating findings effectively, and often generating new insights or questions through exploration.
+Beyond modeling, data science also involves preparing data for analysis, ensuring ethical use, communicating findings effectively, and often generating new insights or questions through exploration.
 - [[Data Munging]]
 	- In my opinion, a big part of data munging is [[Exploratory Data Analysis|exploratory data analysis]]. It can be seen as informing the data cleaning process of data munging.
 - [[Data Preprocessing]], builds on top of cleaned data and focuses on preparing data specifically for modeling.
 - [[Data Visualization]]
 	- To convey our findings, we need [[Visualization Tools|visualization tools]].
 - There are a lot of reasons one might have ethical concerns when talking about data science. Here we discuss some of them: [[Ethics in Data Science]].
-### Data Science, Machine Learning and AI
+### Mathematical Modeling
+The inherent goal of mathematical modeling, statistical modeling, as well as machine learning, is to represent a underlying **data-generating process** via a model. In general (at least in probabilistic models) we have two frameworks to do this: Frequentist or Bayesian ([[Two Approaches to Statistics]]).
+
+The basics of intuition behind the idea of mathematical modeling I describe here: [[Mathematical Modeling in Data Science]]. There are also some general philosophies we want to follow, when modeling problems: [[Philosophies of Modeling]].
+
+When talking about mathematical modeling and the models we produce here, there are distinct dimensions to discuss, which are not always clearly separated. Here is my attempt: 
+1. **Model construction =** _What functional form or distributional assumptions define the model family?_    
+2. **Learning paradigm =** _How does the model learn from data (parameter/structure estimation)?_
+3. **Task type =** _What mapping or structure is the model supposed to capture in the data?_
+	- **Method type** = Which algorithm or method is used to perform the task?
+4. **Use cases =** _For what purpose do we use the fitted model?_
+So a holistic description of a model could be: “I am using a **linear parametric model**, trained in a **supervised** way, on a **regression task**, implemented with the **linear regression** method, and I’m applying it for **inference**.” This would difine the model in the following way:
+- Model construction (form): _Linear model_ → specifies the function family (parametric, linear).
+- Learning paradigm (estimation method): _Supervised_ → parameters estimated from labeled input–output pairs.
+- Task type (mapping/structure to capture): _Regression_ → continuous target prediction.
+	- Method type (specific implementation): *Linear Regression*.
+- Use case (purpose of the fitted model): _Inference_ → interpret coefficients, quantify uncertainty, test hypotheses.
+#### Model Construction
+Model construction methods define how we specify function space/distributional assumptions to build our model, there exist three major principles of model construction: [[Principles of Model Construction]]. Based on how we construct our models, we can categorize them in a few different ways: [[Types of Models]]. 
+#### Learning Paradigms
+The existing learning paradigms define how the model adapts to data. The *learning* here just means parameter and structure estimation. Here I introduce the different learning types: [[Learning Types in Machine Learning]].
+#### Task Types
+The *task type* of a model specifies the kind of relationship or structure the model is intended to capture in the data, defining the _problem formulation_ (e.g., predicting a continuous outcome, grouping similar items, or uncovering latent structure). More on task types here: [[Different Task Types for Mathematical Models]].
+
+At this point, it is also very important to talk about model evaluation. Depending on the task type, we have a few different ways we want to evaluate our models. Here is a summary: [[Evaluating Models]].
+
+The *method type* describes the specific algorithm or estimator used to implement that task, and is where distinctions like “statistical” versus “machine learning” approaches become relevant. More on method types here: [[Different Method Types for Mathematical Models]].  
+
+=> Together, task and method type separate _what the model aims to do_ from _how it is achieved_!
+#### Use Cases for Mathematical Models
+Data science uses these models for **extracting insights from data and solving problems** in two primary ways: [[Inference]] and [[Prediction]]. 
+- **Core foundation:** Both inference and prediction start from a model of the **data-generating distribution**, which has parameters that we try to estimate ([[Parameter Estimation for Deterministic Models]] and [[Parameter Estimation for Probabilistic Models]]).
+- **Inference:** We use the estimated parameters to **answer questions about the underlying process** (e.g., “Does weight influence height?” or “What’s the average height in the city?”).
+- **Prediction:** We use the estimated parameters to **generate outcomes for new, unseen data points** (e.g., “Given weight = 80 kg, predict height”).
+So the heart of both is the same — modeling the data-generating distribution — but the **goal differs**: Inference = **understanding**; Prediction = **forecasting**. Together, they inform **decision-making**, the overarching purpose of most data science projects. 
+
+Besides the big two, inference and prediction, there exist a bunch of more niche use cases we also use models for. Here is a collection of some: 
+- Compression
+- ...
+### Data Science, Machine Learning and AI In Practice
 In this part I want to differentiate the topics Data Science, Machine Learning and AI. I want to look at what Machine Learning and AI are, how they differ from Data Science, and how Data Scientists can use Machine Learning and AI: [[Differentiating Data Science, Machine Learning and AI]].
-#### Theory behind Machine and Deep Learning
-Like I mentioned here ([[Data Science#The Goals of Data Science]]) machine learning in its most basic understanding is just a tool-box for creating models. They can be used for both inference and prediction. Because in practice, it is much more common to use these models for prediction tasks, the chapters below focus on this. 
-
-We categorized the models we build into regression-models, classification-models, and clustering-models.
-- Approaches (Algorithms) for creating Models:
-	- [[Approaches for creating Regression Models]]
-	- [[Approaches for creating Classification Models]]
-	- [[Approaches for creating Clustering Models]]
-- There are a few different approaches to evaluating models. What they are, when to use them, and which methods are appropriate for each approach is documented here: [[Evaluating Models]]
-- While building models a common pitfall is overfitting the model. [[Regularization]] can help with that.
-- As we are talking about machine learning models, it becomes obvious that we need to introduce the different learning types: [[Learning Types in Machine Learning]].
-
-Ensemble models in machine learning combine multiple base models to improve predictive performance. The idea is that multiple weak models, when combined, can produce better generalization and reduce overfitting. More here: [[Ensemble Models]].
-##### Neural Networks and Deep Learning
-As the basic pipeline management approach differs substantially when looking at deep learning projects compared to data science projects or "simple" machine learning projects, I want to describe the deep learning process in more detail: [[Deep Learning Project Workflow]].
-
-Here I want to mainly focus on the theory behind deep learning. The models mentioned above struggle with complex, highly non-linear patterns, unstructured data like images, audio etc., and large-scale data. That's where deep learning and neural networks come in. Everything related to deep learning models can be found here: [[Deep Learning Models]].
 #### Applications of AI and Machine Learning
 A very popular use-case for data science and AI is recommendation systems. Recommendation systems try to solve the problem of personalizing the display policy on websites. More on that here: [[Recommendation Systems]].
 
@@ -106,18 +122,6 @@ These concepts are less of a backbone and more serve more specific purposes. Non
 As discussed here, [[Data Science, a Definition]], the purpose of data science is to tackle real-world problems. Mathematical thinking is the ability to formulate real-world problems and interpret the results of mathematical solutions in a meaningful way. It is not about solving mathematical problem XY, but how we arrive at that problem from a non-mathematical problem. That's why it is so important for data scientists to be able to apply mathematical thinking. The basics of mathematical thinking are described here: [[Mathematical Thinking]]
 
 Some insights and lessons learned form the course *Applied Mathematical Thinking* are summarized in this report: [[The Mathematical Thinking Handbook for Data Scientists]].
-### Applications of Data Science
-In this chapter I want to document various the different fields where I have knowledge of the application of data science. 
-#### Data Science in Biomedicine
-I will mainly focus on the context of drug development when talking about biomedicine (more specifically, drug development at AstraZeneca). 
-
-To understand data science in the context of biomedicine, we first have to look the basics of [[Clinical Trails|clinical trails and controlled randomized experiments]].
-
-To evaluate the outcomes of clinical trails and answer research questions, we use [[Inference|hypothesis testing]]. Additionally multiplicity as big issue when using hypothesis testing in the context of clinical trails, more on that here: [[Multiplicity in Clinical Trails]]. 
-
-Here are some more interesting topics regarding data science in biomedicine:
-- [[Survival Analysis]]
-- [[Simulation in Data Science for Biomedicine]]
 ## Programming
 ### Python
 #### Basics
@@ -166,4 +170,15 @@ UNIX is an integral part of working with Python or any Data Science programming 
 First let's discuss what UNIX it and what it does: [[Basics of UNIX]]. We can create scripts in UNIX by using [[Shell Scripts]].
 
 As discussed here [[Motivation for Computational Methods for Large Scale Data]], [[Notes/Parallel Computing|parallel computing]] is a necessary technique for many modern systems. Here is how we can implement parallel computing: [[SLURM]].
+## Use Cases
+In this chapter I want to document various the different fields where I have knowledge of the application of data science. 
+### Data Science in Biomedicine
+I will mainly focus on the context of drug development when talking about biomedicine (more specifically, drug development at AstraZeneca). 
 
+To understand data science in the context of biomedicine, we first have to look the basics of [[Clinical Trails|clinical trails and controlled randomized experiments]].
+
+To evaluate the outcomes of clinical trails and answer research questions, we use [[Inference|hypothesis testing]]. Additionally multiplicity as big issue when using hypothesis testing in the context of clinical trails, more on that here: [[Multiplicity in Clinical Trails]]. 
+
+Here are some more interesting topics regarding data science in biomedicine:
+- [[Survival Analysis]]
+- [[Simulation in Data Science for Biomedicine]]

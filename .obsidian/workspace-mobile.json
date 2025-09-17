@@ -23,14 +23,10 @@
             "id": "478772ef2264a6f2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Books Overview.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Books Overview"
+              "title": "New tab"
             }
           }
         ],
@@ -125,7 +121,6 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Types of Neural Networks.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -172,6 +167,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
       "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,

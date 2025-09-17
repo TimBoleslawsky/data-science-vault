@@ -1,4 +1,6 @@
 In this chapter, we discuss the distribution functions of discrete and continuous variables as well as the different forms of distribution. For the expected values and the variance of the different distributions look here: [[Expected Value & Variance]].
+
+Two important concepts evolve from these probability distributions: [[Likelihood and Posterior Distributions]].
 ## Distribution Functions
 Distribution functions answer the questions: *What is the probability of a specific value or range of values occurring?* and *What is the probability that the value is less than or equal to a certain number?*
 ### Probability Mass Function for Discrete Random Variables
@@ -14,6 +16,8 @@ Let the random variable $X$ map the sums of two fair dice to their probability.
 Then for PMF, $P(X = 7) = 1/6$ and for CDF, $P(X <= 3) = 1/2$
 ### Probability Density Function for Continuous Random Variables
 The probability density function gives us the probability that the possible outcome lies in a range from $a$ to $b$ for a **continuous** random variable $𝑓 ∶ 𝑆 → [0, ∞)$, it gives the probability $𝑃(𝑎 ≤ 𝑥 ≤ 𝑏) = \int_a^b 𝑓(𝑡)d𝑡$. *Important:* the probability of any given value $P(a = x)$ is always $0$.
+
+So what does the y-axis mean in this case? The y-axis of the PDF means that thought of as a score fore each data point on the x-axis. Higher values on the y-axis mean the value of X is “more likely” at that point relative to other points, but the number itself is not a probability. It can therefore also be called the *likelihood*, but this term also has a different meaning in traditional statistics ([[Likelihood and Posterior Distributions]]).
 
 The PDF must satisfy two conditions:
 - **Non-negativity**:  $f(x) \geq 0$ for all $x$ in the domain.

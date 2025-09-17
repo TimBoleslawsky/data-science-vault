@@ -4,7 +4,7 @@ When we have multiple hypotheses we want to test, we usually denote it like this
 - Family of a priori stated null hypothesis: ￼$F = {H_1,...,H_N}$
 - p-values: $p_1, …, p_n$
 We then want to control the type 1 family-wise error rate (FWER):
-- $P(\text(Reject at least one true H_i) \leq \alpha$. This is the same as $1 - P(Reject none in error)$ if we assume independece this leads to the following calculation: $1 - (P(Not reject first))^5$ = all tests performed on same level = $1 - (1 - 0.05)^5 ≈ 0.23$
+- $P(\text(Reject at least one true H_i) \leq \alpha$. This is the same as $1 - P(Reject none in error)$ if we assume independence this leads to the following calculation: $1 - (P(Not reject first))^5$ = all tests performed on same level = $1 - (1 - 0.05)^5 ≈ 0.23$
 ## Types of Multiplicity
 In general there are four types of multiplicity in clinical trails: multiple endpoints, multiple treatment arms/doses, interim analysis, and subgroup analysis. Here I only focus on multiple endpoints and multiple treatment arms/doses.
 - Multiple Endpoints

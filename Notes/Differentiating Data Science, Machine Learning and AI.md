@@ -9,4 +9,4 @@
 ## How Do They Relate?
 Basically it comes down to this: 
 - AI encompasses ML, which is one of its primary techniques!
-- Data Science often uses ML as a tool but is not limited to it!
+- Data Science often uses ML as a tool for model creation but is not limited to it!

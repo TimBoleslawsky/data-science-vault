@@ -2,18 +2,15 @@ Just like I did with inference here ([[Inference]]), I want to first look at the
 
 Also just like in inference, the basis of prediction are the mathematical model and parameter estimation steps outlined here ([[Basics of Probability and Statistics for Data Science#Connecting Probability and Statistics to Modeling]]).
 ## Bayesian Prediction
-In this example I describe the basic intuitions behind Bayesian prediction and how it connects to the statistical modeling approach.
+In this example I describe the basic intuitions behind Bayesian prediction and how it connects to the statistical modeling approach (an example of how this is done in R can be found here: [[bayesian_regression.rs]]).
 
 - First, model definition. Let’s say we want to predict the body mass of new Gentoo penguins given their flipper length. Our target variable $y$ is body mass, and our feature is $x$ (flipper length). Our model could look like this: $y = \alpha + \beta x$.	
 - Second, define random variables and distributions. In Bayesian modeling, _all unknown quantities_ (parameters as well as observations) are treated as random variables. That means we always assign distributions:
 	- Likelihood: $y_i \sim \text{Normal}(\mu_i, \sigma^2)$
 	- Priors: $\alpha \sim \text{Normal}(0,10), \beta \sim \text{Normal}(0,1), \sigma \sim \text{Exponential}(1)$ (for example).
 	  => Together with the deterministic function: $\mu_i = \alpha + \beta x_i$, this makes us our complete model.
-- Third, parameter estimation. In Bayesian analysis, parameter estimation means computing the **posterior distribution** of the parameters: $p(\alpha, \beta, \sigma \mid y) \propto p(y \mid \alpha, \beta, \sigma) \, p(\alpha, \beta, \sigma)$. This posterior summarizes what we know about the parameters after seeing the data. In practice this is usually done using [[Parameter Estimation for Probabilistic Models#MCMC|MCMC]].
-- Fourth, prediction. With the posterior in hand, prediction means generating the posterior predictive distribution for a new data point:
-	- First, compute the posterior distribution of the mean: $\mu_{\text{new}} = \alpha + \beta x_{\text{new}}$ for each posterior sample of $(\alpha, \beta)$.
-	- Then, sample new outcomes from the likelihood: $y_{\text{new}} \sim \text{Normal}(\mu_{\text{new}}, \sigma^2)$, using posterior samples of $\sigma$.
-	Now the prediction is a full distribution that integrates both parameter uncertainty (from the posterior) and observation uncertainty (from the likelihood).
+- Third, parameter estimation. In Bayesian analysis, parameter estimation means computing the [[Likelihood and Posterior Distributions|posterior distribution]] of the parameters: $p(\alpha, \beta, \sigma \mid y) \propto p(y \mid \alpha, \beta, \sigma) \, p(\alpha, \beta, \sigma)$. This posterior summarizes what we know about the parameters after seeing the data.
+- Fourth, prediction. With the posterior in hand, prediction means generating the posterior predictive distribution for a new data point, see here [[Likelihood and Posterior Distributions#Posterior Predictive Distribution]]. Now the prediction is a full distribution that integrates both parameter uncertainty (from the posterior) and observation uncertainty (from the likelihood).
 	- Point prediction: Often the posterior mean or median of $y_{\text{new}}$.
 	- Uncertainty quantification: Credible intervals (e.g., 89% or 95%) that summarize the posterior predictive distribution.
 ## Frequentist Prediction
