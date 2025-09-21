@@ -14,8 +14,4 @@ In clustering, especially $k$-means, the elbow method is a popular model selecti
 ![[Pasted image 20241205143119.png]]
 
 What we seek from the error curve is the value $k$ where the rate of decline decreases drastically, or the *elbow*. 
-## Model Selection (and Hyperparameter Tuning)
-Like said above the most popular and the easiest way to select a model is by comparing final model evaluation metrics (MSE, Silhouette Score, Accuracy, ...). The methods below have more specific use-cases.
-### AIC and BIC
-AIC BIC 
 

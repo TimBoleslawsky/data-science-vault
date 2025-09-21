@@ -17,7 +17,7 @@ Beyond modeling, data science also involves preparing data for analysis, ensurin
 ### Mathematical Modeling
 The inherent goal of mathematical modeling, statistical modeling, as well as machine learning, is to represent a underlying **data-generating process** via a model. In general (at least in probabilistic models) we have two frameworks to do this: Frequentist or Bayesian ([[Two Approaches to Statistics]]).
 
-The basics of intuition behind the idea of mathematical modeling I describe here: [[Mathematical Modeling in Data Science]]. There are also some general philosophies we want to follow, when modeling problems: [[Philosophies of Modeling]].
+The basics of intuition behind the idea of mathematical modeling I describe here: [[Mathematical Modeling in Data Science]]. 
 
 When talking about mathematical modeling and the models we produce here, there are distinct dimensions to discuss, which are not always clearly separated. Here is my attempt: 
 1. **Model construction =** _What functional form or distributional assumptions define the model family?_    

@@ -1,4 +1,0 @@
-There is a trade-off between model accuracy and complexity. Adding parameters can improve performance but at the cost of increased complexity, which may not always be justified. While simplicity is desired, it should not compromise model performance. A model should be as simple as possible while still being effective.
-
-1. We want to minimize the number of parameters in a model to avoid **overfitting**. Overfitting occurs when a model is too complex, capturing noise and outliers in the training data rather than generalizing well to new data. Data-driven models are more prone to this. Overfitted models perform well on training data but poorly on independent test data.
-2. Bias is the error from incorrect assumptions built into the model. These models perform lousy on both training and testing data and are called underfit. They fail to capture the phenomena in question.

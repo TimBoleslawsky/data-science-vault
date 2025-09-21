@@ -1,20 +1,11 @@
-Final model evaluation happens ones all other evaluation of the model is done and a final model is trained. We want to see how well this model performs. How this can be done in Python is documented here: [[Final Model Evaluation in Python]]
-## What Data Do We Use for the Evaluation?
-The first rule of thumb is a model's performance needs to be evaluated on data that was never used to train the model. We call this the test set (in contrast to the training set). *Never ever evaluate the model on the training set!*
-### Train-test Split
-The idea behind the Train-test split is to divide our data so that we have a **training set** to develop and train our model, an optional **validation set** to help with parameter selection to optimize our model if needed, and a **test set** where we can run final tests. Usually, the split is 75/25 if we have two sets and 50/25/25 if we have three sets. 
-
-**Cross-validation**
-But what if we have very little data? Then we can use cross-validation to repeatedly partition our data into test data and training data and train/test on each of these iterations. One example, of how we can do this is **k-fold cross-validation**.
-
-When using k-fold cross-validation, we divide the entire dataset into k approximately equal-sized folds. Each fold serves as a test set exactly once, while the remaining k-1 folds form the training set. Repeat this process k times, each time using a different fold as the test set. **Leave-One-Out Cross-Validation (LOOCV)** is a special case of k-fold where k equals the number of data points (i.e., each fold contains one data point).
+Final model evaluation happens ones all other evaluation of the model is done and a final model is trained. We want to see how well this model performs. How this can be done in Python is documented here: [[Final Model Evaluation in Python]].
 ## What Model Do We Use for the Evaluation?
-The model we evaluate against is usually called a **baseline model**. A baseline model can be a dummy model  
+The model we evaluate against is usually called a **baseline model**. A baseline model can be a dummy model.
 - For classification, we can use a model that always predicts the most common label  
 - If we have no idea what the most common label is, we can always guess at random 
 - ... 
 
-Other possibilities for a baseline include A simple or trivial model that we know how to build or somebody else’s model (a pre-existing model).
+Other possibilities for a baseline include a simple or trivial model that we know how to build or somebody else’s model (a pre-existing model).
 ## What Do We Use for Evaluation?
 We use **metrics** for evaluating models. A metric is a function or measure that defines a way to quantify the “distance” or difference between two elements in a set. A measure must meet some criteria to qualify as a metric:
 - Non-negativity:  the distance between any two points is always non-negative.

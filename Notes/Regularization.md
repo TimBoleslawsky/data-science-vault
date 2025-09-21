@@ -31,6 +31,19 @@ Two common methods for regularization exists for regression models.
 Here we can for example do **Logistic Regression (with regularization)**. The logistic regressor common in for example sklearn has a parameter that lets us set the penalty to either L1 or L2.
 
 Also common are Tree-based models. While not using L1/L2 regularization, decision trees, random forests, and gradient boosting models are regularized by controlling complexity through limiting max depth, setting min samples per split, or using early stopping in boosting.
+### Connection to Bayesian Models
+This concept is by no means just used in frequentist models. In Bayesian models, we usually account for regularization through priors:
+- A **ridge penalty** corresponds exactly to a **Gaussian prior** on coefficients: $\beta_j \sim \mathcal{N}(0, \tau^2), \quad \lambda = \frac{1}{2\tau^2}$.
+- A **lasso penalty** corresponds exactly to a **Laplace prior**:
+	$\beta_j \sim \text{Laplace}(0, b), \quad \lambda = \frac{1}{b}$.
+
+So, regularization in frequentist terms (penalties) and Bayesian terms (priors) are mathematically the same object, just viewed through different inferential philosophies:
+- Frequentist: “We add a penalty to stabilize estimates.”
+- Bayesian: “We encode prior beliefs that coefficients should be small.”
+
+This leads an important point: In frequentist penalized likelihood (just like with Bayesian priors) , the penalty term can in principle be _anything_ we want, if they assert to these two conditions:
+- Convexity (so optimization is tractable).
+- Interpretability (so we know what kind of shrinkage/sparsity you’re inducing).
 ## Implicit Regularization
 Implicit regularization refers to any effect during training that reduces overfitting or improves generalization, without explicitly adding a penalty term to the loss function (like L1 or L2 regularization). It’s “regularization” in effect, not in form. Here are a few example methods that would be categorized as implicit regularization:
 - **Data Augmentation**: Exposes the model to more data variation, which prevents overfitting and forces the model to be less sensitive to small perturbations. One example would be *noising*, where we add small noise to inputs or hidden layers during training.
