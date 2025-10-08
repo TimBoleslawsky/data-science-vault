@@ -1,5 +1,15 @@
 Data encoding is the process of converting categorical or textual data into a numerical format so that it can be used by machine learning algorithms, which typically require numerical input.
-## One-hot Encoding
+
+There are usually two ways to encode categorical variables: index variables and indicator variables. We will look a bit closer into each in this note.
+## Index Variables
+When encoding categorical variables with *index variables* each category is encoded with a unique integer code. The model interprets it as an _index into a vector of coefficients_, not as a numeric scale. But we need to be careful, we usually have to tell the model explicitly to interpret these variables as categorical values not as a numeric scale.
+
+In this case the interpretation of the variables is as group-specific intercepts!
+## Indicator Variables
+- **Indicator variables** → each category (except a baseline) is a separate binary predictor; this is the statistical modeling equivalent of **one-hot encoding** in ML.
+
+(indicator coefficients as differences from baseline, 
+### One-hot Encoding
 This encoding technique works by creating new columns per unique values within a category feature. Each of these column corresponds to one category and therefore each data point has zeros in all of these column except one.
 
 | ... | Color | Red | Green | Blue |

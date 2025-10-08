@@ -49,4 +49,54 @@ Here is how it works:
 
 => Problem: Only accurate if the true posterior is close to Gaussian and needs enough data points (common frequentist problem).
 ### Markov Chain Monte Carlo (MCMC)
-**Idea**: Simulate a Markov chain that wanders through parameter space, spending time in regions proportional to posterior probability. Collecting samples from the chain approximates the posterior. => TBD
+The idea here is to simulate *chains* that wanders through parameter space, spending time in regions proportional to posterior probability. Collecting samples from the chain approximates the posterior. 
+#### The Metropolis Algorithm
+The Metropolis algorithm serves as the foundation of Markov Chain Monte Carlo (MCMC). The idea is, that instead of calculating the full posterior distribution directly, we generate samples that approximate it. Here is how it works:
+- **Procedure**:
+	1. Start with an initial guess for parameters.
+	2. Propose a small random change (a “jump”).
+	3. Compute the probability ratio between the new parameter values and the old ones using the posterior (likelihood × prior).
+		- Given some data, a likelihood, and a prior
+		- Put in the value of the parameter for the current guess ($\text{posterior}(\mu)$)
+		- Put in the value of the parameter for the next guess ($\text{posterior}(\mu’)$)
+		- Compute the ratio: $r = \frac{\text{posterior}(\mu’)}{\text{posterior}(\mu)} = \frac{0.218}{0.169} \approx 1.29$ 
+		  => Since $r > 1$, the new proposed parameter value is **more likely under the posterior**, so we always accept it. If the new value had $r < 1$ (say $r=0.3$), we would still accept it 30% of the time. This prevents the chain from only climbing uphill (like greedy hill-climbing).
+	4. Accept the new value with that probability, otherwise stay at the current value.
+- Over many iterations, the chain “wanders” through parameter space in proportion to posterior density.
+
+Unfortunately, this becomes very inefficient in high dimensions, because the jumps or walks are random and can get stuck.
+#### Hamilton Monte Carlo
+Hamilton Monte Carlo or HMC is introduced as a solution to Metropolis inefficiency. The idea is, that instead of random small jumps, use physics (Hamiltonian dynamics) to propose moves. So the computation of the probability ratio is exactly the same, just the proposal generation differs.
+- Imagine parameters as positions in space and introduce **momentum** variables that help guide movement.
+- By simulating the dynamics (like a ball rolling across a landscape shaped by the posterior), HMC proposes distant points that still have high acceptance probability.
+- **Advantages over Metropolis**:
+	- Moves faster through correlated parameter spaces.
+	- Reduces random-walk behavior.
+	- Samples are less correlated, giving more “independent” draws.
+#### Diagnostics and Plotting
+Investigating MCMC through plotting is almost always a good idea. These plots can show is, if the algorithm (and each individual chain) converges to reasonable and similar distributions. 
+
+**Diagnosing with Trace Plots**
+- A **trace plot** shows how sampled values evolve across iterations.
+- For well-mixing chains:
+	- The trace looks like a “hairy caterpillar,” bouncing freely across the posterior region.
+- For poorly mixing chains:
+	- The trace sticks in one region, then slowly drifts—sign of strong autocorrelation.
+- Helps detect convergence issues and if multiple chains are exploring the same posterior region.
+
+**Diagnosing with Pair Plots**
+- A **pair plot** visualizes correlations among parameters in the posterior samples.
+- Shows 2D scatter plots of samples from two parameters at a time.
+- Useful for:
+	- Detecting **correlations** between parameters.
+	- Identifying “funnels” or “banana shapes” in the posterior geometry that can make sampling hard.
+- With HMC, pair plots often look cleaner compared to Metropolis because HMC handles correlations better.
+
+Important diagnostics to know:
+- Effective sample size. A good rule of thumb is 10% of the total sample size, i.e., 4 chains running for 1000 iterations leaves us with 4000 samples, of which half are thrown away as warmup; thus 200 is a minimum in this case.
+- Divergences mean that the geometry of the posterior is problematic, so HMC trajectories can’t follow it accurately, and the chain fails to explore all of the posterior. One common cause is that weak priors allow extreme parameter values, creating pathological shapes. Making priors more informative can sometimes help, but the standard fix is to reparameterize the model (e.g. non-centered parameterization) and/or adjust HMC tuning (like adapt_delta).
+- $\hat R$ compares within-chain variance to between-chain variance.
+	- If all chains mix well and explore the same posterior region, they should look like random draws from the same distribution. Then within-chain and between-chain variance will be nearly equal → $\hat R \approx 1$.
+	- Modern practices require $\hat R < 1.01$. If it’s above 1.01, the chains have not converged, meaning different chains are stuck in different regions, or not mixing well.
+	- What can we do? The easiest fix is to run longer chains. This allows more time to mix. But sometimes only reparameterizing the model can actually help.
+

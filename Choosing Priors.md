@@ -8,7 +8,7 @@ Let's say we define our model and our priors like this:
 - $b_A∼Normal(0,0.5)$
 - $σ∼Exponential(1)$
 
-We now draw 50 prior samples of $(a,b_A,σ)$ (no data influence yet). For each prior draw, we compute $μ$ at $A=−2$ and $A=2$ (we standardize the data in this case so this range is good enough). Because a straight line is fully determined by two points, connecting the two computed values for $μ$ at $A = -2$ and $A=2$ over the sampled values visualizes the prior over functions (prior predictive for the mean, not the outcomes). Here is an example:
+We now want to do something called *prior predictive checks.* We now draw 50 prior samples of $(a,b_A,σ)$ (no data influence yet). For each prior draw, we compute $μ$ at $A=−2$ and $A=2$ (we standardize the data in this case so this range is good enough). Because a straight line is fully determined by two points, connecting the two computed values for $μ$ at $A = -2$ and $A=2$ over the sampled values visualizes the prior over functions (prior predictive for the mean, not the outcomes). Here is an example:
 
 ``` r
 data(WaffleDivorce)

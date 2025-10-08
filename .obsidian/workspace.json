@@ -8,6 +8,34 @@
         "type": "tabs",
         "children": [
           {
+            "id": "e8f02ccbe8cf1cae",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Atlas/Data Science.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Data Science"
+            }
+          },
+          {
+            "id": "af58ebe06447ea43",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "binomial regressionm.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "binomial regressionm"
+            }
+          },
+          {
             "id": "b6885808cab136eb",
             "type": "leaf",
             "state": {
@@ -35,7 +63,8 @@
               "title": "Sampling"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -67,7 +96,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "cross validation",
+                "query": "simpson ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -156,13 +185,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Descriptive Statistics.md",
+                "file": "binomial regressionm.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Descriptive Statistics"
+              "title": "Outline of binomial regressionm"
             }
           },
           {
@@ -224,33 +253,37 @@
   },
   "active": "2019eff9c8be2d3d",
   "lastOpenFiles": [
-    "Notes/Evaluating Models.md",
-    "Notes/Information Criteria Methods for Model Selection.md",
-    "Notes/Using Information Theory to Select Models.md",
-    "Notes/Different Types of Hypothesis Tests.md",
-    "Notes/Hypothesis Testing Framework in Frequentist Inference.md",
-    "Notes/Inference.md",
     "Atlas/Data Science.md",
-    "Notes/Model Selection & Hyperparameter Tuning.md",
-    "Notes/Data Usage in Model Selection and Evaluation.md",
-    "Notes/Final Model Evaluation.md",
-    "Notes/Diagnosing Over- and Underfitting in Deep Learning Models.md",
-    "Notes/Hyperparameter Tuning & Overfitting Analysis in Python.md",
-    "Using Information Theory to Judge Models.md",
-    "Notes/Final Model Evaluation in Python.md",
-    "Notes/Model Robustness & Generalization.md",
-    "Notes/Ensemble Models.md",
-    "Notes/Regularization.md",
-    "Notes/Approaches for creating Classification Models.md",
-    "Untitled.base",
-    "Notes/Philosophies of Modeling.md",
+    "binomial regressionm.md",
+    "Notes/Multilevel & Hierarchical Models.md",
     "Notes/Descriptive Statistics.md",
-    "Notes/Causal Inference.md",
-    "Notes/Different Task Types for Mathematical Models.md",
-    "Notes/Prediction.md",
-    "Notes/Approaches for creating Regression Models.md",
-    "Notes/Using Directed Acyclic Graphs to Visualize Causality.md",
+    "Notes/Types of Models.md",
+    "Notes/The Hierarchy of Linear Models.md",
+    "old/Linear Mixed Models in R and SAS.md",
+    "old/Bayesian Inference.md",
+    "Notes/Distribution.md",
+    "Maximum Entropy.md",
+    "Notes/Using Information Theory to Select Models.md",
+    "Meta Analysis.md",
+    "old",
+    "Choosing Priors.md",
+    "Notes/Data Encoding.md",
+    "Notes/Data Preprocessing.md",
+    "Notes/Exploratory Data Analysis.md",
+    "Notes/Data Munging.md",
+    "Notes/Data Analysis in Python.md",
+    "Notes/Data.md",
     "Notes/Principles of Model Construction.md",
+    "Notes/Parameter Estimation for Probabilistic Models.md",
+    "Notes/Interaction Modelling.md",
+    "Images/Pasted image 20250922114436.png",
+    "Images/Pasted image 20250922113028.png",
+    "Literature/statistical_rethinking.pdf",
+    "Notes/Multiple Regression.md",
+    "Notes/Causal Inference.md",
+    "Notes/Using Directed Acyclic Graphs to Visualize Causality.md",
+    "Notes/Drug Development Cycle.md",
+    "Untitled.base",
     "Projects/Survival Analysis/Simulation and Survival Analysis.pdf",
     "Projects/Survival Analysis/Survival Analysis.pdf",
     "Images/plot.svg",
@@ -262,15 +295,11 @@
     "Images/Pasted image 20241120130819.png",
     "Untitled 1.base",
     "Literature/data_science_manual.pdf",
-    "Projects/Image Classification with CNN/Image Classification with CNN.py",
     "Untitled.canvas",
     "Diagram.svg",
-    "Excalidraw",
     "Untitled Diagram.svg",
     "Projects/Untitled Diagram.svg",
     "Images/Pasted image 20250325113138.png",
-    "Images/Pasted image 20250325113027.png",
-    "Images/Pasted image 20250325100633.png",
     "Untitled 1.canvas"
   ]
 }

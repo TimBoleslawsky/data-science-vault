@@ -1,0 +1,4 @@
+- importance of priors
+- two representations (aggregated and not)
+- relative and absolute effects
+- 

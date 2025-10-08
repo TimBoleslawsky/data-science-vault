@@ -20,3 +20,9 @@ $\text{WAIC} = -2 \,\text{lppd} + 2p_{\text{WAIC}}$, where $\text{lppd} = \sum_{
 - Uses full posterior samples $\theta^{(s)}$, not just point estimates.
 - Penalty term arises from variability in log-likelihood across posterior draws → effective complexity.
 - Fully Bayesian, asymptotically equivalent to LOO cross-validation.
+## Interpreting Information Criteria
+Now that we have these scores and more importantly difference between models we compare, what do we do with them? 
+
+Two important take-aways:
+- A model that predicts well may not reflect the true causal relationships. Therefore, model comparison for predictive accuracy is distinct from identifying causal effects. Predictive-focused models might include confounding variables that improve prediction but misrepresent causality.
+- Model comparison is a guide for choosing models that balance fit and generalizability. It informs which models are likely to predict well out-of-sample, but should be used in conjunction with domain knowledge and, when causal inference is the goal, careful causal modeling.

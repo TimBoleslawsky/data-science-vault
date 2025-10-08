@@ -9,10 +9,10 @@ A big part of data science is to mathematically represent real world problems. F
 
 Beyond modeling, data science also involves preparing data for analysis, ensuring ethical use, communicating findings effectively, and often generating new insights or questions through exploration.
 - [[Data Munging]]
-	- In my opinion, a big part of data munging is [[Exploratory Data Analysis|exploratory data analysis]]. It can be seen as informing the data cleaning process of data munging.
+	- In my opinion, a big part of data munging is [[Exploratory Data Analysis]]. It can be seen as informing the data cleaning process of data munging.
 - [[Data Preprocessing]], builds on top of cleaned data and focuses on preparing data specifically for modeling.
 - [[Data Visualization]]
-	- To convey our findings, we need [[Visualization Tools|visualization tools]].
+	- To convey our findings, we need [[Visualization Tools]].
 - There are a lot of reasons one might have ethical concerns when talking about data science. Here we discuss some of them: [[Ethics in Data Science]].
 ### Mathematical Modeling
 The inherent goal of mathematical modeling, statistical modeling, as well as machine learning, is to represent a underlying **data-generating process** via a model. In general (at least in probabilistic models) we have two frameworks to do this: Frequentist or Bayesian ([[Two Approaches to Statistics]]).

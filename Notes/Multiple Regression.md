@@ -4,5 +4,5 @@ First is obviously *multiple causation*. If we want to capture a phenomenon that
 
 Second is, that we can *control for confounders*, unmasked masked relationships, and argue about other causal pitfalls. More on these here: [[Causal Inference]]. 
 
-Third, *interactions*. The importance of one variable may depend upon another. For example, plants benefit from both light and water. But in the absence of either, the other is no benefit at all. Such interactions occur very often. Effective inference about one variable will often depend upon consideration of others.
+Third, *interactions*. The importance of one variable may depend upon another. For example, plants benefit from both light and water. But in the absence of either, the other is no benefit at all. Such interactions occur very often. Effective inference about one variable will often depend upon consideration of others. More on interactions, here: [[Interaction Modelling]]. 
 
