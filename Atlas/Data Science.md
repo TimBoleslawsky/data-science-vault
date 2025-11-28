@@ -20,19 +20,19 @@ The inherent goal of mathematical modeling, statistical modeling, as well as mac
 The basics of intuition behind the idea of mathematical modeling I describe here: [[Mathematical Modeling in Data Science]]. 
 
 When talking about mathematical modeling and the models we produce here, there are distinct dimensions to discuss, which are not always clearly separated. Here is my attempt: 
-1. **Model construction =** _What functional form or distributional assumptions define the model family?_    
+1. **Model types =** _What functional form or distributional assumptions define the model family?_ 
 2. **Learning paradigm =** _How does the model learn from data (parameter/structure estimation)?_
 3. **Task type =** _What mapping or structure is the model supposed to capture in the data?_
 	- **Method type** = Which algorithm or method is used to perform the task?
 4. **Use cases =** _For what purpose do we use the fitted model?_
-So a holistic description of a model could be: “I am using a **linear parametric model**, trained in a **supervised** way, on a **regression task**, implemented with the **linear regression** method, and I’m applying it for **inference**.” This would difine the model in the following way:
+So a holistic description of a model could be: “I am using a **linear parametric model**, trained in a **supervised** way, on a **regression task**, implemented with the **linear regression** method, and I’m applying it for **inference**.” This would define the model in the following way:
 - Model construction (form): _Linear model_ → specifies the function family (parametric, linear).
 - Learning paradigm (estimation method): _Supervised_ → parameters estimated from labeled input–output pairs.
 - Task type (mapping/structure to capture): _Regression_ → continuous target prediction.
 	- Method type (specific implementation): *Linear Regression*.
 - Use case (purpose of the fitted model): _Inference_ → interpret coefficients, quantify uncertainty, test hypotheses.
-#### Model Construction
-Model construction methods define how we specify function space/distributional assumptions to build our model, there exist three major principles of model construction: [[Principles of Model Construction]]. Based on how we construct our models, we can categorize them in a few different ways: [[Types of Models]]. 
+#### Model Types
+Model types define how we specify function space/distributional assumptions to build our model. Based on how we construct our models, we can categorize them in a few different ways: [[Types of Models]]. 
 #### Learning Paradigms
 The existing learning paradigms define how the model adapts to data. The *learning* here just means parameter and structure estimation. Here I introduce the different learning types: [[Learning Types in Machine Learning]].
 #### Task Types
@@ -50,26 +50,7 @@ Data science uses these models for **extracting insights from data and solving p
 - **Prediction:** We use the estimated parameters to **generate outcomes for new, unseen data points** (e.g., “Given weight = 80 kg, predict height”).
 So the heart of both is the same — modeling the data-generating distribution — but the **goal differs**: Inference = **understanding**; Prediction = **forecasting**. Together, they inform **decision-making**, the overarching purpose of most data science projects. 
 
-Besides the big two, inference and prediction, there exist a bunch of more niche use cases we also use models for. Here is a collection of some: 
-- Compression
-- ...
-### Data Science, Machine Learning and AI In Practice
-In this part I want to differentiate the topics Data Science, Machine Learning and AI. I want to look at what Machine Learning and AI are, how they differ from Data Science, and how Data Scientists can use Machine Learning and AI: [[Differentiating Data Science, Machine Learning and AI]].
-#### Applications of AI and Machine Learning
-A very popular use-case for data science and AI is recommendation systems. Recommendation systems try to solve the problem of personalizing the display policy on websites. More on that here: [[Recommendation Systems]].
-
-Another popular use-case for AI systems are dialogue systems. These systems aim to mimic human interaction to provide some service or conversation to a human user. More on this topic here: [[Dialogue Systems and AI]]
-
-Game playing focuses on the interaction between a player (AI) and some opponent (random, human, ...). AI can be taught a variety of games and this has been the focus in improving AI for quite some time. 
-- Here is an example using the [[Monte Carlo Tree Search and Game Playing|Monte Carlo Tree Search algorithm]]: [[Game Playing with MCTS and Deep Learning]]. 
-
-Retrieval-Augmented-Generation (RAG) is a popular technique used in artificial intelligence. The basics of what RAG is and how it works can be found here: [[Retrieval-Augmented Generation (RAG)]] and a demo use case using this obsidian vault can be found here: [[RAG for Obsidian]].
-##### Current Research & Application Areas for Machine Learning
-The applications above are mostly outdated to some extend or basic use cases which are being built upon today. In this note I discuss the current research & application ares for machine learning: [[Current Research & Application Areas for Machine Learning]].
-
-Besides the development of task-specific deep learning models, the most popular application of deep learning models (in the form of foundation models) is [[AI Engineering]].
-
-Right now most of the research done in this area is focused on model-centric AI. A promising new movement is called *data-centric AI*. More on that here: [[Data-Centric AI vs. Model-Centric AI]]
+These use cases are the foundation for more advanced and elaborate task types. For more on these task types, see here: [[Different Task Types for Mathematical Models]].
 ### Theoretical Knowledge in Computer Science
 Computer Science gives us as Data Scientists many relevant tools like databases, querying, algorithms, ... to achieve what we want to achieve as Data Scientists. Basics of computer science:
 - [[Computer Architecture]]
@@ -118,14 +99,14 @@ These concepts are less of a backbone and more serve more specific purposes. Non
 - [[Distances|Distances]] needed for geometry of data. These are important because they, for example, tell us how far apart and therefore how different two points are. This comes especially in handy when dealing with [[Approaches for creating Clustering Models|clustering]].
 - Linear algebra for vector/matrix representation of data and models.
 - Calculus / Optimization for learning models (gradient descent, likelihood maximization).
+- [[Foundations of Information Theory]] provide formal, mathematically provable limits on what compression, communication, and inference systems can achieve.
 #### Mathematical Thinking
 As discussed here, [[Data Science, a Definition]], the purpose of data science is to tackle real-world problems. Mathematical thinking is the ability to formulate real-world problems and interpret the results of mathematical solutions in a meaningful way. It is not about solving mathematical problem XY, but how we arrive at that problem from a non-mathematical problem. That's why it is so important for data scientists to be able to apply mathematical thinking. The basics of mathematical thinking are described here: [[Mathematical Thinking]]
 
 Some insights and lessons learned form the course *Applied Mathematical Thinking* are summarized in this report: [[The Mathematical Thinking Handbook for Data Scientists]].
 ## Programming
 ### Python
-#### Basics
-The basics of Python, which are discussed in this chapter, are not specific to the domain of Data Science and are useful beyond that scope.
+Python is the main language used by data scientists. It provides a wide variety of supported libraries to do basically any analysis, inference, or machine learning task. The basics of Python, which are discussed in this chapter, are not specific to the domain of Data Science and are useful beyond that scope.
 - [[Data Structures in Python]]
 	- [[Advanced Data Structures in Python]]
 - [[Different Method Types in Python]]
@@ -135,43 +116,25 @@ The basics of Python, which are discussed in this chapter, are not specific to t
 - [[Inheritance in Python]]
 - [[The Basic Principles of OOP in Python]]
 - [[Pointers in Python]]
-#### Data Science in Python
-In the chapter [[Data Science#Principles of Data Science]], we discuss the basic principles of Data Science. Especially for implementing algorithms and creating models, we use Python. Some use cases and examples are listed below:
 
-**Basics Steps of the Data Science Process in Python**
-- [[Transformation and Scaling in Python]]
-- [[Visualizing Data in Python]]
-- [[Data Analysis in Python]] 
-- [[The Data Science Process in Python]]
-
-**Inference in Python**
-- [[Hypothesis Testing in Python]] 
-
-**Machine Learning in Python**
-- [[Regression in Python]]
-- [[Decision Tree Classification in Python]]
-- [[Final Model Evaluation in Python]]
-- [[Hyperparameter Tuning & Overfitting Analysis in Python]]
-- [[Simple Machine Learning Task in Python]]
-- [[Ensemble Models in Python]]
-
-**Concepts of Computer Science in Python**
-- [[Parallel Programming in Python]]
+Furthermore, here are two extensive examples of machine learning tasks implemented in Python: [[The Data Science Process in Python]], [[Simple Machine Learning Task in Python]].
 ### R (and SAS)
-R and SAS are primarily used in research and bioinformatics. Here I want to collect a few examples of how statistical ideas can be represented in R and SAS:
-- Basic hypothesis testing and data analysis in R: [[Data Analysis in R.pdf]]
-- [[Linear Mixed Models in R and SAS]]
-- [[Meta Analysis in R]]
-- Survival Analysis in R: [[Survival Analysis.pdf]]
-	- Simulation and Survival Analysis in R: [[Simulation and Survival Analysis.pdf]]
+R and SAS are primarily used in research and bioinformatics. Examples of how to do inference and data analysis with R can be seen throughout this vault. 
 ### UNIX
 UNIX is an integral part of working with Python or any Data Science programming language. Why that is, and what it can do is discussed here: [[Why use UNIX as a Data Scientist?]]
 #### Theory
 First let's discuss what UNIX it and what it does: [[Basics of UNIX]]. We can create scripts in UNIX by using [[Shell Scripts]].
 
 As discussed here [[Motivation for Computational Methods for Large Scale Data]], [[Notes/Parallel Computing|parallel computing]] is a necessary technique for many modern systems. Here is how we can implement parallel computing: [[SLURM]].
-## Use Cases
-In this chapter I want to document various the different fields where I have knowledge of the application of data science. 
+## Research & Applications
+In this chapter I want to document how we do research as data scientist/ software engineers and how important theories described above connect to research and practice. 
+### Empirical Software Engineering Research
+The basics for how we do research and what research is within a software engineering context is discussed here: [[Software Engineering Research]].
+### Machine Learning and AI In Practice
+In this part I want to differentiate the topics Data Science, Machine Learning and AI. I want to look at what Machine Learning and AI are, how they differ from Data Science, and what applications use ML and AI today: [[Differentiating Data Science, Machine Learning and AI]].
+
+Right now most of the research done in this area is focused on model-centric AI. A promising new movement is called *data-centric AI*. More on that here: 
+[[Data-Centric AI vs. Model-Centric AI]].
 ### Data Science in Biomedicine
 I will mainly focus on the context of drug development when talking about biomedicine (more specifically, drug development at AstraZeneca). 
 

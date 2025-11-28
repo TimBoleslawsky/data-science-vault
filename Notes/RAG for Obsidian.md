@@ -1,5 +1,4 @@
-## Introduction
-With [[Retrieval-Augmented Generation (RAG)]], we can build a ChatGPT like chat that works on our own Obsidian markdown files. This means that as input for this LLM we use the files in this vault. 
+With [[Retrieval-Augmented Generation (RAG)]], we can build a ChatGPT like chats that works on our own Obsidian markdown files. This means that as input for this LLM we use the files in this vault. 
 ## Building the RAG
 There are two steps to building the RAG: 
 1. First, we have to start a local server in LM-Studio to load the two models. The models we need are one for text completion and one for embedding your notes to be used in a vector store. This looks like this:                                                                                                          ![[Pasted image 20241211111138.png|400]]

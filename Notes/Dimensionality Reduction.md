@@ -1,0 +1,5 @@
+The basic idea of dimensionality reduction is to learn a continuous low-dimensional embedding that preserves essential structure. The question we want to answer is: "How can I summarize or compress the data while retaining structure?" So the goal is to learn a lower-dimensional representation $Z = h(X)$ capturing the essential structure of $X$. Often defined to minimize reconstruction error $\|X - f(h(X))\|$ or preserve certain properties (variance, topology, distances).
+
+This can seem similar to clustering and that is because it is. Many dimensionality reduction methods are used as a preprocessing step for clustering. And some methods attempt to do both simultaneously. So both are unsupervised and often share techniques (e.g., PCA, autoencoders), but their objective functions and outputs differ.
+- Clustering = discrete latent structure (categorical assignments).
+- Dimensionality reduction = continuous latent structure (coordinates in latent space). 

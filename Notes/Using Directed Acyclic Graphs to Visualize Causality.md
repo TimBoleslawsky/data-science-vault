@@ -33,7 +33,7 @@ This is easily done: For each path:
 - If it passes through a pipe (mediator), do _not_ condition.
 - If it passes through a collider (or descendant), do _not_ condition.
 
-Important, it is important, to evaluate if we want the total or the direct effect!
+Important: it is important, to evaluate if we want the total or the direct effect!
 ## Conditional Independence and Markov Equivalence
 **Conditional independence**: Two variables are conditionally independent if their association disappears once you control for (condition on) another variable.
 **Markov equivalence**: Two DAGs are Markov equivalent if they imply _exactly the same set_ of conditional independencies.

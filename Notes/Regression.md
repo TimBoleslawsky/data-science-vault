@@ -1,0 +1,6 @@
+In mathematical modeling, **regression** is a statistical technique used to describe the relationship between one dependent variable (the outcome you want to predict or explain) and one or more independent variables (the inputs or predictors). The goal is to approximate a continuous mapping $f: \mathcal{X} \to \mathbb{R}$. Mathematically this means: learn $\hat{f}$ such that $\hat{f}(X) \approx Y$ and some loss $L(Y, \hat{f}(X))$ is minimized (e.g., mean squared error).
+
+This key idea can be extended to more complex tasks:
+- **Simple regression**: Models the relationship between one predictor $x$ and one outcome $y$. For example, linear regression assumes: $y \approx \beta_0 + \beta_1 x$    
+- **Multiple regression**: Extends this to several predictors $x_1, x_2, \ldots, x_p$: $y \approx \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_p x_p$. More on the benefits here: [[Multiple Regression]].
+- **Nonlinear regression**: The relationship is not restricted to straight lines, e.g. exponential, logistic, or polynomial models.

@@ -4,3 +4,5 @@ The hypothesis testing framework used in frequentist inference described here
 - To perform hypothesis tests we adhere to the [[Hypothesis Testing Process|hypothesis testing process]].
 - And to evaluate hypothesis tests we use the [[Metrics of Hypothesis Tests|metrics of hypothesis tests]].
 - An important part of performing hypothesis tests, especially in the case of [[Clinical Trails|clinical trails]], is [[Sample Size Calculation|sample size calculation]].
+
+Here is an example of how to do hypothesis testing in Python: [[Hypothesis Testing in Python]].

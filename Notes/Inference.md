@@ -68,5 +68,3 @@ But the **meaning and interpretation** of each is different between the two fram
 3. Probability / Hypothesis-based estimates
 	- Bayesian (Posterior probabilities): You can compute the probability of hypotheses directly; no formal hypothesis testing "ritual" is necessary. Example: $P(\mu > 4500 \mid \text{data}) = 0.85$ => “Given the data and prior, there is an 85% probability that the average Gentoo mass exceeds 4500 g”.
 	- Frequentist (Sample probabilities): You cannot assign probability to hypotheses; instead, you compute the probability of the data under a null hypothesis. Example: Testing $H_0: \mu = 4500$: $p = 0.04$ means “If $μ = 4500$ were true, data this extreme or more would occur 4% of the time.”
-## Meta Analysis
-When we want to infer some knowledge from more than one source (study, article, ...) we can use meta analysis. Here is how we do that: [[Meta Analysis]]

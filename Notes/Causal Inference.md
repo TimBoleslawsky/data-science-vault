@@ -4,6 +4,8 @@ Contrary to [[Inference#Descriptive / Statistical Inference]] and [[Inference#As
 - The goal isn’t just prediction, but counterfactual reasoning: _what if X had been different?_
 => In the end the "result" of causal inference is an overview over the relationships of the attributes in the model and some information about which attributes to account for in the model, depending on our goal with the model!
 
+An example of how to do Bayesian causal inference can be found here: [[Bayesian_causal_inference.rs]].
+
 Below I introduce the important concepts of causality. To visualize causality, we use directed acyclic graphs: [[Using Directed Acyclic Graphs to Visualize Causality]].
 ## Causal vs. Spurious Associations
 A *causal association* is an association between $X$ and $Y$ that reflects a _real causal path_ in the DAG (e.g., $X → Y$, or $X → Z → Y$).
@@ -108,7 +110,6 @@ When comparing multicollinearity and colliders, we have a very similar looking s
 - If $X$ and $Y$ are correlated → multicollinearity (conditioning doesn’t induce anything new, but makes the estimates unstable).
 ## Plots to Analyze Causal Relationships
 There are two main ways to analyze causal relationships using plots in R. Here are the two examples: 
-To analyze the relationship between $M$ and $A$ further we have three options: 
 ### Predictor Residual Plots
 This plot shows the outcome against a predictor that has been “purged” of the influence of other predictors. This lets us see the unique association between a predictor and the outcome.
 

@@ -4,67 +4,81 @@
     "type": "split",
     "children": [
       {
-        "id": "d8be9bae7b03e443",
+        "id": "2bc6301e8ac43cf8",
         "type": "tabs",
         "children": [
           {
-            "id": "e8f02ccbe8cf1cae",
+            "id": "f61357628634006b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Atlas/Data Science.md",
+                "file": "Notes/Different Task Types for Mathematical Models.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Data Science"
+              "title": "Different Task Types for Mathematical Models"
             }
           },
           {
-            "id": "af58ebe06447ea43",
+            "id": "7cc07f8be69d316c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "binomial regressionm.md",
+                "file": "Notes/Deep Learning Design Patterns.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "binomial regressionm"
+              "title": "Deep Learning Design Patterns"
             }
           },
           {
-            "id": "b6885808cab136eb",
+            "id": "52418eb3db238ff3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Descriptive Statistics.md",
+                "file": "Notes/Key Architectures in Deep Learning.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Descriptive Statistics"
+              "title": "Key Architectures in Deep Learning"
             }
           },
           {
-            "id": "c13d47d5b693fa8f",
+            "id": "c26fd31cef948ef1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Sampling.md",
+                "file": "Notes/Foundations of Information Theory.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sampling"
+              "title": "Foundations of Information Theory"
+            }
+          },
+          {
+            "id": "700b9fef6af82897",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Neural Compression.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Neural Compression"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -96,7 +110,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "simpson ",
+                "query": "autoregressi",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -137,7 +151,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Descriptive Statistics.md",
+                "file": "Neural Compression.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +161,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Descriptive Statistics"
+              "title": "Backlinks for Neural Compression"
             }
           },
           {
@@ -156,12 +170,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Descriptive Statistics.md",
+                "file": "Neural Compression.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Descriptive Statistics"
+              "title": "Outgoing links from Neural Compression"
             }
           },
           {
@@ -185,13 +199,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "binomial regressionm.md",
+                "file": "Neural Compression.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of binomial regressionm"
+              "title": "Outline of Neural Compression"
             }
           },
           {
@@ -253,53 +267,53 @@
   },
   "active": "2019eff9c8be2d3d",
   "lastOpenFiles": [
+    "Notes/Deep Learning Design Patterns.md",
+    "Notes/Different Task Types for Mathematical Models.md",
+    "Neural Compression.md",
+    "Notes/Foundations of Information Theory.md",
+    "Notes/Key Architectures in Deep Learning.md",
+    "Deep learning topics.md",
+    "Notes/Supervised Fine-Tuning.md",
+    "Notes/RAG for Obsidian.md",
+    "Notes/Retrieval-Augmented Generation (RAG).md",
+    "Notes/Deep Learning Models.md",
+    "Notes/Different Method Types for Mathematical Models.md",
     "Atlas/Data Science.md",
-    "binomial regressionm.md",
-    "Notes/Multilevel & Hierarchical Models.md",
-    "Notes/Descriptive Statistics.md",
+    "Notes/Learning Types in Machine Learning.md",
+    "Notes/Dimensionality Reduction.md",
+    "Notes/Natural Language Processing.md",
+    "Notes/Differentiating Data Science, Machine Learning and AI.md",
     "Notes/Types of Models.md",
-    "Notes/The Hierarchy of Linear Models.md",
-    "old/Linear Mixed Models in R and SAS.md",
-    "old/Bayesian Inference.md",
-    "Notes/Distribution.md",
-    "Maximum Entropy.md",
+    "Notes/Deep Learning Paradigms and Building Blocks.md",
+    "Notes/Basic Structure of Neural Networks.md",
+    "Notes/The Learning Process in Neural Networks.md",
+    "Notes/Deep Learning Project Workflow.md",
+    "Notes/Cross-Domain AI Paradigms.md",
     "Notes/Using Information Theory to Select Models.md",
-    "Meta Analysis.md",
-    "old",
-    "Choosing Priors.md",
-    "Notes/Data Encoding.md",
-    "Notes/Data Preprocessing.md",
-    "Notes/Exploratory Data Analysis.md",
-    "Notes/Data Munging.md",
-    "Notes/Data Analysis in Python.md",
-    "Notes/Data.md",
-    "Notes/Principles of Model Construction.md",
     "Notes/Parameter Estimation for Probabilistic Models.md",
-    "Notes/Interaction Modelling.md",
+    "Notes/Data Usage in Model Selection and Evaluation.md",
+    "Notes/Principles of Model Construction.md",
+    "Images/olmo2_overview.svg",
+    "Projects/The Data Science Process in Python/The Data Science Process in Python - Script.pdf",
+    "Projects/The Data Science Process in Python/The Data Science Process in Python - Report.pdf",
+    "Projects/Data Analysis in R/Data Analysis in R.pdf",
+    "Projects/Survival Analysis/Simulation and Survival Analysis.pdf",
+    "Projects/Survival Analysis/Survival Analysis.pdf",
+    "Projects/Bayesian Statistics/Bayesian_causal_inference.rs",
+    "Projects/Bayesian Statistics/posterior_predictive_distribution.ts",
+    "Images/Pasted image 20251010093558.png",
+    "old",
     "Images/Pasted image 20250922114436.png",
     "Images/Pasted image 20250922113028.png",
     "Literature/statistical_rethinking.pdf",
-    "Notes/Multiple Regression.md",
-    "Notes/Causal Inference.md",
-    "Notes/Using Directed Acyclic Graphs to Visualize Causality.md",
-    "Notes/Drug Development Cycle.md",
     "Untitled.base",
-    "Projects/Survival Analysis/Simulation and Survival Analysis.pdf",
-    "Projects/Survival Analysis/Survival Analysis.pdf",
     "Images/plot.svg",
-    "Projects/Bayesian Statistics/bayesian_regression.rs",
-    "Projects/Bayesian Statistics/posterior_predictive_distribution.ts",
-    "Projects/Bayesian Statistics",
     "Images/Pasted image 20250914134303.png",
     "Pasted image 20250914130747.png",
     "Images/Pasted image 20241120130819.png",
-    "Untitled 1.base",
-    "Literature/data_science_manual.pdf",
     "Untitled.canvas",
     "Diagram.svg",
     "Untitled Diagram.svg",
-    "Projects/Untitled Diagram.svg",
-    "Images/Pasted image 20250325113138.png",
     "Untitled 1.canvas"
   ]
 }

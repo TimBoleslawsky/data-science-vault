@@ -30,3 +30,19 @@ A **flat model** is one where there is only one problem that is being solved, wi
 **Frequentist models**: Parameters are fixed but unknown; uncertainty comes from imaginary repeated sampling; probability describes long-run frequencies of data.
 **Bayesian models**: Parameters are treated as random variables with probability distributions; uncertainty reflects incomplete information; probability is a measure of plausibility.
 => More on this difference here: [[Two Approaches to Statistics]].
+## Generative vs. Discriminative Models
+Generative models explicitly model how data is produced. They learn the joint distribution: $p(X, Y)$ or  $p(X)$, and can both classify and generate new samples. Examples: Naive Bayes, HMMs, LDA, Gaussian mixtures, autoregressive LMs (GPT), VAEs, GANs, diffusion models.
+
+Discriminative models learn only the conditional distribution: $p(Y \mid X)$, or a direct decision boundary $f: X \to Y$. They focus solely on prediction and do not model how the data was generated. Examples: Logistic regression, neural classifiers (MLP/CNN/Transformer).
+
+=> **Key difference:** Generative = model the data _and_ the label process vs. Discriminative = model only the mapping from inputs to labels.
+## Parametric vs. Non-Parametric Models
+Parametric models assume a _fixed_ functional form with a _fixed_ number of parameters, regardless of how much data is available. Learning consists of estimating these parameters.
+
+Examples: Linear/logistic regression, Naive Bayes, fixed-k Gaussian mixtures.
+
+Non-parametric models make _minimal assumptions_ about functional form. Their effective number of parameters grows with the dataset, allowing increasing flexibility as more data becomes available.
+
+Examples: k-NN, decision trees, kernel density estimation, Gaussian processes.
+
+=> Key difference: Parametric = fixed complexity determined before seeing the data vs. Non-parametric = flexible complexity that grows with the data.

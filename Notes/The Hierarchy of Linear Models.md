@@ -37,6 +37,8 @@ There are two important distinctions here when comparing it against the "simple"
 To decide which distributions gives the most appropriate model for our specific likelihood, we can use *maximum entropy*. The intuition behind maximum entropy is simple: The distribution that can happen the most ways is also the distribution with the biggest information entropy (see [[Using Information Theory to Select Models|here]] for more on that). Call this distribution the maximum entropy distribution. 
 
 We want to use this maximum entropy distribution because: The distribution with the biggest entropy is the most conservative distribution that obeys its constraints!
+
+GLM's enable us, among other things, to model discrete data. This is very useful in a lot of real world problems, but has its own challenges. These challenges are discussed here: [[Modelling Discrete Data]].
 ### Gaussian Linear Model (special case of GLM)
 A GLM where the outcome is Gaussian and the link is the identity, i.e. ordinary regression. It assumes constant variance and normally distributed errors.
 
@@ -55,6 +57,8 @@ m_gauss <- ulam(
 )
 ```
 
+### Mixture Models
+Whenever there are different causes for the same observation, then a *mixture model* may be useful. A mixture model uses more than one simple probability distribution to model a mixture of causes. These mixture models can be seen as a preliminary for hierarchical models (often solve similar problems). More on mixture models here: [[Mixture Models]].
 ## Multilevel (Hierarchical) Models
 These extend GLMs by introducing varying (random) effects, so parameters can differ across groups but still share information through partial pooling. They are more generative and reduce overfitting.
 

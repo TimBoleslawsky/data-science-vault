@@ -1,4 +1,6 @@
-Data visualization is a great tool for exploratory data analysis, error detection, and communication, ... We want to keep six basic principles in mind when it comes to data visualization. For visualization tools look here: [[Visualization Tools]]
+Data visualization is a great tool for exploratory data analysis, error detection, and communication, ... We want to keep six basic principles in mind when it comes to data visualization. For visualization tools look here: [[Visualization Tools]].
+
+An example of how to do data visualization in Python can be found here: [[Visualizing Data in Python]].
 ## Maximizing Data-Ink Ratio / Minimizing Chartjunk
 The Data-Ink Ratio is defined by the *Data-Ink* (so the part of the graphic that actually represents the data) in relation to the *total ink used in graphic*. We want to let the data do the talking and minimize unnecessary ink. 
 ## Minimizing the Lie Factor

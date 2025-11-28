@@ -1,12 +1,31 @@
-**Data Science**: An interdisciplinary field that combines statistical analysis, programming, domain knowledge, and data processing to *extract meaningful insights and patterns from raw data*.
-=> **Goal**: Understand and analyze real-world phenomena through data to inform decision-making or build predictive models.
+The difference between data science and AI can be very messy. But in it's most simplistic way, the difference is in intent. AI aims to create systems based on action and autonomy while data science aims to explain and understand. The difficulty in distinction lies in the fact that the underlying principles are nearly identical!
+## The Hierarchy of AI Use-Cases
+**Artificial Intelligence (AI)** → The overarching _goal_ of building systems that emulate human intelligence to reason, learn, and act autonomously.
 
-**Artificial Intelligence**: AI is the broadest concept that focuses on *creating systems capable of performing tasks that typically require human intelligence*. This includes reasoning, learning, problem-solving, and understanding language.
-=> **Goal**: Mimic or simulate human intelligence to automate tasks, make decisions, or solve complex problems.
+1. **Foundational Methods** → The _algorithmic and theoretical building blocks_ for intelligence. They define _how_ AI systems learn, optimize, and reason.
+	- **Machine Learning (ML)** — learning from data.
+	- **Optimization** — improving parameters toward an objective.
+	- **Knowledge Representation & Reasoning (KRR)** — logical and symbolic reasoning.
+	- **Planning and Strategies (including Reinforcement Learning)** — decision making over time.
 
-**Machine Learning**: A subset of AI that focuses on algorithms and models that allow computers to *learn from and make predictions or decisions based on data*, without being explicitly programmed for every specific task. This is how ML is different from data analysis. We have an automated process and the computer program is learnt from data. 
-=> **Goal**: Enable systems to improve their performance over time with experience (data).
-## How Do They Relate?
-Basically it comes down to this: 
-- AI encompasses ML, which is one of its primary techniques!
-- Data Science often uses ML as a tool for model creation but is not limited to it!
+> [[Inference]] and [[Prediction]] are _core operations_ **within** these foundational methods, especially within ML and probabilistic reasoning that bridge mathematical models and applications.
+
+2. **Cross-Domain Paradigms** → Frameworks describing _how foundational methods are organized or scaled_ across domains. They define _patterns of usage_ rather than new goals or domains. Examples:
+	- Foundation Models
+	- AI Engineering
+	- Explainable AI (XAI)
+	More details, here: [[Cross-Domain AI Paradigms]].
+
+3. **Problem-Specific Fields** → Domains that apply foundational methods to _particular modalities of data_ or _specific perception problems_. Examples:
+	- Natural Language Processing (NLP): Natural language processing is the set of methods for making human language accessible to computers. More on that here: [[Natural Language Processing]].
+	- Computer Vision (CV): Image/video understanding, object detection, segmentation, generative models, neural compression of images/video.
+	- Speech & Audio Processing: Speech recognition, synthesis, audio classification, compression (lossy/lossless neural codecs).
+	- Reinforcement Learning / Control: Autonomous decision-making, robotics, games, planning.
+
+4.  **Applications** → Concrete, end-user solutions that _operationalize AI fields and paradigms_ for specific purposes. Examples:
+	- Recommendation systems try to solve the problem of personalizing the display policy on websites. More on that here: [[Recommendation Systems]].
+	- Dialogue Systems: These systems aim to mimic human interaction to provide some service or conversation to a human user. More on this topic here: [[Dialogue Systems and AI]].
+	- Autonomous Systems
+	- Game-Playing Agents: Game playing focuses on the interaction between a player (AI) and some opponent (random, human, ...). AI can be taught a variety of games and this has been the focus in improving AI for quite some time. 
+		- Here is an example using the [[Monte Carlo Tree Search and Game Playing|Monte Carlo Tree Search algorithm]]: [[Game Playing with MCTS and Deep Learning]]. 
+

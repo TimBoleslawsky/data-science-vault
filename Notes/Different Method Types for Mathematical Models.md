@@ -4,7 +4,7 @@ Machine learning methods are specific implementations of parameter estimation (o
 *"In a regression task, the linear regression method implements an optimization procedure to estimate parameters that map features to a continuous target. Other methods, like random forests or neural networks, implement parameter/function estimation differently but for the same underlying task.”*
 
 So here is where we would differentiate between statistical methods and machine learning methods. I will not do such a distinction, because in the end, both methods just try to implement a specific model task. Here are a bunch of approaches categorized by task:
--  [[Approaches for creating Regression Models]]
+- [[Approaches for creating Regression Models]]
 - [[Approaches for creating Classification Models]]
 - [[Approaches for creating Clustering Models]]
 

@@ -18,7 +18,7 @@ In the above example, we also assume, that $\sigma$ is known. If we have multipl
 
 An additional important note is, that we usually minimize for the **negative log likelihood**. This is mainly so the calculations are easier (product => sums) and for standardization. This leads to the objective function: $\hat{θ}_{MLE} = arg min −logL(θ|data)$.
 ## Bayesian Parameter Estimation Techniques
-Parameter estimation in the Bayesian sense is a little more complex. When talking about the parameter estimation in the Bayesian sense, we usually mean the [[Likelihood and Posterior Distributions|posterior distribution]]. This posterior distribution can be calculated analytically by multiplying the priors with the likelihood and normalizing it with the denomintor, but this is usually not feasible in the real world. Here is why:
+Parameter estimation in the Bayesian sense is a little more complex. When talking about the parameter estimation in the Bayesian sense, we usually mean the [[Likelihood and Posterior Distributions|posterior distribution]]. This posterior distribution can be calculated analytically by multiplying the priors with the likelihood and normalizing it with the denominator, but this is usually not feasible in the real world. Here is why:
 - The denominator $P(X)$ is just the probability of seeing the observed data, under the entire model.
 - Since the model allows many possible parameter values $\theta$, you must average (integrate) the likelihood across all of them, weighted by how plausible each $\theta$ was a priori. That's how we get => $\int P(X \mid \theta) P(\theta) d\theta$ (for continues variables).
 - In most realistic models, that integral is **not analytically tractable**!
@@ -50,6 +50,16 @@ Here is how it works:
 => Problem: Only accurate if the true posterior is close to Gaussian and needs enough data points (common frequentist problem).
 ### Markov Chain Monte Carlo (MCMC)
 The idea here is to simulate *chains* that wanders through parameter space, spending time in regions proportional to posterior probability. Collecting samples from the chain approximates the posterior. 
+
+The basic intuition behind all MCMC algorithms, is, that calculating actual probabilities is often infeasible (because of the denominator in the Bayes' rule). E.g.:
+
+$P(Z,\theta,\phi \mid w) = \frac{P(Z, w, \theta, \phi)}{P(w)}$, $P(w)$ is way to large to calculate. 
+
+so we look to *relative probabilities*. MCMC algorithms never calculate exact probabilities, but always see, if a probability of state a is better or worse than probability of state b. E.g.:
+
+$\frac{P(Z^{(1)},\theta^{(1)},\phi^{(1)} \mid w)} {P(Z^{(2)},\theta^{(2)},\phi^{(2)} \mid w)} = \frac{P(Z^{(1)}, w, \theta^{(1)}, \phi^{(1)})} {P(Z^{(2)}, w, \theta^{(2)}, \phi^{(2)})}$, this gives us the comparison of probabilities between two states.
+
+This leads to two things: (1) We can spend more time in high probable areas of the posterior distribution, because we can compare each new state to the old one. (2) Therefore the behaviour automatically normalizes, even if we do not know the denominator. 
 #### The Metropolis Algorithm
 The Metropolis algorithm serves as the foundation of Markov Chain Monte Carlo (MCMC). The idea is, that instead of calculating the full posterior distribution directly, we generate samples that approximate it. Here is how it works:
 - **Procedure**:
@@ -73,6 +83,27 @@ Hamilton Monte Carlo or HMC is introduced as a solution to Metropolis inefficien
 	- Moves faster through correlated parameter spaces.
 	- Reduces random-walk behavior.
 	- Samples are less correlated, giving more “independent” draws.
+#### Gibbs Sampling
+Gibbs sampling is an alternative MCMC algorithm to HCM. Here is how it differs from Hamilton Monte Carlo.
+
+Gibbs sampling works by **iteratively sampling each variable from its conditional distribution** given the current values of all other variables.
+
+**Procedure:**
+1. Initialize all variables $\theta_1, \theta_2, …, \theta_d$ to some values.
+2. For each iteration:
+	- Sample $\theta_1$ from $P(\theta_1 \mid \theta_2, …, \theta_d, X)$
+	- Sample $\theta_2$ from $P(\theta_2 \mid \theta_1, \theta_3, …, \theta_d, X)$
+	- Continue for all variables $\theta_d$.
+3. Repeat until convergence; the collected samples approximate the **joint posterior distribution**.
+
+=> Both HCM and Gibbs sampling are MCMC methods, so they solve the same **posterior sampling problem**, but Gibbs holds all but one parameter of the distribution fixed so it moves *coordinate-wise*. 
+
+**Collapsed Gibbs Sampling**: In many Bayesian models (e.g., LDA), directly sampling all parameters can be inefficient or unnecessary. Some parameters can be **integrated out** (collapsed) to reduce dimensionality.
+
+**How it works:**
+1. Integrate out parameters like $\theta$ and $\phi$ in LDA.
+2. Sample only the **latent assignments** $z$ (e.g., topic assignments for words).
+3. Posterior distributions of the collapsed variables can be computed **directly from counts**, improving convergence and mixing.
 #### Diagnostics and Plotting
 Investigating MCMC through plotting is almost always a good idea. These plots can show is, if the algorithm (and each individual chain) converges to reasonable and similar distributions. 
 

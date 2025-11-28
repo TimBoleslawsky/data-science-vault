@@ -38,7 +38,7 @@ At each iteration (or **epoch**) of training, the model follows these steps:
    - The loss function $\mathcal{L}(y, \hat{y})$ quantifies the error.
 3. Backpropagation (Computing Gradients)
    - To minimize the loss, we compute how much each weight $W$ and bias $b$ contributes to the loss:
-	   - First we compute the gradient for the output layer by diffentiating the loss function. 
+	   - First we compute the gradient for the output layer by differentiating the loss function. 
 	   - Then, using the chain rule, we use each gradient from the previous layer to compute the gradients of the remaining layers. => This tells us which direction (increase or decrease) each weight should move to reduce the loss.
 4. Weight Update (Using an Optimizer)
    - Once gradients are computed, an optimizer updates the weights. 

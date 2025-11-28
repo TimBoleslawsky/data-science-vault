@@ -1,3 +1,12 @@
+## MLPs
+A Multilayer Perceptron (MLP), also known as a Feedforward Neural Network (FNN), is the simplest form of a deep learning model. It consists of layers of neurons where each neuron in one layer is connected to every neuron in the next layer — hence the term _fully connected_.
+
+An MLP is composed of:
+- Input layer – receives the raw input features (e.g., pixel values, measurements).
+- Hidden layers – perform transformations on the input using learned weights and nonlinear activation functions.
+- Output layer – produces the final prediction (e.g., class probabilities).
+
+MLPs work well for tabular or low-dimensional data, but they do not scale efficiently to structured data like images or sequences. They ignore spatial or temporal relationships because every input is treated as independent — motivating architectures like CNNs and RNNs.
 ## Convolutional Neural Networks
 CNNs are designed for grid-like data (e.g., images) to detect local patterns (edges, textures, shapes). Instead of flattening an image, CNNs preserve its spatial structure by using filters (kernels) that scan through small patches of the image. For an example of how to do image classification using CNNs, look here [[Image Classification with CNN.py]]. 
 
@@ -28,33 +37,47 @@ The basic architecture of CNNs follows this principle:
   => These two follow each other for how many layers we want.
 - Fully connected layer, for the final classification task (like an FNN layer).
 ## Recurrent Neural Networks
-We can think of RNNs as FNNs reused across time steps, with shared weights. That reuse is what gives RNNs the ability to learn temporal dependencies. Therefore they are especially relevant in time series analysis. TBD
-## **1. Predictive Models (input → Output mapping)**
+A recurrent neural network (RNN) is any network that contains a cycle within its network connections, meaning that the value of some unit is directly, or indirectly, dependent on its own earlier outputs as an input.
 
-**Goal:** learn statistical patterns to make predictions.
+We can think of RNNs as FNNs reused across time steps, with shared weights. That reuse is what gives RNNs the ability to learn temporal dependencies. Therefore they are especially relevant in time series analysis.
+### Basic Architecture
+An RNN augments a regular feedforward layer with a _recurrent connection_ from the previous hidden state. At time step t the basic equations are:
+- $h_t = g(U h_{t-1} + W x_t)$
+- $y_t = f(V h_t)$
+where:
+- $x_t$ — input vector at time t (usually an embedding).
+- $h_t\in\mathbb{R}^{d_h}$ — hidden state (the “memory” at time t).
+- $y_t$ — output (e.g. logits or softmax probabilities).
+- $W\in\mathbb{R}^{d_h\times d_{in}}, U\in\mathbb{R}^{d_h\times d_h}, V\in\mathbb{R}^{d_{out}\times d_h}$ are weight matrices **shared across time**.
+- $g(\cdot)$ is a nonlinearity (tanh, ReLU, …); $f(\cdot)$ often includes softmax for classification.
 
-- **Base architectures:**
-	
-	- MLPs
-		
-	- CNNs (+ ResNet, U-Net, RCNN)
-		
-	- RNNs (+ LSTM, GRU)
-		
-	- Transformers (+ BERT, GPT [in predictive contexts], ViT)
+Why this matters: the hidden state $h_t$ is a learned vector summary of everything the model has “seen” so far — in principle it can carry information from arbitrarily far back in the sequence (unlike n-gram or fixed-window models). The recurrence is exactly the mechanism that lets the network propagate information forward across time.
 
----
+In the training of RNNs we use something called *backpropagation through time (BPTT)*. This is conceptually very similar to "normal" backpropagation, but instead of going down and up the layers, we go down and up the time steps. We compute forward through all time steps, accumulate losses (e.g. cross-entropy at each step or only at final step for sequence classification) aka *forward pass*, then backpropagate errors backwards through time to get gradients for the shared matrices W, U, V aka *backward pass*.
 
-## **2. Generative Models (learn Distribution, Create data)**
-
-**Goal:** capture data distribution and generate new samples.
-
-- **Base architectures inside them:**
-	
-	- CNNs (GANs, VAEs for images)
-		
-	- Transformers (diffusion, text generation, multimodal models)
-
----
-
+TBD:
+- vanishing gradients
+- exploding gradients
+- rnns as language models
+- RNNs for other NLP tasks
+- Stacked and bidirectional RNNs
+- encoder-decoder framework (other note)
+### LSTM
 TBD
+### GRU
+TBD
+## Transformers
+The Transformer architecture was introduced in *Vaswani et al., 2017 – “Attention Is All You Need.”* The key motivation was to remove [[Deep Learning Paradigms and Building Blocks#Recurrence|recurrence]] and [[Deep Learning Paradigms and Building Blocks#Convolutional Processing|convolution]] from sequence models and rely entirely on [[Deep Learning Paradigms and Building Blocks#Attention Mechanisms|attention]] for sequence mixing and long-range dependencies.
+
+A **Transformer** is defined by a specific architectural template consisting of:
+- Two major blocks: Self-attention and MLP. The self-attention layer models the relational structure of the data, we can say it determines "which variables matter". The MLP layer introduces the non-linear transformation and answer the question: "Given those variables, what transformation should I apply?". 
+	- For more on the multi-head self-attention layer, look here: [[Deep Learning Paradigms and Building Blocks]].
+	- The MLP layer is usually just a linear layer + a non-linear activation function (e.g. SwiGLU)  + another linear layer. So we want, for each token independently (no interaction here), to expand the latent space, introduce non-linearity, compress back down. 
+- Residual connections + layer normalization as essential components.
+- No Recurrence, No Convolution (which enables full parallelization during training).
+- Positional Encodings; additionally added to the "normal" embeddings to inject word order.
+
+Modern variants (GPT, BERT, T5, LLaMA, ViT) might have slight deviations from this architecture, but are still called “Transformers” as long as they preserve its main features.
+
+Here is an example implementation of the transformer architecture:
+![[olmo2_overview.svg|250]]
