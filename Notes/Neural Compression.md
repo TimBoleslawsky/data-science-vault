@@ -16,7 +16,7 @@ Large-scale self-supervised learning models (2018–present) like transformers, 
 - **Better latent representations** → lower bitrate for same distortion
 - **Improved probability modeling** → more efficient entropy coding
 These models build the backbone of modern neural lossy compression research!
-## **Neural Lossless Compression**
+## Neural Lossless Compression
 Neural lossless compression builds upon the established compression pipeline present in information theory (more detail here: [[Foundations of Information Theory]]): 
 - Model data distribution <= Here is where neural compression comes in!
 - Entropy-code the symbols <= This remains largely the same!
@@ -26,7 +26,7 @@ Neural lossless compression extends this by **learning the probability model wit
 - **Normalizing flows** → learn exact, invertible transformations $f(x)$ with tractable likelihoods
 - **Autoregressive models** → model exact probabilities for sequences or images
 => These models feed entropy coders ([[Foundations of Information Theory#Entropy Coding and Lossless Compression]]) to produce near-entropy-optimal codes and allow data-driven modeling of distributions, surpassing hand-engineered statistical models.
-## **Neural Lossy Compression**
+## Neural Lossy Compression
 Just like neural lossless compression, neural lossy compression builds upon a pipeline established by information theory (more detail here: [[Foundations of Information Theory]]): 
 - Decorrelation strategy
 - Model distribution 
