@@ -1,6 +1,6 @@
-Just like [[Probabilistic Data Structures]], spatial data structures are specialized data structures to solve a specific problem. In the case of spatial data structures these problems are spatial queries like nearest neighbor. The idea is to preprocess the list of data points of interest into a data structure that enables faster queries.
+Just like [Probabilistic Data Structures](Probabilistic%20Data%20Structures.md), spatial data structures are specialized data structures to solve a specific problem. In the case of spatial data structures these problems are spatial queries like nearest neighbor. The idea is to preprocess the list of data points of interest into a data structure that enables faster queries.
 
-Spatial data structures are useful in lower dimensions (we will specifically look at one and two dimensions here). For higher dimensions the methods described below will become worse than linear scan due to the curse of dimensionality (look [[Distances#The Curse of Dimensionality|here]]), and methods like [[Locality-Sensitive Hashing]] are preferred. 
+Spatial data structures are useful in lower dimensions (we will specifically look at one and two dimensions here). For higher dimensions the methods described below will become worse than linear scan due to the curse of dimensionality (look [here](Distances.md#the-curse-of-dimensionality)), and methods like [Locality-Sensitive Hashing](Locality-Sensitive%20Hashing.md) are preferred. 
 ## Range Queries in 1D
 The objective of the range search in one dimension, is to find the numbers in the set $P$ that satisfy the condition $x < p < y$. 
 

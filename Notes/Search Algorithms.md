@@ -16,4 +16,4 @@ def linear_search(L, element):
 - Depending on the answer, search left or right half of L for the element.
 -> Time complexity = O(log(n))
 ## MCTS
-The Monte Carlo Tree Search algorithm is a popular algorithm for game playing and decision-making problems especially in combination with machine learning and AI. More on MCTS here: [[Monte Carlo Tree Search and Game Playing]].
+The Monte Carlo Tree Search algorithm is a popular algorithm for game playing and decision-making problems especially in combination with machine learning and AI. More on MCTS here: [Monte Carlo Tree Search and Game Playing](Monte%20Carlo%20Tree%20Search%20and%20Game%20Playing.md).

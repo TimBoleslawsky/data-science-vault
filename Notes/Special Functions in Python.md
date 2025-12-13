@@ -14,7 +14,7 @@ for val in gen:
 	print(val, end=" ")
 ```
 
-We can also use [[List comprehension]] to create generators.
+We can also use [List comprehension](List%20comprehension.md) to create generators.
 ### Advantages of Generators
 
 - **Efficient**: Python Generators are more efficient than loops for large datasets, as they produce values one by one instead of storing them in memory before returning them.

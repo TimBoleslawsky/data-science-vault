@@ -8,9 +8,9 @@ Take this example:
 
 Important: This also means that, for example in a Python dictionary, both the hash **and** the original key need to be saved to be able to retrieve the original values as well as make us of the hash functionalities. 
 
-A Python dictionary is an example for a hash table. More on hash tables here: [[Hash Tables]].
+A Python dictionary is an example for a hash table. More on hash tables here: [Hash Tables](Hash%20Tables.md).
 
-An implementation and evaluation of the popular **Murmur3_32** hash function, as well as the connection to the theory outline in this note, can be found here: [[Hashing in Python]].
+An implementation and evaluation of the popular **Murmur3_32** hash function, as well as the connection to the theory outline in this note, can be found here: [Hashing in Python](Hashing%20in%20Python.md).
 ## Hash Functions
 A hash function $ℎ ∶ 𝑈 → 𝑅$ maps the elements of a universe $𝑈$ to some fixed number of values $𝑅.$ This becomes interesting in the case when $R$ < $U$. Then we can have **hash collisions**, meaning two elements of the universe are mapped to the same hash value.
 

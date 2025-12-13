@@ -1,12 +1,12 @@
-Contrary to [[Inference#Descriptive / Statistical Inference]] and [[Inference#Associational / Correlational Inference]], causal inference is which associations represent real cause–effect relations, and to predict the consequences of interventions. There are a few attributes of causal inference that come with this: 
+Contrary to [Descriptive / Statistical Inference](Inference.md#descriptive-statistical-inference) and [Associational / Correlational Inference](Inference.md#associational-correlational-inference), causal inference is which associations represent real cause–effect relations, and to predict the consequences of interventions. There are a few attributes of causal inference that come with this: 
 - Causal inference requires a model of the data-generating process (not just associations).
 - We divide between causal and spurious associations.
 - The goal isn’t just prediction, but counterfactual reasoning: _what if X had been different?_
 => In the end the "result" of causal inference is an overview over the relationships of the attributes in the model and some information about which attributes to account for in the model, depending on our goal with the model!
 
-An example of how to do Bayesian causal inference can be found here: [[Bayesian_causal_inference.rs]].
+An example of how to do Bayesian causal inference can be found here: [Bayesian_causal_inference](../Projects/Bayesian%20Statistics/Bayesian_causal_inference.rs).
 
-Below I introduce the important concepts of causality. To visualize causality, we use directed acyclic graphs: [[Using Directed Acyclic Graphs to Visualize Causality]].
+Below I introduce the important concepts of causality. To visualize causality, we use directed acyclic graphs: [Using Directed Acyclic Graphs to Visualize Causality](Using%20Directed%20Acyclic%20Graphs%20to%20Visualize%20Causality.md).
 ## Causal vs. Spurious Associations
 A *causal association* is an association between $X$ and $Y$ that reflects a _real causal path_ in the DAG (e.g., $X → Y$, or $X → Z → Y$).
 

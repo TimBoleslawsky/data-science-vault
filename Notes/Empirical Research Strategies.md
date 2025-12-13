@@ -1,4 +1,4 @@
-To categories our knowledge-seeking research strategies in software engineering we adopt an **ABC framework** (more on knowledge-seeking, here: [[Software Engineering Research]]. ABC stands for goals toward: 
+To categories our knowledge-seeking research strategies in software engineering we adopt an **ABC framework** (more on knowledge-seeking, here: [Software Engineering Research](Software%20Engineering%20Research.md). ABC stands for goals toward: 
 - Actors (generalizability over people)
 - Behaviour (precise measurement/control of behaviour)
 - Context (realism of context). 

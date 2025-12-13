@@ -1,8 +1,8 @@
-With [[Retrieval-Augmented Generation (RAG)]], we can build a ChatGPT like chats that works on our own Obsidian markdown files. This means that as input for this LLM we use the files in this vault. 
+With [Retrieval-Augmented Generation (RAG)](Retrieval-Augmented%20Generation%20%28RAG%29.md), we can build a ChatGPT like chats that works on our own Obsidian markdown files. This means that as input for this LLM we use the files in this vault. 
 ## Building the RAG
 There are two steps to building the RAG: 
-1. First, we have to start a local server in LM-Studio to load the two models. The models we need are one for text completion and one for embedding your notes to be used in a vector store. This looks like this:                                                                                                          ![[Pasted image 20241211111138.png|400]]
-3. We need a Flowise chatflow, to create our chat. This can look like this:  ![[Pasted image 20241211111040.png|400]]
+1. First, we have to start a local server in LM-Studio to load the two models. The models we need are one for text completion and one for embedding your notes to be used in a vector store. This looks like this:                                                                                                          ![Pasted image 20241211111138.png](../Images/Pasted%20image%2020241211111138.png)
+3. We need a Flowise chatflow, to create our chat. This can look like this:  ![Pasted image 20241211111040.png](../Images/Pasted%20image%2020241211111040.png)
 ## Steps to Start the Chat
 1. Start LM-Studio
 2. Start the Flowise instance:

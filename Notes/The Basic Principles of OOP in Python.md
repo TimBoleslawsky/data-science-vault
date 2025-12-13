@@ -113,7 +113,7 @@ car.open_trunk()      # Output: Opening trunk of the Toyota Camry
 ```
 
 ## Polymorphism
-Polymorphism allows us to treat objects of different types in the same way by establishing a common interface. This can be done in various ways, such as inheritance or [[Abstract classes in Python|abstract classes]]. In the below example, we can iterate over all three objects and use the `color()`method, despite them being of different types. 
+Polymorphism allows us to treat objects of different types in the same way by establishing a common interface. This can be done in various ways, such as inheritance or [abstract classes](Abstract%20classes%20in%20Python.md). In the below example, we can iterate over all three objects and use the `color()`method, despite them being of different types. 
 
 ``` Python
 class Vegetable:

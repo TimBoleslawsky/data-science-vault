@@ -8,7 +8,7 @@ Loss functions measure how well (or badly) a neural network’s predictions matc
 - For regression problems, where we have continuous numerical outputs, popular loss functions are the mean squared error, the mean absolute error, or the Huber Loss, which is a combination of MSE & MAE.
 - For classification problems we usually either use log loss or binary cross-entropy (for binary classification) or categorical cross-entropy (for multi-class classification).
 ## Optimization (Gradient Descent & Variants)
-Optimization is the process of adjusting a model’s weights to minimize the loss function. It is about finding the best set of parameters (weights and biases) that minimize the loss function. More on optimization problems in general, here: [[Optimization Problems]]. 
+Optimization is the process of adjusting a model’s weights to minimize the loss function. It is about finding the best set of parameters (weights and biases) that minimize the loss function. More on optimization problems in general, here: [Optimization Problems](Optimization%20Problems.md). 
 
 To talk about optimization, we need to introduce two concepts: *objective functions* & *gradients*. 
 - Objective functions in machine learning models can have two forms: First, a *loss function* that measures how well the model fits the training data. Second, a *regularizer* that measures how simple/complex the model is.

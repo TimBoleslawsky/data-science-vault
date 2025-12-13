@@ -40,16 +40,16 @@ Before the trail we define inclusion and exclusion criteria. To be eligible a pa
 ## Study Design
 Which type of study design we choose might depend on the objective(s) of the study, therapeutic area, time and cost, or regulatory requirements. In general there are either fixed or adaptive trail designs. Fixed trails follow a strict design => conduct => analyze design, while adaptive trails have a review and adapt phase during the conduct-stage of the trail.  
 ### Parallel Group Designs
-![[Pasted image 20250130092959.png|400]]
+![Pasted image 20250130092959.png](../Images/Pasted%20image%2020250130092959.png)
 ### Cross-Over Designs
-![[Pasted image 20250130093049.png|400]]
+![Pasted image 20250130093049.png](../Images/Pasted%20image%2020250130093049.png)
 Advantages:
 - Within subject comparison.  
 - Reduced sample size.  
 - Good for chronic conditions.  
 - Good for pharmaceutical studies.
 ### Group Sequential Designs
-![[Pasted image 20250130093214.png|400]]
+![Pasted image 20250130093214.png](../Images/Pasted%20image%2020250130093214.png)
 ## Randomization
 When talking about randomization in clinical trails there are a few methods and techniques we can use: 
 ### Complete Randomization

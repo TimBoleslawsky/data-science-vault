@@ -1,18 +1,18 @@
-Directed acyclic graphs (DAG) help us visualize causality within [[Causal Inference]]. The nice thing is, no matter how complex, DAGs are built from four _elemental relations_ between variables. These relations also map directly to the pitfalls described earlier in the note on causal inference.
+Directed acyclic graphs (DAG) help us visualize causality within [Causal Inference](Causal%20Inference.md). The nice thing is, no matter how complex, DAGs are built from four _elemental relations_ between variables. These relations also map directly to the pitfalls described earlier in the note on causal inference.
 ## Elemental Relations
 These elemental relations are the backbone of the DAGs and map to the causal pitfalls.
 ### Fork
 - $X ← Z → Y$
 - $Z$ is a confounder: a common cause of $X$ and $Y$. If we do not condition on $Z$, $X$ and $Y$ are spuriously associated.
-- More on confounders here: [[Causal Inference#Confounders]].
+- More on confounders here: [Confounders](Causal%20Inference.md#confounders).
 ### Pipe
 - $X → Z → Y$
 - $Z$ is a mediator in a causal chain. Conditioning on $Z$ _blocks the causal path_. This leads to post-treatment bias.
-- More on post-treatment bias here: [[Causal Inference#Mediators and Post-Treatment Bias]].
+- More on post-treatment bias here: [Mediators and Post-Treatment Bias](Causal%20Inference.md#mediators-and-post-treatment-bias).
 ### Collider
 - $X → Z ← Y$
 - $Z$ is a collider, a common effect of $X$ and $Y$. Conditioning on $Z$ (or its descendants) _opens a non-causal path_ (by default, $X$ and $Y$ are independent), creating collider bias.
-- More on collider bias here: [[Causal Inference#Colliders]]. 
+- More on collider bias here: [Colliders](Causal%20Inference.md#colliders). 
 ### Descendant
 - $X → Z → D$
 - $D$ is a descendant of $Z$. Conditioning on $D$ is partially like conditioning on $Z$. If $Z$ is a collider, conditioning on $D$ can still open biasing paths (weaker but real).

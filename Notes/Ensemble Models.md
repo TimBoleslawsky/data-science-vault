@@ -5,7 +5,7 @@ Before we go into the techniques how to create ensemble models, we need to talk 
 
 There are more advanced ways of creating ensemble models (described below), but we can just simply train multiple models and use one of the strategies above to create an ensemble model. When using Voting Classifiers, Averaging Classifiers, or Stacking Classifiers, all base models are typically trained on the same dataset.
 
-Here is an example in Python: [[Ensemble Models in Python]].
+Here is an example in Python: [Ensemble Models in Python](Ensemble%20Models%20in%20Python.md).
 ## Bagging
 Bagging is a technique used to reduce variance by training multiple models independently on different subsets of the training data created by **bootstrap sampling**. This is combined with either voting (classification) or averaging (regression). 
 

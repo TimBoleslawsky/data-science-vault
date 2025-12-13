@@ -24,7 +24,7 @@ The registers available to a CPU are: A general-purpose registers (for arithmeti
 Depending on the architecture, there may be a number of special-purpose registers. Usually, there is a register **called instruction pointer (IP)** or **program counter (PC)** that holds the address of the next instruction to be executed.
 
 There may be vector registers, such as the 128-bit SSE registers (XMM registers) on x86  
-architectures to enable [[Parallel Programming in Python#Data Parallelism|data parallelism]].
+architectures to enable [data parallelism](Parallel%20Programming%20in%20Python.md#data-parallelism).
 ## Cache
 In the past, CPU and RAM operated at similar speeds but, since the 1980s, CPU speeds have increased dramatically, but RAM access latency has not kept up. Modern CPUs can execute many instructions in the time it takes to access one value from RAM. This is why we need Cache Memory. 
 

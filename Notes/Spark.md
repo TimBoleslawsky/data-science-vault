@@ -1,4 +1,4 @@
-Apache Spark is a general-purpose engine for large-scale data processing, primarily used to implement [[Parallel Programming in Python|parallel programming]]. Unlike MapReduce it is not a programming paradigm but Spark also includes the MapReduce idea. The advantages of Spark are:
+Apache Spark is a general-purpose engine for large-scale data processing, primarily used to implement [parallel programming](Parallel%20Programming%20in%20Python.md). Unlike MapReduce it is not a programming paradigm but Spark also includes the MapReduce idea. The advantages of Spark are:
 - Speed, ease of use, flexibility across many workloads  
 - The programming model allows for cached computations, flexible operations, and iteration  
 - Parallelization can be done automatically by the engine (like with MapReduce)  
@@ -14,8 +14,8 @@ When comparing Spark to MapReduce implementations it becomes apparent, why in pr
 | **Use Cases**         | Batch processing only                          | Batch processing, real-time streaming, ML, SQL |
 
 For an example of how to implement Spark in Python look at these two: 
-- [[High Level Spark.py]] uses DataFrames and a Spark session.
-- [[Low Level Spark.py]] uses RDDs and Spark context.
+- [High Level Spark](../Projects/Parallelization%20in%20Python/High%20Level%20Spark.py) uses DataFrames and a Spark session.
+- [Low Level Spark](../Projects/Parallelization%20in%20Python/Low%20Level%20Spark.py) uses RDDs and Spark context.
 ## Core Concepts of Spark
 First we need to talk about the difference between RDDs and DataFrames. **RDDs** are low-level, immutable distributed collections of objects. You manipulate them using functional operations like map(), flatMap(), reduceByKey(), etc. We want to use them if there is no structured schema, meaning each line needs to be manually parsed and we need fine grained control over raw data. RDDs use Spark context for example like this:
 

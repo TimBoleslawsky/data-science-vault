@@ -47,4 +47,4 @@ Example: Let 𝐴 = {𝑎, 𝑏, 𝑐}. The partitions of 𝐴 are
 - {{𝑎} ,{𝑏}, {𝑐}}  
 
 • The number of partitions of a set of 𝑛 elements is known as the Bell number 𝐵"  
-• [[Relations#Equivalence relations|Equivalence classes]] form a partition of a set!
+• [Equivalence classes](Relations.md#equivalence-relations) form a partition of a set!

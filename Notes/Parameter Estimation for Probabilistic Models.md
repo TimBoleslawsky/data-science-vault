@@ -1,6 +1,6 @@
-If we have some data sample, and we know what underlying distribution this data follows (how this can be for example known: [[Q-Q Plot]]), how do we know the parameter of this distribution? In other words: Suppose we have 𝑛 samples 𝑋1, 𝑋2, ... , 𝑋𝑛 from a probability distribution with a parameter 𝜃 (e.g., 𝑝 for Bernoulli(𝑝) distribution, or 𝜆 for Exp(𝜆) distribution). Now, what is the most likely value $\hat{𝜃}$ for the parameter to have generated the observations?
+If we have some data sample, and we know what underlying distribution this data follows (how this can be for example known: [Q-Q Plot](Q-Q%20Plot.md)), how do we know the parameter of this distribution? In other words: Suppose we have 𝑛 samples 𝑋1, 𝑋2, ... , 𝑋𝑛 from a probability distribution with a parameter 𝜃 (e.g., 𝑝 for Bernoulli(𝑝) distribution, or 𝜆 for Exp(𝜆) distribution). Now, what is the most likely value $\hat{𝜃}$ for the parameter to have generated the observations?
 
-The probabilistic topics discussed here built upon the basics laid out here: [[Basics of Probability and Statistics for Data Science#Probability and Statistics]], and more specifically, here: [[Likelihood and Posterior Distributions]].
+The probabilistic topics discussed here built upon the basics laid out here: [Probability and Statistics](Basics%20of%20Probability%20and%20Statistics%20for%20Data%20Science.md#probability-and-statistics), and more specifically, here: [Likelihood and Posterior Distributions](Likelihood%20and%20Posterior%20Distributions.md).
 ## Frequentist Parameter Estimation Techniques
 In the frequentist sense, parameter estimation is pretty simple, its usually MLE.
 ### Maximum Likelihood Estimation (MLE)
@@ -12,13 +12,13 @@ Once we have the likelihood function, all that's left is to formulate the deriva
 In the above example, we assumed that we only have one data point. This is obviously not realistic or practical. When we have more than one data point, we have to look at the **joint probability distributions** of the random variables. This is defined as so: 
 - $X, Y$ discrete: joint PMF $f_{X,Y} (x,y) = P(X = x,Y = y)$
 - $X, Y$ continuous: joint PDF $f_{X,Y}(x,y) = P(X ≤x,Y ≤y)$
-The problem is, that this quite hard to obtain, therefore we assume [[Probability#Independence|independence]] (in practice this is usually a reasonable assumption). Because of the properties of independence the terms for PMF/PDF generalize to the product of the PMF/PDF of all random variables. 
+The problem is, that this quite hard to obtain, therefore we assume [independence](Probability.md#independence) (in practice this is usually a reasonable assumption). Because of the properties of independence the terms for PMF/PDF generalize to the product of the PMF/PDF of all random variables. 
 
 In the above example, we also assume, that $\sigma$ is known. If we have multiple unknown parameters, we just need to solve the likelihood function for all of them. The good thing here is that the parameters usually are independent and therefore the maximization (minimization) is not affected by either parameter. 
 
 An additional important note is, that we usually minimize for the **negative log likelihood**. This is mainly so the calculations are easier (product => sums) and for standardization. This leads to the objective function: $\hat{θ}_{MLE} = arg min −logL(θ|data)$.
 ## Bayesian Parameter Estimation Techniques
-Parameter estimation in the Bayesian sense is a little more complex. When talking about the parameter estimation in the Bayesian sense, we usually mean the [[Likelihood and Posterior Distributions|posterior distribution]]. This posterior distribution can be calculated analytically by multiplying the priors with the likelihood and normalizing it with the denominator, but this is usually not feasible in the real world. Here is why:
+Parameter estimation in the Bayesian sense is a little more complex. When talking about the parameter estimation in the Bayesian sense, we usually mean the [posterior distribution](Likelihood%20and%20Posterior%20Distributions.md). This posterior distribution can be calculated analytically by multiplying the priors with the likelihood and normalizing it with the denominator, but this is usually not feasible in the real world. Here is why:
 - The denominator $P(X)$ is just the probability of seeing the observed data, under the entire model.
 - Since the model allows many possible parameter values $\theta$, you must average (integrate) the likelihood across all of them, weighted by how plausible each $\theta$ was a priori. That's how we get => $\int P(X \mid \theta) P(\theta) d\theta$ (for continues variables).
 - In most realistic models, that integral is **not analytically tractable**!
@@ -29,7 +29,7 @@ MAP is different from the other parameter estimation techniques, because it only
 
 MAP estimation incorporates both the observed data (through the likelihood, as in MLE) and prior beliefs (through the prior). It is particularly useful when the sample size is small, or when we have prior information that we want to use in the estimation. When no prior is used (or an uninformative prior is assumed), MAP simplifies to MLE.
 
-The MAP estimation is based on Bayesian statistics and is therefor calculated as: $P(\theta \mid X) = \frac{P(X \mid \theta) P(\theta)}{P(X)}$. But $P(X)$ is independent of $\theta$ and can therefore be ignored. This leaves us with $P(X \mid \theta)$, which is the likelihood of the observations, given parameter value 𝜃, like in MLE, and $P(\theta)$ which is the prior probability of the parameter value (the degree of belief in a particular value before observing the evidence). *Note: this is just the posterior distribution described here ([[Likelihood and Posterior Distributions#Posterior Distribution]]). MAP gives us a point estimate from this distribution.* This leads us to the objective function: $\hat{θ}_{MAP} = arg min −logL(θ|data)-logf_θ(θ)$.
+The MAP estimation is based on Bayesian statistics and is therefor calculated as: $P(\theta \mid X) = \frac{P(X \mid \theta) P(\theta)}{P(X)}$. But $P(X)$ is independent of $\theta$ and can therefore be ignored. This leaves us with $P(X \mid \theta)$, which is the likelihood of the observations, given parameter value 𝜃, like in MLE, and $P(\theta)$ which is the prior probability of the parameter value (the degree of belief in a particular value before observing the evidence). *Note: this is just the posterior distribution described here ([Posterior Distribution](Likelihood%20and%20Posterior%20Distributions.md#posterior-distribution)). MAP gives us a point estimate from this distribution.* This leads us to the objective function: $\hat{θ}_{MAP} = arg min −logL(θ|data)-logf_θ(θ)$.
 ### Grid Approximation
 The idea behind grid approximation is quite simple. Unfortunately it does not hold up in practice, as it becomes computationally infeasible with more than ~2–3 parameters (curse of dimensionality).
 
@@ -44,7 +44,7 @@ Here is how it works:
 The idea is, that the region near the peak of the posterior distribution will be nearly Gaussian—or “normal”—in shape. This means the posterior distribution can be usefully approximated by a Gaussian distribution. A Gaussian approximation is called “quadratic approximation” because the logarithm of a Gaussian distribution forms a parabola.
 
 Here is how it works:
-- Find the posterior mode. This is usually accomplished by some optimization algorithm like [[Parameter Estimation for Probabilistic Models#Maximum A Posteriori (MAP) Estimation|MAP]].
+- Find the posterior mode. This is usually accomplished by some optimization algorithm like [MAP](Parameter%20Estimation%20for%20Probabilistic%20Models.md#maximum-a-posteriori-map-estimation).
 - Once you find the peak of the posterior, you must estimate the curvature near the peak. This curvature is sufficient to compute a quadratic approximation of the entire posterior distribution. In some cases, these calculations can be done analytically, but usually your computer uses some numerical technique instead.
 
 => Problem: Only accurate if the true posterior is close to Gaussian and needs enough data points (common frequentist problem).

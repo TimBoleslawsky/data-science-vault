@@ -1,4 +1,4 @@
-As described here ([[Data Munging]]), data preprocessing is an important step in the data science process. The two main techniques we use are **transformation** and **scaling**. Transformations like the log, square root, Box-Cox, and rank-based transformations are used to **reshape** data to approximate normality or reduce skewness, while **standardization** and **normalization** are scaling techniques to **adjust data for comparison**. Here is a python example of how to use the techniques described in this note, [[Transformation and Scaling in Python]].
+As described here ([Data Munging](Data%20Munging.md)), data preprocessing is an important step in the data science process. The two main techniques we use are **transformation** and **scaling**. Transformations like the log, square root, Box-Cox, and rank-based transformations are used to **reshape** data to approximate normality or reduce skewness, while **standardization** and **normalization** are scaling techniques to **adjust data for comparison**. Here is a python example of how to use the techniques described in this note, [Transformation and Scaling in Python](Transformation%20and%20Scaling%20in%20Python.md).
 ## Transformation
 Transforming data that is not normally distributed into a normal distribution is a common goal in data analysis, especially when we need to meet the assumptions of statistical tests or models that require normality. One common transformation is the **log transformation**.
 
@@ -6,7 +6,7 @@ The log transformation works by taking the logarithm of each dat point ($Y = \lo
 
 The basic intuition behind transformation is that we want to **reduce skewness** in our data. Skewed data is asymmetrical. Positively skewed data has a long tail on the right (e.g., income, population) and negatively skewed data has a long tail on the left. The log transformation for example works very well for right skewed data. Here is how that could look:
 
-![[Pasted image 20241219094412.png]]
+![Pasted image 20241219094412.png](../Images/Pasted%20image%2020241219094412.png)
 ## Scaling
 Because standardization and normalization serve such a similar purpose, it usually does not make sense to use them together. Here
 ### Standardization
@@ -20,11 +20,11 @@ Z-scores transform arbitrary sets of variables to a uniform range and accomplish
 
 **Z-scores best work on normally distributed data. Be careful when dealing with anything else!** As we can see in our example above, the data is almost standardized (mean is almost at 0) but we can shape it to be properly standardized with the z-score:
 
-![[Pasted image 20241219095752.png|400]]
+![Pasted image 20241219095752.png](../Images/Pasted%20image%2020241219095752.png)
 ### Normalization
 The general purpose of **normalization** is to scale the data so that it fits within a specific range, typically between 0 and 1, or sometimes between -1 and 1. This is done to ensure that all features or variables in our dataset have the same scale. 
 
 One popular method to do this is Min-Max-Scaling. Min-Max-Scaling works like this:  $\text{Normalized Value} = \frac{x - \min(x)}{\max(x) - \min(x)}$. If we use this to normalize our previous example it would look something like this:
 
-![[Pasted image 20241219101531.png|400]]
+![Pasted image 20241219101531.png](../Images/Pasted%20image%2020241219101531.png)
 

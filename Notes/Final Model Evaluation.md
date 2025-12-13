@@ -1,4 +1,4 @@
-Final model evaluation happens ones all other evaluation of the model is done and a final model is trained. We want to see how well this model performs. How this can be done in Python is documented here: [[Final Model Evaluation in Python]].
+Final model evaluation happens ones all other evaluation of the model is done and a final model is trained. We want to see how well this model performs. How this can be done in Python is documented here: [Final Model Evaluation in Python](Final%20Model%20Evaluation%20in%20Python.md).
 ## What Model Do We Use for the Evaluation?
 The model we evaluate against is usually called a **baseline model**. A baseline model can be a dummy model.
 - For classification, we can use a model that always predicts the most common label  
@@ -35,7 +35,7 @@ The behavior of the classifier is often characterized by the Area Under Curve (A
 ![File:Roc curve.svg](https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Roc_curve.svg/512px-Roc_curve.svg.png?20210909040029)
 
 **Hypothesis Testing as a Tool to evaluate Classification Models**
-Hypothesis testing, as discussed here: [[Inference]], provides a framework for understanding whether the observed performance differences are due to the *models’ real capabilities* or due to *random chance*. It helps you assess whether the observed improvements in evaluation metrics are statistically significant or not.
+Hypothesis testing, as discussed here: [Inference](Inference.md), provides a framework for understanding whether the observed performance differences are due to the *models’ real capabilities* or due to *random chance*. It helps you assess whether the observed improvements in evaluation metrics are statistically significant or not.
 ## Evaluating Regression Models
 The main problem for evaluating regression models is that we don't have a one size fits all solution. But we have some good candidates. Suppose ($x$ is the predicted value and 𝑦 is the correct value.
 
@@ -49,7 +49,7 @@ Another way of looking at it. If we don't want to evaluate the errors but how we
 ## Evaluating Clustering Models
 A popular way of doing this, is the ***Silhouette score***. The idea is that a good clustering should have compact clusters with a large separation between different clusters. This is characterized by the within-cluster distance and between-cluster distance. When calculating the Silhouette score, we get a graph that looks like this: 
 
-![[Pasted image 20241205143119.png]]
+![Pasted image 20241205143119.png](../Images/Pasted%20image%2020241205143119.png)
 
 What we seek from the Silhouette score graph, is the highest point. 
 

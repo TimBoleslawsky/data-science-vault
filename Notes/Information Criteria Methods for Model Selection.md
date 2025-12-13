@@ -1,6 +1,6 @@
 Other than cross-validation methods, information criteria methods try to construct a theoretical estimate of the relative out-of-sample K-L divergence. 
 
-From information theory we know that log-likelihood is an excellent measure of surprise/entropy ([[Using Information Theory to Select Models]]). *Information criteria* modifies this penalties for complexity to estimate out-of-sample predictive accuracy.
+From information theory we know that log-likelihood is an excellent measure of surprise/entropy ([Using Information Theory to Select Models](Using%20Information%20Theory%20to%20Select%20Models.md)). *Information criteria* modifies this penalties for complexity to estimate out-of-sample predictive accuracy.
 
 Here are common methods to do this. In practice WAIC and PSIS-LOO are preferred for Bayesian models, because they use the entire posterior distribution and handle hierarchical/complex models better than AIC, BIC, or DIC.
 ## AIC (Akaike Information Criterion)

@@ -80,7 +80,7 @@ Here is why: The beta-binomial model allows each row in the data — each combin
 ### Information Theory and Model Comparison with Over-Dispersed Models
 Beta-binomial and gamma-Poisson (negative-binomial) models extend binomial and Poisson models by adding unobserved parameters for each data row, which makes model comparison using WAIC or PSIS problematic. Unlike standard binomial or Poisson models, these cannot be freely aggregated or disaggregated without altering their assumptions, since the latent variation depends on data structure. 
 
-This issue is largely resolved when using [[The Hierarchy of Linear Models#Multilevel (Hierarchical) Models]], which can handle over-dispersion and heterogeneity across different levels of aggregation.
+This issue is largely resolved when using [Multilevel (Hierarchical) Models](The%20Hierarchy%20of%20Linear%20Models.md#multilevel-hierarchical-models), which can handle over-dispersion and heterogeneity across different levels of aggregation.
 ## Zero-Inflation
 Usually within a model (especially a binomial model) a count of zero can arise more than one way. A “zero” means that nothing happened, and nothing can happen either because the rate of events is low or rather because the process that generates events failed to get started. If we are counting scrub jays in the woods, we might record a zero because there were no scrub jays in the woods or rather because we scared them all off before we starting looking. Either way, the data contains a zero.
 

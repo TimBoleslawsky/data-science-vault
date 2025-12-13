@@ -1,4 +1,4 @@
-There are a few different ways we can teach a model to "learn". The *learning* here just means parameter and structure estimation. These heavily influence the task types for mathematical models. More on these here: [[Different Task Types for Mathematical Models]]. Here is as summary of the most important ones (there are many more):
+There are a few different ways we can teach a model to "learn". The *learning* here just means parameter and structure estimation. These heavily influence the task types for mathematical models. More on these here: [Different Task Types for Mathematical Models](Different%20Task%20Types%20for%20Mathematical%20Models.md). Here is as summary of the most important ones (there are many more):
 ## Supervised Learning
 - **How the system learns**: The model learns from labeled data, meaning each input has a corresponding output (label).
 - **Objective**: Minimize the error between predictions and actual labels (e.g., using loss functions like cross-entropy or mean squared error).

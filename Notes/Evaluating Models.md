@@ -13,12 +13,12 @@ The **robustness** of the model is defined as the ability to handle unexpected o
 The **generalization** of the model is defined as the ability to perform well on truly unseen data, not just the training/validation/test set.
 ## Navigating Between Underfitting and Overfitting
 To navigate between underfitting and overfitting to create robust models that generalize well, we us use two complementary toolkits:
-1. Methods to _prevent_ overfitting. For preventing overfitting, two common methods are [[Regularization]] and building [[Ensemble Models]].
-2. Predictive accuracy measures to _diagnose/compare_ models. More on that, here: [[Using Information Theory to Select Models]]. 
+1. Methods to _prevent_ overfitting. For preventing overfitting, two common methods are [Regularization](Regularization.md) and building [Ensemble Models](Ensemble%20Models.md).
+2. Predictive accuracy measures to _diagnose/compare_ models. More on that, here: [Using Information Theory to Select Models](Using%20Information%20Theory%20to%20Select%20Models.md). 
 
-An important question to ask, is: "*What data do we use for model evaluation and selection?*". More on that here: [[Data Usage in Model Selection and Evaluation]].
+An important question to ask, is: "*What data do we use for model evaluation and selection?*". More on that here: [Data Usage in Model Selection and Evaluation](Data%20Usage%20in%20Model%20Selection%20and%20Evaluation.md).
 
-Once we have build a few robust models using regularization or ensemble methods and selected the "best" one by predicting predictive accuracy, we can do: [[Final Model Evaluation]].
+Once we have build a few robust models using regularization or ensemble methods and selected the "best" one by predicting predictive accuracy, we can do: [Final Model Evaluation](Final%20Model%20Evaluation.md).
 ## Model Evaluation and Tuning Process in ML and DL
 The techniques and methods described above, are far more systemized in machine learning and deep learning projects. In such projects there usually exists a standardize model evaluation process. Here is what such a process could look like:
 - Step 1: Train Initial Model: 
@@ -26,7 +26,7 @@ The techniques and methods described above, are far more systemized in machine l
 - Step 2: Model Selection & Hyperparameter Tuning:
   In most cases, we would want to compare and improve our model. Model selection means that optimally we want more than one model for problem and compare. Hyperparameter tuning means, that we want to improve our model by adjusting the input values. 
 - Step 3: Diagnose Over- & Underfitting
-  Just a model might be performing good or better than other models, does not mean, that it might not be over- or underfitted. (Deep Learning specific example: [[Diagnosing Over- and Underfitting in Deep Learning Models]])
+  Just a model might be performing good or better than other models, does not mean, that it might not be over- or underfitted. (Deep Learning specific example: [Diagnosing Over- and Underfitting in Deep Learning Models](Diagnosing%20Over-%20and%20Underfitting%20in%20Deep%20Learning%20Models.md))
 - Step 4: Ensure Model Robustness & Generalization
   To ensure that our model works with different data and under different circumstances, we can for example do out-of-distribution data tests or tests on augmented data. 
 - Step 5: Final Model Evaluation

@@ -45,7 +45,7 @@ plt.xlabel('False Positive Rate (FPR)')
 plt.ylabel('True Positive Rate (TPR)')
 ```
 
-![[Pasted image 20240927104030.png]]
+![Pasted image 20240927104030.png](../Images/Pasted%20image%2020240927104030.png)
 
 This is a lot of effort. We can do this simply by using the `sklearn.metrics.roc_curve` function.
 
@@ -57,7 +57,7 @@ plt.xlabel('False Positive Rate (FPR)')
 plt.ylabel('True Positive Rate (TPR)')
 ```
 
-![[Pasted image 20240927110620.png]]
+![Pasted image 20240927110620.png](../Images/Pasted%20image%2020240927110620.png)
 
 Now we can use the `roc_auc_score`function to compute the AUC. 
 

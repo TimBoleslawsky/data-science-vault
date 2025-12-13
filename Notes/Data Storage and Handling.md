@@ -1,7 +1,7 @@
 When discussing data storage and data handling we differentiate between these main types:
 1. **Direct storage**
 	→ Save the raw data in memory or disk (e.g., variables, text files).
-2. **[[Hashing]]**
+2. **[Hashing](Hashing.md)**
 	→ Transform data into a fixed-size code for fast lookup, verification, or security (e.g., dictionaries, password hashing).
 3. **Compression**
 	→ Shrink data to a smaller size for storage or transmission (e.g., ZIP files, image compression like JPEG).

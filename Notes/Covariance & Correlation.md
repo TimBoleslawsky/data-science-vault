@@ -5,7 +5,7 @@ The covariance is given by the formula $\text{Cov}(X, Y) = E\left[(X - E[X])(Y -
 ## Example for Variance and Expected Value
 Suppose that we roll two dice, let 𝑋 = the sum of the face values and $Y$ = the product of the  
 face values:
-![[Pasted image 20241006202655.png]]
+![Pasted image 20241006202655.png](../Images/Pasted%20image%2020241006202655.png)
 
 Then:
 - $E[𝑋] = 7, E[𝑌] = 12.25$ 

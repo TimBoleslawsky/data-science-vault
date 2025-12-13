@@ -4,7 +4,7 @@ The basic idea of approaching a game playing problem with AI is that we can take
 - Storage Limitations: We can’t store the value of each state  => A table housing all state-value pairs would be too huge. 
 	- Possible solution: Truncating search depth with an approximate value function (deep learning), to reduce the number of states considered.
 ## Monte Carlo Tree Search (MCTS)
-Monte Carlo Tree Search (MCTS) is a decision-making algorithm used for planning in complex environments. MCTS models actions, or more specifically state-action pairs, in a game as nodes in a tree. While traversing through the nodes we collect metrics, most importantly: $q_i$ (number of wins from a specific node $i$) and $n_i$ (number of times this node has been visited). How a MCTS implementation could look like in practice can be seen in this report [[MCTS.pdf]] and this code snippet [[MCTS.py]]. 
+Monte Carlo Tree Search (MCTS) is a decision-making algorithm used for planning in complex environments. MCTS models actions, or more specifically state-action pairs, in a game as nodes in a tree. While traversing through the nodes we collect metrics, most importantly: $q_i$ (number of wins from a specific node $i$) and $n_i$ (number of times this node has been visited). How a MCTS implementation could look like in practice can be seen in this report [MCTS](../Projects/MCTS%20and%20Deep%20Learning/MCTS.pdf) and this code snippet [MCTS](../Projects/MCTS%20and%20Deep%20Learning/MCTS.py). 
 
 The basic idea of MCTS can be broken down into four steps: 
 1.  **Selection**

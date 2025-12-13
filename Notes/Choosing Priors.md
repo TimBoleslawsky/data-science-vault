@@ -37,8 +37,8 @@ for ( i in 1:50 ) lines( c(-2,2) , mu[i,] , col=col.alpha("black",0.4) )
 ```
 
 Here is the corresponding plot:
-![[plot.svg]]
+![plot.svg](../Images/plot.svg)
 
 Her we can see that we don't have crazy outliers but also a nice distribution of possible outcomes. This is exactly what we want!
 
-More examples can be found in this Bayesian causal inference script: [[Bayesian_causal_inference.rs]].
+More examples can be found in this Bayesian causal inference script: [Bayesian_causal_inference](../Projects/Bayesian%20Statistics/Bayesian_causal_inference.rs).

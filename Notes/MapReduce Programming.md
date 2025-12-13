@@ -1,4 +1,4 @@
-When doing [[Parallel Programming in Python|parallel programming]] it is important to follow certain principles so that parallelization can be done correctly and without faults. Just like in object-oriented programming, we want to use inheritance, in parallel computing, we want to use MapReduce Programming. 
+When doing [parallel programming](Parallel%20Programming%20in%20Python.md) it is important to follow certain principles so that parallelization can be done correctly and without faults. Just like in object-oriented programming, we want to use inheritance, in parallel computing, we want to use MapReduce Programming. 
 
 MapReduce works in two phases:
 1. Map Phase
@@ -19,4 +19,4 @@ Another thing to consider is that the storage of data matters. If the data is st
 ## Implementations of MapReduce
 The concept of MapReduce can be implemented in different systems. Examples include:
 - **Hadoop MapReduce:** The most famous implementation, using the Hadoop ecosystem (HDFS, YARN).
-- **MRJob (Python):** A lightweight MapReduce framework for writing and running MapReduce jobs in Python. An example for this here: [[MapReduce Programming.py]]
+- **MRJob (Python):** A lightweight MapReduce framework for writing and running MapReduce jobs in Python. An example for this here: [MapReduce Programming](../Projects/Parallelization%20in%20Python/MapReduce%20Programming.py)

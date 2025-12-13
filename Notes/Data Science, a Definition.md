@@ -4,7 +4,7 @@ Data Science lies at the intersection of computer science, statistics, and subst
 - From statistics comes a long tradition of exploratory data analysis, significance testing, and visualization. 
 - From application domains in business and the sciences come challenges worthy of battle, and evaluation standards to assess when they have been adequately conquered.
 
-![[Screenshot 2024-09-04 at 12.09.22.png|300]]
+![Screenshot 2024-09-04 at 12.09.22.png](../Images/Screenshot%202024-09-04%20at%2012.09.22.png)
 ### What Do We Need Data Science For?
 
 - New technology leads to the amassing of a lot of data.

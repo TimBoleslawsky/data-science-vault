@@ -1,4 +1,4 @@
-For deterministic models we do not divide between frequentist and Bayesian because there is no assumption that the data comes from a probability distribution. The goal is purely to find parameter values of a model (function) that minimize some **loss function** measuring the discrepancy between predictions and observed data (in essence this is purely an [[Optimization Problems|optimization problem]]).
+For deterministic models we do not divide between frequentist and Bayesian because there is no assumption that the data comes from a probability distribution. The goal is purely to find parameter values of a model (function) that minimize some **loss function** measuring the discrepancy between predictions and observed data (in essence this is purely an [optimization problem](Optimization%20Problems.md)).
 
 Here is how that works:
 1. Define a **model function** $f_\theta(x)$ with parameters $\theta$.

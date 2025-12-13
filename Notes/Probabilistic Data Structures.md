@@ -1,4 +1,4 @@
-Probabilistic data structures are space- and time-efficient data structures that provide approximate solutions to problems where exact answers are either unnecessary or too costly to compute. They trade a small and well-defined probability of error for significant gains in performance and memory usage. They use randomization or [[Hashing#Hash Functions|hash functions]] to manage data.
+Probabilistic data structures are space- and time-efficient data structures that provide approximate solutions to problems where exact answers are either unnecessary or too costly to compute. They trade a small and well-defined probability of error for significant gains in performance and memory usage. They use randomization or [hash functions](Hashing.md#hash-functions) to manage data.
 ## Bloom Filters
 Problem: Set membership, Is the given object an element of the set (in the dataset)?
 - Possible solution => Python set, works, but, since all values are stored explicitly, too much large.

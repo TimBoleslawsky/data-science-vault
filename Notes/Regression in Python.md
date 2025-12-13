@@ -36,7 +36,7 @@ lr.predict(x.reshape(-1,1))
 y_pred = alpha + beta * x
 ```
 
-![[Pasted image 20241018081128.png|400]]
+![Pasted image 20241018081128.png](../Images/Pasted%20image%2020241018081128.png)
 ## Polynomial Regression
 When we want to fit non-linear regression with regression tools, we speak of polynomial regression. In *sklearn* this can easily be done by using the familiar `LinearRegression`function.
 
@@ -60,7 +60,7 @@ plt.scatter(x, y_with_noise, label="Noisy data")
 plt.legend()
 ```
 
-![[Pasted image 20241018071836.png|400]]
+![Pasted image 20241018071836.png](../Images/Pasted%20image%2020241018071836.png)
 
 3. Step: Using the built-in function `PolynomialFeatures` to create some polynomial features. What might seem weird is that we need to do a fit (when calling function fit_transform) before we actually fit the regression model. The function `fit_transform` has two functions within it: 
 	- fit: Learns the structure of the transformation from the input data (in this case, it determines how to expand the original feature(s) into polynomial terms).
@@ -84,7 +84,7 @@ plt.legend()
 
 ```
 
-![[Pasted image 20241018071824.png|400]]
+![Pasted image 20241018071824.png](../Images/Pasted%20image%2020241018071824.png)
 ## Baseline Models
 We might want to create a baseline model to evaluate our model against. This can be done with the sklearn function `DummyRegression`.
 

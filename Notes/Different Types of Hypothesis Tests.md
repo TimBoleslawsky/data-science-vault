@@ -30,7 +30,7 @@ The null distribution is then just a binomial distribution. The formula for the 
 - when $n$ is small, the test statistic is the exact number of success derived from the sample.
 - when $n$ is big, the formula is: $s = \frac{k_0 - N\pi}{\sqrt{N\pi(1 - \pi)}}$, which is the same formula as the z-test uses (simplified).
 ## McNemar's Test
-The McNemar's test in general is used to test if an action have different effects on two different groups. The data we analyze looks like this: ![[Pasted image 20250114192555.png|400]]
+The McNemar's test in general is used to test if an action have different effects on two different groups. The data we analyze looks like this: ![Pasted image 20250114192555.png](../Images/Pasted%20image%2020250114192555.png)
 - We have two groups ($x_i = 0, x_i = 1$) and two possible effects ($y_j = 0, y_i = 1$). 
 - $n_{01}$ counts the subjects of group $0$ that after the action now belong to group $1$. 
 - $n_{10}$ counts the subjects of group $1$ that after the action now belong to group $0$. 

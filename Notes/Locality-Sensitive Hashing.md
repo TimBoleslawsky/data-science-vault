@@ -1,6 +1,6 @@
 Locality-Sensitive Hashing (LSH) is a powerful technique designed to efficiently find similar items in high-dimensional data, especially when exact nearest neighbor search becomes too slow or impractical. 
 
-The basic problem we want to solve with LSH is known as the nearest neighbor search. In high-dimensional spaces, exact methods, more on them here: [[Spatial Data Structures]], become computationally expensive or even infeasible due to the curse of dimensionality.
+The basic problem we want to solve with LSH is known as the nearest neighbor search. In high-dimensional spaces, exact methods, more on them here: [Spatial Data Structures](Spatial%20Data%20Structures.md), become computationally expensive or even infeasible due to the curse of dimensionality.
 
 This is where Approximate Nearest Neighbor (ANN) techniques come in. LSH is one such technique that allows sublinear-time retrieval of similar items by sacrificing a small amount of accuracy. Just like with spatial data structures, we build a specialized data structure to do this.
 ## Approximate Nearest Neighbor
@@ -29,7 +29,7 @@ When we want to run a query on this for query point $q$ we:
 - return the closest point within distance $cr$, with probability $\geq 1 - \delta$ — if any exist.
 Important note, in the ($c$, $r$, $δ$)-approximate nearest neighbor setting, we are not required to return the exact nearest neighbor — only some point within distance $cr$, if one within $r$ exists.
 ## Comparison To an Alternative: KD-Trees
-KD-Trees are another structure for nearest neighbor search, especially in low-dimensional Euclidean spaces. For more information see here: [[Spatial Data Structures]].
+KD-Trees are another structure for nearest neighbor search, especially in low-dimensional Euclidean spaces. For more information see here: [Spatial Data Structures](Spatial%20Data%20Structures.md).
 
 | **Feature**              | **LSH**                               | **KD-Tree**                               |
 | ------------------------ | ------------------------------------- | ----------------------------------------- |

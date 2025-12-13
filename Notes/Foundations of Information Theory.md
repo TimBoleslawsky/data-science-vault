@@ -31,7 +31,7 @@ Common approaches include:
 - Asymmetric Neural Systems (ANS), modern alternative to arithmetic coding. Used in most neural compression systems due to speed and parallelism.
 
 This leads to the following general pipeline for lossless compression after Shannon’s source coding theorem:
-1. Model the data distribution. The model gives us an estimate of the true probability distribution $p(x)$. Could be hand-engineered (e.g., statistical counts, prediction, context models) or could be learned (in modern [[Neural Compression]]).
+1. Model the data distribution. The model gives us an estimate of the true probability distribution $p(x)$. Could be hand-engineered (e.g., statistical counts, prediction, context models) or could be learned (in modern [Neural Compression](Neural%20Compression.md)).
 2. Entropy-code the symbols (Huffman, arithmetic, ANS). The **entropy coder** produces a code whose expected length is close to $H(p) = -\sum p(x)\log_2 p(x)$ aka. the entropy.
 ## Lossy Compression
 The goal of lossy compression is to compress data with some allowed distortion while minimizing bitrate. So in contrast to lossless compression, we allow distortion to reduce bitrate by discarding “irrelevant” or “imperceptible” information. Another difference to lossless compression is, that lossy compression is not governed by entropy, but by **rate–distortion theory**. 
@@ -56,7 +56,7 @@ There are three reason, why quantization is essential for lossy compression:
 Quantization can be done in three main ways: 
 - Scalar Quantization (most common): Each coefficient is quantized independently. This is quite simple and efficient, if done after a transform step. Simple JPEG or MP3 do this.
 - Vector Quantization (less common): Maps multi-dimensional vectors to a codebook of representative vectors. Can theoretically minimize distortion for a given bitrate, but is very computationally expensive.
-- During training of [[Neural Compression]]: This has become in modern approaches, where we use training tricks to optimize the rate-distortion objective end-to-end.
+- During training of [Neural Compression](Neural%20Compression.md): This has become in modern approaches, where we use training tricks to optimize the rate-distortion objective end-to-end.
 ### Decorrelation Strategies
 As said above, the introduction of these is the main difference between lossless and lossy compression, so why do we do this? The high level intuition is, we do this to reshape the data so that quantization throws away the least important information for a given distortion measure. As we introduce above, quantization is the _only_ part of lossy compression that actually removes information.
 
@@ -77,7 +77,7 @@ Vector Quantization (VQ) is a decorrelation and compression strategy that maps i
 - **Cons:** Exponentially expensive in high dimensions; impractical for large data without structured approximations.
 #### Transform Encoding
 Transform coding applies a linear or nonlinear transform to the data to decorrelate it and concentrate its “energy” into fewer components.
-- **How it works:** An analysis transform $f$ maps the input $x$ to coefficients $z = f(x)$. Then scalar quantization is applied to each coefficient independently ($\hat{z} = [[z]]$). 
+- **How it works:** An analysis transform $f$ maps the input $x$ to coefficients $z = f(x)$. Then scalar quantization is applied to each coefficient independently ($\hat{z} = [z](z.md)$). 
 - **Key idea:** By decorrelating the data, transform coding allows simple scalar quantization to approximate the optimal vector quantization, making compression computationally feasible.
 - **Examples:** DCT in JPEG, wavelet transforms in JPEG2000, learned transforms in neural compression.
 #### Predictive Encoding

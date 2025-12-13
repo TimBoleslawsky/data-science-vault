@@ -1,4 +1,4 @@
-**Modeling** is the process of encapsulating information into a tool that can forecast and make predictions (more Information about the theory behind mathematical modeling can be found here [[Mathematical Thinking]]).
+**Modeling** is the process of encapsulating information into a tool that can forecast and make predictions (more Information about the theory behind mathematical modeling can be found here [Mathematical Thinking](Mathematical%20Thinking.md)).
 ## Statistical Intuition
 In essence, every model is just a function! If we want to make it more specific, we can say that a model is a **function meant to represent a generative process** (a “small world” that produces the data).
 
@@ -20,7 +20,7 @@ Now while the function models deterministic structure (e.g., “weight increases
 
 => Together, function + (optionally) distribution = full statistical model. _That’s why every statistical model is, at its core, a set of variables tied together by functional assumptions, and in probabilistic models also by distributional assumptions!_
 
-More on this from the statistical side, here: [[Basics of Probability and Statistics for Data Science#Connecting Probability and Statistics to Modelling]].
+More on this from the statistical side, here: [Connecting Probability and Statistics to Modelling](Basics%20of%20Probability%20and%20Statistics%20for%20Data%20Science.md#connecting-probability-and-statistics-to-modelling).
 ## Terminology
 In data science, we describe mathematical models like this: $y = g(x;θ | h)$
 

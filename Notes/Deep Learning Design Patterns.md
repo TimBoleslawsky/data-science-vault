@@ -6,7 +6,7 @@ Key points:
 - Works naturally for sequence-to-sequence tasks like text, but also for images, graphs, etc.
 - Often paired with attention mechanisms to allow the decoder to look back at the input.
 
-Below is a more detailed description of the encoder and decoder models, the encoder-decoder model just combines these two concepts in one model! Encoder-decoder models are sometimes also called *sequence-to-sequence or seq2seq* models. This refers to the task type they are usually applied to: [[Different Task Types for Mathematical Models]].
+Below is a more detailed description of the encoder and decoder models, the encoder-decoder model just combines these two concepts in one model! Encoder-decoder models are sometimes also called *sequence-to-sequence or seq2seq* models. This refers to the task type they are usually applied to: [Different Task Types for Mathematical Models](Different%20Task%20Types%20for%20Mathematical%20Models.md).
 ### Encoder Models
 Encoders are models that take input data and produce a latent representation. Their structure is as follows: Input → Layers (e.g., CNN, RNN, Transformer encoder) → Latent vector(s). Encoders do not generate the final output themselves; they just encode the input into a representation.
 

@@ -69,4 +69,4 @@ print("Encoded data:\n", X_encoded)
 ```
 
 ## Embeddings
-(Word) embeddings are another type of encoding, that enable semantic encoding. This is especially useful for NLP use cases ([[Natural Language Processing]]). More on embeddings here: [[Word Embeddings]].
+(Word) embeddings are another type of encoding, that enable semantic encoding. This is especially useful for NLP use cases ([Natural Language Processing](Natural%20Language%20Processing.md)). More on embeddings here: [Word Embeddings](Word%20Embeddings.md).

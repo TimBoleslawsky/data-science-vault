@@ -16,7 +16,7 @@ The steps:
 - Repeat until the last entry has been correctly inserted
 -> Time complexity = O(n^2)
 ## Merge Sort
-The merge sort algorithm follows the design principle of [[Basics of Algorithms#Divide & Conquer|Divide & Conquer]] and consists of two parts:
+The merge sort algorithm follows the design principle of [Divide & Conquer](Basics%20of%20Algorithms.md#divide-conquer) and consists of two parts:
 - Divide the unsorted list into n sublists, each containing 1 element (a list of 1 element is considered sorted). Time complexity O(log(n))
 - Repeatedly merge sublists to produce new sorted sublists until there is only 1 sublist remaining. This will be the sorted list. Time complexity O(n)
 	- We merge by comparing elements from both halves and place the smaller element in the result array.

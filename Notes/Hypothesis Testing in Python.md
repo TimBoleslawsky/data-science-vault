@@ -112,7 +112,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-  ![[Pasted image 20250123102149.png|400]]
+  ![Pasted image 20250123102149.png](../Images/Pasted%20image%2020250123102149.png)
 
 For hypothesis 1 we reject the null hypothesis, meaning, that we can generalize our hypothesis that students in fact experience more stress and mental health struggles than non-students to the population. In the graph I depict the statistical significance of the results. The line we can see is the null distribution, in this case the t-distribution. On the x-axis we can see the t-statistic and on the y-axis we can see the probability density. We can see that the test statistic sufficiently lies beyond the rejection region letting us reject the null hypothesis.
 
@@ -227,7 +227,7 @@ for z_stat, name in zip(z_stats, test_names):
 	plt.show()
 ```
 
-  ![[Pasted image 20250123102704.png|400]]
+  ![Pasted image 20250123102704.png](../Images/Pasted%20image%2020250123102704.png)
 
 For the second hypothesis I tested on three datasets. The results show that we can reject the null hypothesis in one case (DS3) and fail to reject the null hypothesis in the other (DS1). This is again visualized against the null distribution, in this case the standard normal distribution. I this time plotted the z-statistic in the x-axis and the probability density is again shown on the y-axis. Now for the hypothesis I am testing and for the tests I am carrying out, only the z-value of DS3 is statistically significant. But the results of DS1 obviously should make us cautious. When taking into account the power of the tests, we can see that only the test on DS3 holds any significant statistical power.
 
@@ -321,7 +321,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-![[Pasted image 20250123103125.png|400]]
+![Pasted image 20250123103125.png](../Images/Pasted%20image%2020250123103125.png)
 
 The test on DS1 for hypothesis 2.5 was successful in rejecting the null hypothesis. This means we can generalize our hypothesis that students in western countries are more likely to be diagnosed with a mental health disorder than students in non-western countries to the population. We can also see that the power of the test and the statistical significance seem the support this decision.
 

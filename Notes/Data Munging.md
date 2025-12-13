@@ -46,7 +46,7 @@ Some examples:
 - Times and dates, timezones or daylight saving times can make things difficult.
 - Money, currency conversions can make things difficult.
 ### Missing Values
-Replacing missing values willy-nilly with a 0 or a -1 is dangerous. Zero can be a valid value and it is then impossible to tell whether it is a missing value or an actual 0. Because handling missing values is a very important and nuanced topic, I discuss it in another note, here: [[Handling Missing Values]].
+Replacing missing values willy-nilly with a 0 or a -1 is dangerous. Zero can be a valid value and it is then impossible to tell whether it is a missing value or an actual 0. Because handling missing values is a very important and nuanced topic, I discuss it in another note, here: [Handling Missing Values](Handling%20Missing%20Values.md).
 ### Outliers
 An outlier is a data point that differs significantly from other observations.
 Outliers can be caused by:

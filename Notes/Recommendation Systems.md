@@ -11,7 +11,7 @@ This approach is based on a regression model. The basic idea is this: Each item 
 This approach works specifically well when we have good metadata about items and individual user preferences and when users have unique preferences. Another advantage is that it can recommend new items. 
 Some disadvantages are that we risk "filter bubbles" (users only see content similar to what they’ve already interacted with) and that if a user has no history we cannot make any predictions (cold start problem). 
 
-Two other main problems are high dimensionality and non-uniform missingness. For more details on how to solve high dimensionality, look [[Approaches for creating Regression Models#**Dealing with Highly-Correlated and Unnecessary Features**|here]]. For details on how to handle non-uniform missingness, look [[Handling Missing Values|here]].
+Two other main problems are high dimensionality and non-uniform missingness. For more details on how to solve high dimensionality, look [here](Approaches%20for%20creating%20Regression%20Models.md#dealing-with-highly-correlated-and-unnecessary-features). For details on how to handle non-uniform missingness, look [here](Handling%20Missing%20Values.md).
 ### Collaborative Filtering
 The basic idea behind collaborative filtering is that users with similar histories  
 give similar scores to the same products. This is especially useful, when we don't have detailed product features and therefore can't do a linear regression. 

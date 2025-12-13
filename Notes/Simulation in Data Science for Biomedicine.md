@@ -4,7 +4,7 @@ Simulation, in a statistical context, means generating artificial (fabricated) d
 	- Generate data, run multiple studies with this data, aggregate power calculation.
 - **Efficiency**: Saves time compared to analytical derivations.
 
-How simulation can be used in praxis, can be seen here: [[Simulation and Survival Analysis.pdf]]
+How simulation can be used in praxis, can be seen here: [Simulation and Survival Analysis](../Projects/Survival%20Analysis/Simulation%20and%20Survival%20Analysis.pdf)
 ## Generating Synthetic Data
-To generate synthetic data, we use a random number generator. But these random number generators usually create uniformly distributed random numbers and we usually need numbers from a variety of distributions. Therefore we use [[Sampling#Inverse Transform Sampling|inverse transform sampling]]. 
+To generate synthetic data, we use a random number generator. But these random number generators usually create uniformly distributed random numbers and we usually need numbers from a variety of distributions. Therefore we use [inverse transform sampling](Sampling.md#inverse-transform-sampling). 
 

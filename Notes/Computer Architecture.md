@@ -24,4 +24,4 @@ Computers transform high-level code into machine-executable instructions through
 	 - **Registers** R2 and R3 to send data to ALU
 	 - ALU to perform ADD Result to be stored in R1
 
-The CPU relies on **registers**, small but ultra-fast storage locations, to temporarily hold data for processing. The registers are part of a larger memory hierarchy which is further explained here: [[Memory Hierarchy]]. 
+The CPU relies on **registers**, small but ultra-fast storage locations, to temporarily hold data for processing. The registers are part of a larger memory hierarchy which is further explained here: [Memory Hierarchy](Memory%20Hierarchy.md). 

@@ -1,5 +1,5 @@
 ## Decision Tree Classification
-The basic idea of decision trees is described in the regression model note: [[Approaches for creating Regression Models#Definition]].
+The basic idea of decision trees is described in the regression model note: [Definition](Approaches%20for%20creating%20Regression%20Models.md#definition).
 
 Recursive binary splitting, the main method to train decision trees, is also described in the link above. But when talking about decision tree classification, we have some differences compared to the way we train regression decision trees. 
 
@@ -10,7 +10,7 @@ Secondly, we need a different splitting criterion than the squared prediction er
 - Entropy (Information Gain): Measures the impurity of a node based on class probabilities.
 - Gini Index: Measures the probability of incorrect classification if a random sample is chosen.
 
-Here is an example in Python how a decision tree classifier can be trained and visualized: [[Decision Tree Classification in Python]].
+Here is an example in Python how a decision tree classifier can be trained and visualized: [Decision Tree Classification in Python](Decision%20Tree%20Classification%20in%20Python.md).
 ## Linear Classifiers
 When we say a regressor or a classifier is linear, we mean that the output is a linear function of the input features. A linear classifier predicts discrete classes based on whether the linear combination of features crosses a certain threshold. We can think of this process as finding the decision boundary in a hyperplane in feature space.
 
@@ -18,17 +18,17 @@ The main difference between different linear classifiers lies in their loss func
 
 Below the linear classifier "logistic regression" is explained in detail. Because in practice all linear classifiers work relatively similarly, I will only explain one. Another very popular linear classifier is the **Support Vector Classifier (SVC)**. In practice we want to use logistic regression if we want probabilities or interpretability and use SVC if we care more about classification accuracy and margin-based generalization.
 
-Linear classifiers can become inefficient when using high-dimensional, noisy, or text-based data. We can help this by using *sparse* classifiers that aim to reduce many weights to zero and therefore having fewer active features. In practice we achieve this using [[Regularization|L1 regularization]]. Most popular linear classifiers in scikit-learn support this (via 'l1' penalty).
+Linear classifiers can become inefficient when using high-dimensional, noisy, or text-based data. We can help this by using *sparse* classifiers that aim to reduce many weights to zero and therefore having fewer active features. In practice we achieve this using [L1 regularization](Regularization.md). Most popular linear classifiers in scikit-learn support this (via 'l1' penalty).
 ### Logistic Regression
 Unfortunately, we can not just simply use linear regression for classification problems. Imagine we add a number of “very negative” examples to the training data. The regression line will tilt towards these examples, putting the correct classification of more marginal examples at risk.
-Unlike [[Approaches for creating Regression Models#Linear Regression|linear regression]], which is used to predict a continuous value (like house prices), logistic regression predicts the **probability** that a given input belongs to a particular class. To do this, it uses the **logistic function (sigmoid function)** to ensure that the output is always a probability between 0 and 1.
+Unlike [linear regression](Approaches%20for%20creating%20Regression%20Models.md#linear-regression), which is used to predict a continuous value (like house prices), logistic regression predicts the **probability** that a given input belongs to a particular class. To do this, it uses the **logistic function (sigmoid function)** to ensure that the output is always a probability between 0 and 1.
 
 Logistic regression starts by calculating a linear combination of the input features. This is similar to linear regression and looks like this $f(x) = w_0 + w_1x$. Now we use the sigmoid function to convert this linear output into a probability between 0 and 1. The sigmoid function looks like this 
 $g(x) = \frac{1}{1 + e^{-f(x)}}$. 
 
 For example, let's say our linear combination looks like this $f(x) = -4+1x$ for predicting if students pass or fail based on the hours of study. Then our sigmoid function would look like this $g(x) = \frac{1}{1 + e^{-(-4+1x)}}$. Now we want to predict if a student that studied 3 hours likely passes or fails. Our $f(3) = -1$ and our $g(3) = 0.27$. This means the model predicts that the student who studied 3 hours has about a **27% chance of passing**. Since 27% is less than 0.5, we predict that the student will **fail** (classification = 0).
 
-![[Pasted image 20241008085552.png|400]]
+![Pasted image 20241008085552.png](../Images/Pasted%20image%2020241008085552.png)
 
 **Model Definition of Form $y = g(x;θ | h)$**
 Left-hand side:
@@ -48,7 +48,7 @@ If we combine these two functions for all $f(x)$ we get: $J(w) = - { 1 \over n} 
 
 Because this function is convex, we can find the parameters $w$, which best fit the training examples, using gradient descent.
 ## Nearest Neighbor Classification
-The idea behind the nearest neighbor classification is very simple. We have an arbitrary amount of points on a feature space. When we want to determine the class of a new point, or *query point,* we just look which point is the closest to the new point and assume the new point has the same class as the nearest point. Which distance function (discussed here: [[Distances]]) is used, is up to the programmer. 
+The idea behind the nearest neighbor classification is very simple. We have an arbitrary amount of points on a feature space. When we want to determine the class of a new point, or *query point,* we just look which point is the closest to the new point and assume the new point has the same class as the nearest point. Which distance function (discussed here: [Distances](Distances.md)) is used, is up to the programmer. 
 
 **Advantages**:  
 - Simplicity: Easy to understand.  
@@ -77,9 +77,9 @@ Increasing $k$ tends to produce larger regions with smoother boundaries, represe
 ## Naïve Bayes Classification
 The idea behind Naïve Bayes classification is really simple. We have two steps. 
 In the training phase, Naïve Bayes calculates the probabilities. The *prior probability* for each class is typically the proportion of the training data that belongs to that class. The *likelihood* for each feature, which is the likelihood of the feature given the class.
-In the prediction phase, we classify a new data point by calculating the posterior probability (maximum a posteriori estimation of the label) for each class using the Bayes theorem and assigning the class with the highest posterior probability. For more information about posterior probability and maximum a posteriori estimation, look here: [[Parameter Estimation for Probabilistic Models]].
+In the prediction phase, we classify a new data point by calculating the posterior probability (maximum a posteriori estimation of the label) for each class using the Bayes theorem and assigning the class with the highest posterior probability. For more information about posterior probability and maximum a posteriori estimation, look here: [Parameter Estimation for Probabilistic Models](Parameter%20Estimation%20for%20Probabilistic%20Models.md).
 
-This means that for each variation of the Naïve Bayes classifier, we start with something like this: $P(C_k | X) \propto P(C_k) \cdot P(X | C_k)$. For each variation of the Naïve Bayes classifier the assumption we make for the distribution of the underlying data changes. This means that the way we calculate the likelihood differs. The way we calculate the prior is the same across all variations ($P(C_k) = \frac{\text{Number of samples in class } C_k}{\text{Total number of samples}}$). More on the variations here: ([[Approaches for creating Classification Models#Variations of Naïve Bayes Classification]])
+This means that for each variation of the Naïve Bayes classifier, we start with something like this: $P(C_k | X) \propto P(C_k) \cdot P(X | C_k)$. For each variation of the Naïve Bayes classifier the assumption we make for the distribution of the underlying data changes. This means that the way we calculate the likelihood differs. The way we calculate the prior is the same across all variations ($P(C_k) = \frac{\text{Number of samples in class } C_k}{\text{Total number of samples}}$). More on the variations here: ([Variations of Naïve Bayes Classification](Approaches%20for%20creating%20Classification%20Models.md#variations-of-nave-bayes-classification))
 
 The “naïve” part of Naïve Bayes refers to the assumption that all features (predictors) are conditionally independent given the class label. This independence assumption simplifies the computation significantly. Even though it’s often unrealistic (features are usually not completely independent), Naïve Bayes still works well in practice.
 
@@ -105,10 +105,10 @@ We can deal with this by **Laplace smoothing** also called **discounting**. The 
    - Formula for the likelihood: $P(x_i = 1 | y) = \frac{\text{Count of documents in class } y \text{ containing word } i}{\text{Total number of documents in class } y}$ the product of this is the likelihood. 
 
 3. Gaussian Naïve Bayes is particularly useful for tasks where you need to classify continuous features that are assumed to have a bell-shaped distribution, making it suitable for problems where the data can be modeled using continuous, normally distributed features. We for example use it in text or image classification.
-   - Formula for the likelihood: likelihood function of the gaussian distribution, more [[Parameter Estimation for Probabilistic Models#Maximum Likelihood Estimation (MLE)|here]].
+   - Formula for the likelihood: likelihood function of the gaussian distribution, more [here](Parameter%20Estimation%20for%20Probabilistic%20Models.md#maximum-likelihood-estimation-mle).
 ## Issues Specific in Modeling Classification Problems
 **Balanced training classes**
-In a lot of real word classification problems, there exists an unbalance in training classes. For example, if we want to classify terrorists, there are way more non-terrorists than terrorists. If we fit our classifier with an unbalanced data set, we will likely miss all of the terrorists because their contribution to the loss function is so minimal. It is generally best to use equal numbers of positive and negative examples. We could use a workaround like replicating some of the scarce data or weighing the rare training examples by adding coefficients, but in each case, we bias the classifier, which can lead to problems. More on handling imbalanced classes here: [[Handling Imbalanced Classes]].
+In a lot of real word classification problems, there exists an unbalance in training classes. For example, if we want to classify terrorists, there are way more non-terrorists than terrorists. If we fit our classifier with an unbalanced data set, we will likely miss all of the terrorists because their contribution to the loss function is so minimal. It is generally best to use equal numbers of positive and negative examples. We could use a workaround like replicating some of the scarce data or weighing the rare training examples by adding coefficients, but in each case, we bias the classifier, which can lead to problems. More on handling imbalanced classes here: [Handling Imbalanced Classes](Handling%20Imbalanced%20Classes.md).
 
 **Multi-class Classification**
 It is also no rarity that we need to classify between more then two classes. This is a problem for most classifiers. A workaround is to build many one-vs.-all classifiers.

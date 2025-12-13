@@ -38,7 +38,7 @@ p <- inv_logit(prior$a)
 dens(p, adj = 0.1)
 ```
 
-The resulting prior predictive check looks like this: ![[Pasted image 20251010093558.png]]
+The resulting prior predictive check looks like this: ![Pasted image 20251010093558.png](../Images/Pasted%20image%2020251010093558.png)
 This is the result of the extreme prior:  a ~ dnorm(0, 10)!
 
 Second, the nonlinear link creates _two scales of meaning_ — one for parameters and one for outcomes. Every generalized linear model has:

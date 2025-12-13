@@ -1,4 +1,4 @@
-For a hands-on example of survival analysis in R, look here: [[Survival Analysis.pdf]]
+For a hands-on example of survival analysis in R, look here: [Survival Analysis](../Projects/Survival%20Analysis/Survival%20Analysis.pdf)
 ## **What Is Survival Analysis?**
 Survival analysis deals with data where the outcome of interest is **the time until an event occurs** (e.g., death, disease progression, equipment failure). It’s used in:
 - Medicine (e.g., time until death after diagnosis)
@@ -20,17 +20,17 @@ Important functions and notation for survival analysis:
 - $h(t) = \frac{f(t)}{S(t)}$:  Hazard function, measures instantaneous risk of an event at time $t$, given survival up to $t$.
 ## Estimating the Survival Function
 Since patients enter studies at different times, survival time must be adjusted accordingly. The **Kaplan-Meier estimator** is widely used. The first idea is to use time in study instead of actual time: 
-![[Pasted image 20250301160735.png|00]]
+![Pasted image 20250301160735.png](../Images/Pasted%20image%2020250301160735.png)
 
 The second idea is to produce a stepwise survival curve that decreases at event times. This can look like this: 
-![[Pasted image 20250301160855.png|400]]
+![Pasted image 20250301160855.png](../Images/Pasted%20image%2020250301160855.png)
 
 The steps to produce this look like this. Let's say we have the following observations: order event times: 59 115 156 268 329 431 | 638 and ordered non-event times: 448 477 | 803 855 1040 1106. This means that for example at time 59 there was an event and at time 448 there was a censoring (end of observation, withdrawal, ...). We can now calculate the following for each step:
 - $d_k$: Number of events at time $t_k$.
 - $m_k$: Number of censored observations in ($t_k$,$t_{k+1}$)
 - $n_k$: Number of patients at risk just prior to $t_k$. 
 => the estimation of the survival function $s(t)$ is then the product of ($1-\frac{d_k}{n_k}$) of all $t$'s up until now. Example: 
-![[Pasted image 20250301161841.png|600]]
+![Pasted image 20250301161841.png](../Images/Pasted%20image%2020250301161841.png)
 ## Comparing Survival Functions: Log-Rank Test
 To compare survival between groups (e.g., two treatment arms), the **Log-Rank Test** is used. It tests whether there is a significant difference in survival times between groups by checking if the hazard functions are proportional over time. 
 
@@ -60,7 +60,7 @@ The **“proportional hazards”** assumption means that the ratio of hazards be
 	=> If receiving treatment A halves the risk of death compared to treatment B, this remains true at all time points.
 
 Since the Cox model assumes hazards are proportional, this needs to be checked. For example, this can be checked graphically. For example like this: 
-![[Pasted image 20250302094520.png]]
+![Pasted image 20250302094520.png](../Images/Pasted%20image%2020250302094520.png)
 - Compute Kaplan-Meier estimate for each group.
 - Plot separate lines log(-log(KM\$surv)) versus log(KM\$time) for each group.
 

@@ -28,7 +28,7 @@ First let's answer the question of *Why?*.  The existence of both the Frequenti
 		- Example: If we flip a coin and don’t know its fairness, we assign it a probability distribution (e.g., maybe it has a 70% chance of being fair and a 30% chance of being biased).
 		- As we collect data, we update this belief using **Bayes’ theorem**.
 	- **Inference is about belief updating.**
-		- We start with a **prior belief** about a parameter. (Prior choice is very important [[Choosing Priors]])!
+		- We start with a **prior belief** about a parameter. (Prior choice is very important [Choosing Priors](Choosing%20Priors.md))!
 		- We observe new data and compute the **likelihood** of that data.
 		- We update our belief to get a **posterior distribution**.
 	- **Hypothesis testing is direct.**

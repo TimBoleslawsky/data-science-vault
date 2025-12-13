@@ -5,7 +5,7 @@ The basic idea of CSPs is simple: A **Constraint Satisfaction Problem (CSP)** is
 3. **Constraints**: Rules that specify which combinations of values for the variables are valid.
 => The goal in CSPs is to assign values to all variables while satisfying all constraints.
 ## Constraint Programming
-Constraint programming is a tool to solve CSPs or [[Optimization Problems|optimization problems]]. When solving these problems we usually take one of two approaches:
+Constraint programming is a tool to solve CSPs or [optimization problems](Optimization%20Problems.md). When solving these problems we usually take one of two approaches:
 - Refinement model: variables in the problem are initially unassigned, and each variable is assumed to be able to contain any value included in its range or domain. 
 - Perturbation model: variables in the problem are assigned a single initial value. At different times one or more variables receive perturbations (changes to their old value), and the system propagates the change trying to assign new values to other variables that are consistent with the perturbation.
 

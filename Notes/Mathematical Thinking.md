@@ -18,7 +18,7 @@ Why is that important? => To arrive at a hypothesis or conjecture that we can pr
 - Now we formulate this problem differently to better serve our purpose: $1*(-1)+(-1)*(-1) =0$. From this follows that: $-1 +(-1)^2 = 0$. 
 - For this to hold, $-1^2$ must therefore be $1$. 
 ## Mathematical Modeling
-Applied problems are not mathematical from the beginning. You must identify and formulate them as such. A model serves as a way to represent the complex reality in a convenient way, so that we can draw conclusions about it and gain access to mathematical and computational techniques. For more specific information about what mathematical modeling means in the context of data science, look here: [[Mathematical Modeling in Data Science]].
+Applied problems are not mathematical from the beginning. You must identify and formulate them as such. A model serves as a way to represent the complex reality in a convenient way, so that we can draw conclusions about it and gain access to mathematical and computational techniques. For more specific information about what mathematical modeling means in the context of data science, look here: [Mathematical Modeling in Data Science](Mathematical%20Modeling%20in%20Data%20Science.md).
 
 Usually, the modeling cycle follows this pattern: 
 - We have some **aspect of reality**, that we simplify and make more precise. This process is usually inductive and not deductive. 

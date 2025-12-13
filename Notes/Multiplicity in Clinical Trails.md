@@ -17,7 +17,7 @@ In general there are four types of multiplicity in clinical trails: multiple end
 We can categorize the comparison methods into two categories: **p-value-based methods** and **fixed-sequence procedures**. These two categories (there are technically more) reflect different ways of controlling for multiplicity in hypothesis testing. Here’s how they differ and when each is useful:
 ### P-value-based Methods
 The most famous p-value-based methods are the Bonferroni method, the Holm method, and the Hochberg method. Here is how they work: 
-![[Pasted image 20250221093449.png]]
+![Pasted image 20250221093449.png](../Images/Pasted%20image%2020250221093449.png)
 - For Bonferroni, we just multiply each p-value times N.
 - For Holm, we go from the best/worst p-value and multiply by N, then by N-1. ...
 	- If the adjusted p-value of the current $i$ is smaller than the previous one, take the previous one.

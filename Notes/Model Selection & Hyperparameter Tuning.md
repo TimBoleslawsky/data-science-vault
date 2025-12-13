@@ -1,4 +1,4 @@
-When it comes to model selection & hyperparameter tuning, we both want to check, which hyperparameters perform the best and which models (either different in hyperparameters or completely different) perform the best. We have methods that are only used for hyperparameter tuning and we have methods that are used for both, hyperparameter tuning and model selection. An example can be seen here: [[Hyperparameter Tuning & Overfitting Analysis in Python]].
+When it comes to model selection & hyperparameter tuning, we both want to check, which hyperparameters perform the best and which models (either different in hyperparameters or completely different) perform the best. We have methods that are only used for hyperparameter tuning and we have methods that are used for both, hyperparameter tuning and model selection. An example can be seen here: [Hyperparameter Tuning & Overfitting Analysis in Python](Hyperparameter%20Tuning%20%26%20Overfitting%20Analysis%20in%20Python.md).
 
 It needs to be said that of course a sensible and easy way to do this for all types of models is just comparing different inputs (hyperparameters, model types, ...) and outputs (final model evaluation metrics). For example a common method for $k$-means clustering is taking the silhouette score (see picture below) and just comparing different $k$ values for that. The methods below are just more sophisticated applications of this principle.
 ## Hyperparameter Tuning
@@ -11,7 +11,7 @@ Plots training and validation performance as a function of a hyperparameter (e.g
 ### Elbow Method
 In clustering, especially $k$-means, the elbow method is a popular model selection The elbow method is based on the **MSE**. When we perform $k$-means and evaluate the resulting clustering of different values for $k$ according to the MSE of the points from their centers, we get a graph that looks something like the one in the picture below.
 
-![[Pasted image 20241205143119.png]]
+![Pasted image 20241205143119.png](../Images/Pasted%20image%2020241205143119.png)
 
 What we seek from the error curve is the value $k$ where the rate of decline decreases drastically, or the *elbow*. 
 

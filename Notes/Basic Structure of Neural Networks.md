@@ -15,8 +15,8 @@ $a^{(1)} = \sigma(Wa^{(0)}+b)$, where:
 - $\sigma$ is an activation function, which introduces non-linearity.  
 
 How these layers are constructed and connected, is the main deciding factor in how the neural network functions!
-- The layer-level architecture and different ways to connect the layers are the fundamental design paradigms of deep learning models. More here: [[Deep Learning Paradigms and Building Blocks]].
-- The model-level architecture and what different layers are combined in which way, define the overarching architecture types of deep learning models. More here: [[Key Architectures in Deep Learning]].
+- The layer-level architecture and different ways to connect the layers are the fundamental design paradigms of deep learning models. More here: [Deep Learning Paradigms and Building Blocks](Deep%20Learning%20Paradigms%20and%20Building%20Blocks.md).
+- The model-level architecture and what different layers are combined in which way, define the overarching architecture types of deep learning models. More here: [Key Architectures in Deep Learning](Key%20Architectures%20in%20Deep%20Learning.md).
 ## Activation Functions
 Activation functions play a crucial role in neural networks by introducing **non-linearity**, allowing the model to learn complex patterns. Without them, a neural network would be just a linear model, regardless of how many layers it has!
 

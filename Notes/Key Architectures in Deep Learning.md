@@ -8,7 +8,7 @@ An MLP is composed of:
 
 MLPs work well for tabular or low-dimensional data, but they do not scale efficiently to structured data like images or sequences. They ignore spatial or temporal relationships because every input is treated as independent — motivating architectures like CNNs and RNNs.
 ## Convolutional Neural Networks
-CNNs are designed for grid-like data (e.g., images) to detect local patterns (edges, textures, shapes). Instead of flattening an image, CNNs preserve its spatial structure by using filters (kernels) that scan through small patches of the image. For an example of how to do image classification using CNNs, look here [[Image Classification with CNN.py]]. 
+CNNs are designed for grid-like data (e.g., images) to detect local patterns (edges, textures, shapes). Instead of flattening an image, CNNs preserve its spatial structure by using filters (kernels) that scan through small patches of the image. For an example of how to do image classification using CNNs, look here [Image Classification with CNN](../Projects/Image%20Classification%20with%20CNN/Image%20Classification%20with%20CNN.py). 
 
 Here is how these kernels work. A kernel is basically a small window that is applied on different parts of an image. A kernel could for example look like this: 
 
@@ -66,11 +66,11 @@ TBD
 ### GRU
 TBD
 ## Transformers
-The Transformer architecture was introduced in *Vaswani et al., 2017 – “Attention Is All You Need.”* The key motivation was to remove [[Deep Learning Paradigms and Building Blocks#Recurrence|recurrence]] and [[Deep Learning Paradigms and Building Blocks#Convolutional Processing|convolution]] from sequence models and rely entirely on [[Deep Learning Paradigms and Building Blocks#Attention Mechanisms|attention]] for sequence mixing and long-range dependencies.
+The Transformer architecture was introduced in *Vaswani et al., 2017 – “Attention Is All You Need.”* The key motivation was to remove [recurrence](Deep%20Learning%20Paradigms%20and%20Building%20Blocks.md#recurrence) and [convolution](Deep%20Learning%20Paradigms%20and%20Building%20Blocks.md#convolutional-processing) from sequence models and rely entirely on [attention](Deep%20Learning%20Paradigms%20and%20Building%20Blocks.md#attention-mechanisms) for sequence mixing and long-range dependencies.
 
 A **Transformer** is defined by a specific architectural template consisting of:
 - Two major blocks: Self-attention and MLP. The self-attention layer models the relational structure of the data, we can say it determines "which variables matter". The MLP layer introduces the non-linear transformation and answer the question: "Given those variables, what transformation should I apply?". 
-	- For more on the multi-head self-attention layer, look here: [[Deep Learning Paradigms and Building Blocks]].
+	- For more on the multi-head self-attention layer, look here: [Deep Learning Paradigms and Building Blocks](Deep%20Learning%20Paradigms%20and%20Building%20Blocks.md).
 	- The MLP layer is usually just a linear layer + a non-linear activation function (e.g. SwiGLU)  + another linear layer. So we want, for each token independently (no interaction here), to expand the latent space, introduce non-linearity, compress back down. 
 - Residual connections + layer normalization as essential components.
 - No Recurrence, No Convolution (which enables full parallelization during training).
@@ -79,4 +79,4 @@ A **Transformer** is defined by a specific architectural template consisting of:
 Modern variants (GPT, BERT, T5, LLaMA, ViT) might have slight deviations from this architecture, but are still called “Transformers” as long as they preserve its main features.
 
 Here is an example implementation of the transformer architecture:
-![[olmo2_overview.svg|250]]
+![olmo2_overview.svg](../Images/olmo2_overview.svg)

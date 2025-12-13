@@ -11,7 +11,7 @@ When we say a model is **linear** or **non-linear**, we’re talking about the s
 - $p(y=1|x_1,x_2) = \sigma(w_1 x_1 + w_2 x_2 + b)$, has a decision boundary at $p(y=1|x_1,x_2) = 0.5$. Since $\sigma(z)=0.5$ when $z=0$, the boundary is: $w_1 x_1 + w_2 x_2 + b = 0$, which is linear. 
 This is the reason, why "normal" machine learning models struggle to capture non-linear problems!
 
-More on linear models here: [[The Hierarchy of Linear Models]].
+More on linear models here: [The Hierarchy of Linear Models](The%20Hierarchy%20of%20Linear%20Models.md).
 ## Black Box vs. Descriptive Models
 A model is a black box if we can observe that the outputs have predictive power, but we cannot explain why the outputs are what they are. Artificial neural networks are black box models, we understand that they are working, but we don't understand why.
 ## First-principle vs. Data-driven Models
@@ -21,15 +21,15 @@ A model is a black box if we can observe that the outputs have predictive power,
 
 **Deterministic models** provide a fixed output for a given input. The outcomes are fully determined by the inputs and the model structure. First-principle models often yield only one possible answer. Newton’s laws of motion will tell you exactly how long a mass takes to fall a given distance.
 ### Parameter Estimation
-A really really important part of mathematical modeling is parameter estimation ([[Data Science#The Goals of Data Science]]). Because they are inherently different for probabilistic and deterministic models I want to shine a light on both:
-- **Probabilistic models**: Almost always estimated via MLE, MAP, or Bayesian inference (all optimization under the hood) ([[Parameter Estimation for Probabilistic Models]]).
-- **Deterministic models**: Almost always estimated via direct optimization of some loss, without reference to a likelihood ([[Parameter Estimation for Deterministic Models]]).
+A really really important part of mathematical modeling is parameter estimation ([The Goals of Data Science](../README.md#the-goals-of-data-science)). Because they are inherently different for probabilistic and deterministic models I want to shine a light on both:
+- **Probabilistic models**: Almost always estimated via MLE, MAP, or Bayesian inference (all optimization under the hood) ([Parameter Estimation for Probabilistic Models](Parameter%20Estimation%20for%20Probabilistic%20Models.md)).
+- **Deterministic models**: Almost always estimated via direct optimization of some loss, without reference to a likelihood ([Parameter Estimation for Deterministic Models](Parameter%20Estimation%20for%20Deterministic%20Models.md)).
 ## Flat vs. Hierarchical Models
-A **flat model** is one where there is only one problem that is being solved, without subproblems with a parent-child relationship. A **hierarchical model** would be the opposite, for example, hierarchical clustering. More on hierarchical models, here: [[The Hierarchy of Linear Models]].
+A **flat model** is one where there is only one problem that is being solved, without subproblems with a parent-child relationship. A **hierarchical model** would be the opposite, for example, hierarchical clustering. More on hierarchical models, here: [The Hierarchy of Linear Models](The%20Hierarchy%20of%20Linear%20Models.md).
 ## Inference Framework
 **Frequentist models**: Parameters are fixed but unknown; uncertainty comes from imaginary repeated sampling; probability describes long-run frequencies of data.
 **Bayesian models**: Parameters are treated as random variables with probability distributions; uncertainty reflects incomplete information; probability is a measure of plausibility.
-=> More on this difference here: [[Two Approaches to Statistics]].
+=> More on this difference here: [Two Approaches to Statistics](Two%20Approaches%20to%20Statistics.md).
 ## Generative vs. Discriminative Models
 Generative models explicitly model how data is produced. They learn the joint distribution: $p(X, Y)$ or  $p(X)$, and can both classify and generate new samples. Examples: Naive Bayes, HMMs, LDA, Gaussian mixtures, autoregressive LMs (GPT), VAEs, GANs, diffusion models.
 

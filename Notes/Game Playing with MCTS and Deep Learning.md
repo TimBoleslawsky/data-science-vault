@@ -1,4 +1,4 @@
-There exist a lot of popular systems based on MCTS ([[Monte Carlo Tree Search and Game Playing]]). But they have some limitations, especially in large search spaces:
+There exist a lot of popular systems based on MCTS ([Monte Carlo Tree Search and Game Playing](Monte%20Carlo%20Tree%20Search%20and%20Game%20Playing.md)). But they have some limitations, especially in large search spaces:
 - Inefficient Exploration – The systems treat all moves equally at first and only refines values after many rollouts.
 - Lack of Generalization – Every game state is evaluated from scratch, meaning no learning happens across different games.
 - Purely Random Rollouts – The game outcome is estimated based on random moves rather than intelligent play.
@@ -13,5 +13,5 @@ MCTS can be improved by deep learning in two key ways:
 	- In deep learning, the value network directly estimates the probability of winning from a given state, eliminating the need for full random rollouts.
 	- This makes the search much faster because instead of playing thousands of games per move, the value network provides a strong estimate instantly.
 
-In this project I go into a little more detail how that can be done: [[MCTS and Deep Learning Report.pdf]]. The code for this solution is here: [[MCTS and Deep Learning Code.py]].
+In this project I go into a little more detail how that can be done: [MCTS and Deep Learning Report](../Projects/MCTS%20and%20Deep%20Learning/MCTS%20and%20Deep%20Learning%20Report.pdf). The code for this solution is here: [MCTS and Deep Learning Code](../Projects/MCTS%20and%20Deep%20Learning/MCTS%20and%20Deep%20Learning%20Code.py).
 

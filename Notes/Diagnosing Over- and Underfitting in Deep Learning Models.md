@@ -1,4 +1,4 @@
-When it comes to diagnosing over- and underfitting we have two popular and simple ways of doing this. An example can be seen here: [[Hyperparameter Tuning & Overfitting Analysis in Python]].
+When it comes to diagnosing over- and underfitting we have two popular and simple ways of doing this. An example can be seen here: [Hyperparameter Tuning & Overfitting Analysis in Python](Hyperparameter%20Tuning%20%26%20Overfitting%20Analysis%20in%20Python.md).
 
 First, the learning curve. The learning curve, shows how a model’s performance (e.g., accuracy, loss) changes with increasing training data. This helps to diagnose if more data would improve the model. How this detects over- and underfitting:
 - Underfitting: Both training and validation scores are low and close to each other → the model is too simple.

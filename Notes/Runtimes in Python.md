@@ -93,7 +93,7 @@ w = words_letter_position(fileContent, 'a', 5)
 print(timeit.timeit(setup=SETUP_CODE,stmt=TEST_CODE,number=100)/100)
 ```
 
-In this example, it is evident that there is a lot of work necessary to time multiple lines of code with the `timeit` module. It might be better to use a wrapper function or a [[Decorators in Python|decorator]].
+In this example, it is evident that there is a lot of work necessary to time multiple lines of code with the `timeit` module. It might be better to use a wrapper function or a [decorator](Decorators%20in%20Python.md).
 
 4. Using the `timeit` module with a wrapper function:
 

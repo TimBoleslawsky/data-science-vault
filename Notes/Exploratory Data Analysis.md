@@ -1,6 +1,6 @@
 Exploratory data analysis is the search for patterns and trends in a given data set before actually doing any Data Science. We want to answer the question: What does our data really look like? Getting a handle on what you are dealing with is the first step of any serious analysis. 
 
-Here are two examples of how to do data analysis in Python and R: [[Data Analysis in R.pdf]], [[Data Analysis in Python]].
+Here are two examples of how to do data analysis in Python and R: [Data Analysis in R](../Projects/Data%20Analysis%20in%20R/Data%20Analysis%20in%20R.pdf), [Data Analysis in Python](Data%20Analysis%20in%20Python.md).
 
 When confronting a new data set, the following tasks should be done:
 1. Answer the basic questions:

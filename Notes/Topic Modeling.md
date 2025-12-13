@@ -24,7 +24,7 @@ Key parameters for this:
 - $\beta$: Dirichlet prior controlling topic-word sparsity.
 - $K$: Number of topics.
 
-Do achieve this we want the posterior: $P(Z, \theta, \phi \mid W)$. Looking at the Bayes' rule, we can see, that calculating this exactly, is impossible: $P(Z,\theta,\phi \mid w) = \frac{P(Z, w, \theta, \phi)}{P(w)}$. To solve this, we use Gibbs sampling, more here: [[Parameter Estimation for Probabilistic Models#Gibbs Sampling]].
+Do achieve this we want the posterior: $P(Z, \theta, \phi \mid W)$. Looking at the Bayes' rule, we can see, that calculating this exactly, is impossible: $P(Z,\theta,\phi \mid w) = \frac{P(Z, w, \theta, \phi)}{P(w)}$. To solve this, we use Gibbs sampling, more here: [Gibbs Sampling](Parameter%20Estimation%20for%20Probabilistic%20Models.md#gibbs-sampling).
 
 LDA comes in a few different variants: 
 

@@ -6,7 +6,7 @@ This is an excerpt of the project I did in the course *Statistical Methods for D
 df_ds1 = pd.read_csv("Mental_Health_Dataset.csv", sep=",")
 
 # Choosing relevant variables
-df_ds1 = df_ds1[["Country", "Occupation", "treatment", "Growing_Stress", "Mood_Swings", "Coping_Struggles", "Social_Weakness"]]
+df_ds1 = df_ds1["Country", "Occupation", "treatment", "Growing_Stress", "Mood_Swings", "Coping_Struggles", "Social_Weakness"](%22Country%22%2C%20%22Occupation%22%2C%20%22treatment%22%2C%20%22Growing_Stress%22%2C%20%22Mood_Swings%22%2C%20%22Coping_Struggles%22%2C%20%22Social_Weakness%22.md)
 df_ds1
 ```
 
@@ -83,7 +83,7 @@ for j in range(len(columns), len(axs)):
 	plt.show()
 ```
 
-![[Pasted image 20250123100819.png|400]]
+![Pasted image 20250123100819.png](../Images/Pasted%20image%2020250123100819.png)
 
 To get a better understanding of how the answer are distributed, I look at bar charts for each of the columns. For the x-axis I always have the possible values in the columns and for the y-axis I have the frequency.
 
@@ -114,7 +114,7 @@ for j in range(len(columns), len(axs)):
 	plt.show()
 ```
 
-  ![[Pasted image 20250123100946.png|400]]
+  ![Pasted image 20250123100946.png](../Images/Pasted%20image%2020250123100946.png)
 
 Because I am especially interested in how the answer are distributed between students and non-students participants, I plot these distributions in a heat map. For the x-axis I have again the possible answer of the specific column and for the y-axis I have the distinction between students and non-students.
 
@@ -139,7 +139,7 @@ df_ds1['mental_health_score'] = df_ds1[columns_to_map].sum(axis=1)
 
 # Scale the data
 scaler = MinMaxScaler()
-df_ds1['mental_health_score'] = scaler.fit_transform(df_ds1[['mental_health_score']])
+df_ds1['mental_health_score'] = scaler.fit_transform(df_ds1['mental_health_score'](%27mental_health_score%27.md))
 ```
 
 ```python
@@ -158,7 +158,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-![[Pasted image 20250123101106.png|400]]
+![Pasted image 20250123101106.png](../Images/Pasted%20image%2020250123101106.png)
 
 To get a better understanding of the mental health score I use the `describe()` function to look at the basic descriptive statistic and a bar chart to look at the distribution.
 ## Conclusion

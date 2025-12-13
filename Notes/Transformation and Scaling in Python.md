@@ -59,4 +59,4 @@ plt.tight_layout()
 plt.show()
 ```
 
-![[Pasted image 20241219103609.png]]
+![Pasted image 20241219103609.png](../Images/Pasted%20image%2020241219103609.png)

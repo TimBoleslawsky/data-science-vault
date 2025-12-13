@@ -11,4 +11,4 @@ The problem with LOOCV, is that it requires re-fitting the model _n_ times (once
 - These re-weightings can be unstable, so Pareto smoothing is applied to stabilize the importance weights. 
 - The result is **PSIS-LOO**, an efficient and reliable approximation of exact LOO cross-validation.
 
-It is important to note, that cross-validation, is a framework that can be used for multiple purposes. We can use it for model selection and then compare metrics like deviance ([[Using Information Theory to Select Models#Deviance]]), or we can use it for actual model evaluation and then we usually use metrics like the RMSE, $R^2$, accuracy.
+It is important to note, that cross-validation, is a framework that can be used for multiple purposes. We can use it for model selection and then compare metrics like deviance ([Deviance](Using%20Information%20Theory%20to%20Select%20Models.md#deviance)), or we can use it for actual model evaluation and then we usually use metrics like the RMSE, $R^2$, accuracy.

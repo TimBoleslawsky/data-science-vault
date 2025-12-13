@@ -26,7 +26,7 @@ plt.title("Emissions by commodity per year")
 # This will automatically display a legend were the labels are the column names of the data frame.
 ```
 
-![[Pasted image 20240921154549.png|400]]
+![Pasted image 20240921154549.png](../Images/Pasted%20image%2020240921154549.png)
 
 **plt.subplot**
 We can plot several subplots in an x,y matrix with the function `plt.subplot`. The `plt.subplot` function creates a figure and several axes objects. For better visual clarity the function `fig.tight_layout()`can be helpful. For iterating over the axes the `enumerate`function can be helpful. 
@@ -68,7 +68,7 @@ plt.title('Number of Roman Emperors Assassinated by Each Killer')
 plt.show()
 ```
 
-![[Pasted image 20240928092341.png|400]]
+![Pasted image 20240928092341.png](../Images/Pasted%20image%2020240928092341.png)
 
 **Stacked Column Chart**
 A stacked column chart nicely shows us some categorical data's distribution and composition. To plot a stacked column chart, we first need to format the data in a certain way. 
@@ -84,12 +84,12 @@ Class Male Female
 ax = data.plot(kind='bar', stacked=True, figsize=(10, 6))
 ```
 
-![[Pasted image 20241119091506.png|400]]
+![Pasted image 20241119091506.png](../Images/Pasted%20image%2020241119091506.png)
 ### Numerical Data
 Here are some useful graphs for visualizing numerical data. We usually want to visualize distribution or dependence.
 #### Distribution
 **Line Plot**
-For an example using a line plot see the example described in the chapter [[Visualizing Data in Python#Basic plotting]]
+For an example using a line plot see the example described in the chapter [Basic plotting](Visualizing%20Data%20in%20Python.md#basic-plotting)
 
 **Histogram**
 The important part of plotting a histogram is the `bins`-attribute. Here we specify the number of bins we should use. Another important note is that outliers can heavily affect the histogram. Always check for outliers before plotting a histogram. 
@@ -104,7 +104,7 @@ axs[0,0].set_title("Histogram of Prices (filtered)")
 axs[0,0].ticklabel_format(style='plain')
 ```
 
-![[Pasted image 20241118104245.png|400]]
+![Pasted image 20241118104245.png](../Images/Pasted%20image%2020241118104245.png)
 #### Dependence
 **Scatter Plot**
 In this example, we are using a pandas series for input data. We can also use two different lists of x and y values, as shown in the next `plt.scatter` example: 
@@ -116,7 +116,7 @@ y = [10, 20, 25, 30]
 plt.scatter(x, y, s=100, c='red', alpha=0.5, label='Data Points') 
 ```
 
-![[Pasted image 20240921154530.png|400]]
+![Pasted image 20240921154530.png](../Images/Pasted%20image%2020240921154530.png)
 ## Using Seaborn
 ### Basic Plotting
 **Inserting Seaborn plots into Matplotlib subplots**
@@ -148,7 +148,7 @@ axs[0,0].set_ylabel("Frequency")
 axs[0,0].set_title("Histogram of 'Embarked'")
 ```
 
-![[Pasted image 20241118110852.png|400]]
+![Pasted image 20241118110852.png](../Images/Pasted%20image%2020241118110852.png)
 
 **Strip Plot**
 A strip plot is great for comparing a categorical and a numerical variable. It shows us how the values in each category are distributed in regards to a specific numerical variable. 
@@ -163,7 +163,7 @@ plt.xlabel("Port where they embarked from")
 plt.ylabel("Price of the ticket")
 ```
 
-![[Pasted image 20241119091441.png|400]]
+![Pasted image 20241119091441.png](../Images/Pasted%20image%2020241119091441.png)
 
 **Violin Plot**
 The violin plot is great for analyzing the distribution of categorical data based on two different variables, one numerical and one categorical. 
@@ -179,12 +179,12 @@ palette={"male": "g", "female": ".35"})
 plt.show()
 ```
 
-![[Pasted image 20241119091739.png|400]]
+![Pasted image 20241119091739.png](../Images/Pasted%20image%2020241119091739.png)
 ### Numerical Data
 Here are some useful graphs for visualizing numerical data. We usually want to visualize distribution or dependence.
 #### Distribution
 **Kde Plot**
-The Kde plot makes use of the kernel density estimator explained [[Visualization Tools|here]] to visualize the distribution of numerical data. 
+The Kde plot makes use of the kernel density estimator explained [here](Visualization%20Tools.md) to visualize the distribution of numerical data. 
 
 ``` Python
 fig, axs = plt.subplots(1,1,figsize=(10,7), squeeze=False)
@@ -195,7 +195,7 @@ axs[0,0].set_ylabel("Frequency")
 axs[0,0].set_title("Density Plot of 'Fare'")
 ```
 
-![[Pasted image 20241118111139.png|400]]
+![Pasted image 20241118111139.png](../Images/Pasted%20image%2020241118111139.png)
 #### Dependence
 **Advanced Scatter Plot**
 Let's say we want to create a scatter plot that shows the relationship between two numerical values, colored by the species of penguin. We want to give it a title, label the axes appropriately, and add a legend. Now the 'complex' part is that we want to automatically see which points in the scatter plot belong to which species.

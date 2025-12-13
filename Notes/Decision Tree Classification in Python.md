@@ -27,7 +27,7 @@ plt.show()
 ```
 
 This will give us something like this: 
-![[Pasted image 20250325113027.png|500]]
+![Pasted image 20250325113027.png](../Images/Pasted%20image%2020250325113027.png)
 
 Second, we can look at the decision regions:
 
@@ -42,4 +42,4 @@ plt.show()
 ```
 
 This will give us something like this:
-![[Pasted image 20250325113138.png|500]]
+![Pasted image 20250325113138.png](../Images/Pasted%20image%2020250325113138.png)

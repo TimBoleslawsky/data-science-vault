@@ -1,4 +1,4 @@
-A data structure is a group of data elements grouped under one name (e.g., an array of integers). The data structure gives a way of storing and organizing data in a computer so that it can be used efficiently and effectively. How different data structures can produce different approaches to a solution can be seen here: [[List solution vs. dict solution vs. generator solution]]
+A data structure is a group of data elements grouped under one name (e.g., an array of integers). The data structure gives a way of storing and organizing data in a computer so that it can be used efficiently and effectively. How different data structures can produce different approaches to a solution can be seen here: [List solution vs. dict solution vs](List%20solution%20vs.%20dict%20solution%20vs.%20generator%20solution)
 ## Python Collections
 There are four collection data types in the Python programming language:
 - A list is a collection that is ordered and changeable. Allows duplicate members.
@@ -12,7 +12,7 @@ There are four collection data types in the Python programming language:
 	- usually homogeneous (i.e., all *integers*)
 	- can contain mixed types (not common)
 
-For an easy way of creating lists look at [[List comprehension]]
+For an easy way of creating lists look at [List comprehension](List%20comprehension.md)
 ### Tuple
 - an ordered sequence of elements, which can be of mixed element types
 - a tuple is denoted by parentheses, ()

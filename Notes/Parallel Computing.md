@@ -1,6 +1,6 @@
 Parallel computing is at the core of modern big data solutions. It enables us to tackle the challenges of the modern world. In this note I will discuss the basic theory behind parallel computing. 
 
-We can think of parallel computing as the concept, and parallel programming as how to implement that concept. Tools like Pool(), MapReduce, and Spark are different ways to do parallel programming. More on this here [[Parallel Programming in Python]].
+We can think of parallel computing as the concept, and parallel programming as how to implement that concept. Tools like Pool(), MapReduce, and Spark are different ways to do parallel programming. More on this here [Parallel Programming in Python](Parallel%20Programming%20in%20Python.md).
 ## Concurrency vs. Parallelism
 Parallelism and concurrency are both important concepts in computing. Concurrency is when multiple tasks are in progress at the same time but not necessarily _executing_ at the same instant. We do this to improve responsiveness, like when using a browser and a text editor at the same time. Parallelism is when multiple tasks are executed _simultaneously_. We do this to improve performance. 
 ### Different Types of Parallelism
@@ -12,8 +12,8 @@ Parallelism can be done on different levels of hardware or software. These are t
 5. RLP – Request-Level Parallelism: Handling independent external requests through asynchronous or multi-threaded request handling.
 
 To implement the different levels of parallelism in code, we typically rely on two main programming models:
-- [[Parallel Programming in Python#Data Parallelism|Data Parallelism]], meaning, same operation applied to different pieces of data, for DLP.
-- [[Parallel Programming in Python#Task Parallelism|Task Parallelism]], meaning, different tasks or operations running in parallel, for TLP/RLP.
+- [Data Parallelism](Parallel%20Programming%20in%20Python.md#data-parallelism), meaning, same operation applied to different pieces of data, for DLP.
+- [Task Parallelism](Parallel%20Programming%20in%20Python.md#task-parallelism), meaning, different tasks or operations running in parallel, for TLP/RLP.
 ## Parallelism in Computer Architecture
 Flynn’s Taxonomy is a classification system for computer architectures. It categorizes systems based on the number of concurrent **instruction streams** and **data streams** they support.
 - SISD – Single Instruction, Single Data:
@@ -77,5 +77,5 @@ Parallel computing is commonly used in high-performance computing (HPC), data pr
 - Distributing workloads across multiple nodes.
 - Handling dependencies and scheduling optimizations.
 
-On popular job scheduler, especially in academia, is [[SLURM]].
+On popular job scheduler, especially in academia, is [SLURM](SLURM.md).
 

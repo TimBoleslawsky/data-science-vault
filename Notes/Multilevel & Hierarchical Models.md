@@ -5,9 +5,9 @@ Before going into detail on how hierarchical models work, here is what they brin
 - Avoid averaging, retain variation. Frequently, scholars pre-average some data to construct variables. This can be dangerous, because averaging removes variation, and there are also typically several different ways to perform the averaging. Averaging therefore both manufactures false confidence and introduces arbitrary data transformations. Multilevel models allow us to preserve the uncertainty and avoid data transformations.
 
 But having said that, hierarchical models also come with their own challenges. Luckily we usually have a good solution for them: 
-- New assumptions: We have to define the distributions (priors) from which the characteristics of the clusters arise ([[Using Information Theory to Select Models|maximum entropy]] helps us here).
-- Estimation/ fitting is harder ([[Parameter Estimation for Probabilistic Models#Markov Chain Monte Carlo (MCMC)|MCMC]] helps us here).
-- Harder to understand, because they make predictions at different levels of the data and model comparison techniques like WAIC ( more here [[Information Criteria Methods for Model Selection]]) are harder to apply.
+- New assumptions: We have to define the distributions (priors) from which the characteristics of the clusters arise ([maximum entropy](Using%20Information%20Theory%20to%20Select%20Models.md) helps us here).
+- Estimation/ fitting is harder ([MCMC](Parameter%20Estimation%20for%20Probabilistic%20Models.md#markov-chain-monte-carlo-mcmc) helps us here).
+- Harder to understand, because they make predictions at different levels of the data and model comparison techniques like WAIC ( more here [Information Criteria Methods for Model Selection](Information%20Criteria%20Methods%20for%20Model%20Selection.md)) are harder to apply.
 ## Simpsons Paradox
 Simpson’s Paradox occurs when a trend that appears in different groups of data reverses or disappears when the groups are combined. This happens due to confounding variables that affect the relationship between the variables of interest. LMMs handle Simpson’s Paradox by explicitly modeling group-level variability (random effects), instead of treating all data points as independent. 
 ## Pooling

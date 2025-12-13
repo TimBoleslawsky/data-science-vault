@@ -41,7 +41,7 @@ selector.fit(X.values, y.values)
 ```
 
 ## Embedded Methods
-Feature selection is built into the model training process — the algorithm selects features as part of optimization. Models with regularization (like Lasso) naturally shrink coefficients of less useful features to zero. More on regularization here: [[Regularization]].
+Feature selection is built into the model training process — the algorithm selects features as part of optimization. Models with regularization (like Lasso) naturally shrink coefficients of less useful features to zero. More on regularization here: [Regularization](Regularization.md).
 
 ``` python
 from sklearn.linear_model import Lasso

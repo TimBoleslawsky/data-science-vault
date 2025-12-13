@@ -82,7 +82,7 @@ print(lines(rug_seq, mu_mean[1:100], col="blue"))   # non-Africa
 print(lines(rug_seq, mu_mean[101:200], col="red"))  # Africa
 ```
 
-The resulting image shows that inside Africa, ruggedness is positively associated with GDP, while outside Africa the opposite is the case:![[Pasted image 20250922113028.png]]
+The resulting image shows that inside Africa, ruggedness is positively associated with GDP, while outside Africa the opposite is the case:![Pasted image 20250922113028.png](../Images/Pasted%20image%2020250922113028.png)
 
 - Continuous x continuous: $\mu_i = \alpha + \beta_w \cdot \text{water}_i + \beta_s \cdot \text{shade}_i + \beta{ws} \cdot (\text{water}_i \cdot \text{shade}_i)$
 
@@ -120,4 +120,4 @@ for ( s in -1:1 ) {
 }
 ```
 
-In the resulting plot we can see what happens, when we fix shade to -1/0/1. In this case we see, that in low shade water has a positive effect on bloom. This effect vanishes, if we have high shade.![[Pasted image 20250922114436.png]]
+In the resulting plot we can see what happens, when we fix shade to -1/0/1. In this case we see, that in low shade water has a positive effect on bloom. This effect vanishes, if we have high shade.![Pasted image 20250922114436.png](../Images/Pasted%20image%2020250922114436.png)

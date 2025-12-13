@@ -34,11 +34,11 @@ There are two important distinctions here when comparing it against the "simple"
 	- Logit Link: If we want the parameter to be between 0 and 1. Can be reversed through the logistic (in this context also called inverse-logit) function. 
 	- Log Link: If we want to prevent the parameter from taking on a negative value. Can be reversed through the exponential. 
 
-To decide which distributions gives the most appropriate model for our specific likelihood, we can use *maximum entropy*. The intuition behind maximum entropy is simple: The distribution that can happen the most ways is also the distribution with the biggest information entropy (see [[Using Information Theory to Select Models|here]] for more on that). Call this distribution the maximum entropy distribution. 
+To decide which distributions gives the most appropriate model for our specific likelihood, we can use *maximum entropy*. The intuition behind maximum entropy is simple: The distribution that can happen the most ways is also the distribution with the biggest information entropy (see [here](Using%20Information%20Theory%20to%20Select%20Models.md) for more on that). Call this distribution the maximum entropy distribution. 
 
 We want to use this maximum entropy distribution because: The distribution with the biggest entropy is the most conservative distribution that obeys its constraints!
 
-GLM's enable us, among other things, to model discrete data. This is very useful in a lot of real world problems, but has its own challenges. These challenges are discussed here: [[Modelling Discrete Data]].
+GLM's enable us, among other things, to model discrete data. This is very useful in a lot of real world problems, but has its own challenges. These challenges are discussed here: [Modelling Discrete Data](Modelling%20Discrete%20Data.md).
 ### Gaussian Linear Model (special case of GLM)
 A GLM where the outcome is Gaussian and the link is the identity, i.e. ordinary regression. It assumes constant variance and normally distributed errors.
 
@@ -58,7 +58,7 @@ m_gauss <- ulam(
 ```
 
 ### Mixture Models
-Whenever there are different causes for the same observation, then a *mixture model* may be useful. A mixture model uses more than one simple probability distribution to model a mixture of causes. These mixture models can be seen as a preliminary for hierarchical models (often solve similar problems). More on mixture models here: [[Mixture Models]].
+Whenever there are different causes for the same observation, then a *mixture model* may be useful. A mixture model uses more than one simple probability distribution to model a mixture of causes. These mixture models can be seen as a preliminary for hierarchical models (often solve similar problems). More on mixture models here: [Mixture Models](Mixture%20Models.md).
 ## Multilevel (Hierarchical) Models
 These extend GLMs by introducing varying (random) effects, so parameters can differ across groups but still share information through partial pooling. They are more generative and reduce overfitting.
 
@@ -79,4 +79,4 @@ m_hier <- ulam(
 )
 ```
 
-More on multilevel/hierarchical models here: [[Multilevel & Hierarchical Models]].
+More on multilevel/hierarchical models here: [Multilevel & Hierarchical Models](Multilevel%20%26%20Hierarchical%20Models.md).

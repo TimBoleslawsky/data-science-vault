@@ -1,7 +1,7 @@
 ## What is an Algorithm?
 *An Algorithm is a well-defined computational procedure that takes some value, or a set of values, as input and produces some value, or set of values as output. An algorithm is thus a sequence of computational steps that transform input into output.
 
-For examples of sort and searching algorithms look here: [[Sort Algorithms]]
+For examples of sort and searching algorithms look here: [Sort Algorithms](Sort%20Algorithms.md)
 ## Analysis of Algorithms
 **Correctness
 - Does the algorithm do what it is supposed to do?

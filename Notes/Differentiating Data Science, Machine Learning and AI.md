@@ -8,24 +8,24 @@ The difference between data science and AI can be very messy. But in it's most s
 	- **Knowledge Representation & Reasoning (KRR)** — logical and symbolic reasoning.
 	- **Planning and Strategies (including Reinforcement Learning)** — decision making over time.
 
-> [[Inference]] and [[Prediction]] are _core operations_ **within** these foundational methods, especially within ML and probabilistic reasoning that bridge mathematical models and applications.
+> [Inference](Inference.md) and [Prediction](Prediction.md) are _core operations_ **within** these foundational methods, especially within ML and probabilistic reasoning that bridge mathematical models and applications.
 
 2. **Cross-Domain Paradigms** → Frameworks describing _how foundational methods are organized or scaled_ across domains. They define _patterns of usage_ rather than new goals or domains. Examples:
 	- Foundation Models
 	- AI Engineering
 	- Explainable AI (XAI)
-	More details, here: [[Cross-Domain AI Paradigms]].
+	More details, here: [Cross-Domain AI Paradigms](Cross-Domain%20AI%20Paradigms.md).
 
 3. **Problem-Specific Fields** → Domains that apply foundational methods to _particular modalities of data_ or _specific perception problems_. Examples:
-	- Natural Language Processing (NLP): Natural language processing is the set of methods for making human language accessible to computers. More on that here: [[Natural Language Processing]].
+	- Natural Language Processing (NLP): Natural language processing is the set of methods for making human language accessible to computers. More on that here: [Natural Language Processing](Natural%20Language%20Processing.md).
 	- Computer Vision (CV): Image/video understanding, object detection, segmentation, generative models, neural compression of images/video.
 	- Speech & Audio Processing: Speech recognition, synthesis, audio classification, compression (lossy/lossless neural codecs).
 	- Reinforcement Learning / Control: Autonomous decision-making, robotics, games, planning.
 
 4.  **Applications** → Concrete, end-user solutions that _operationalize AI fields and paradigms_ for specific purposes. Examples:
-	- Recommendation systems try to solve the problem of personalizing the display policy on websites. More on that here: [[Recommendation Systems]].
-	- Dialogue Systems: These systems aim to mimic human interaction to provide some service or conversation to a human user. More on this topic here: [[Dialogue Systems and AI]].
+	- Recommendation systems try to solve the problem of personalizing the display policy on websites. More on that here: [Recommendation Systems](Recommendation%20Systems.md).
+	- Dialogue Systems: These systems aim to mimic human interaction to provide some service or conversation to a human user. More on this topic here: [Dialogue Systems and AI](Dialogue%20Systems%20and%20AI.md).
 	- Autonomous Systems
 	- Game-Playing Agents: Game playing focuses on the interaction between a player (AI) and some opponent (random, human, ...). AI can be taught a variety of games and this has been the focus in improving AI for quite some time. 
-		- Here is an example using the [[Monte Carlo Tree Search and Game Playing|Monte Carlo Tree Search algorithm]]: [[Game Playing with MCTS and Deep Learning]]. 
+		- Here is an example using the [Monte Carlo Tree Search algorithm](Monte%20Carlo%20Tree%20Search%20and%20Game%20Playing.md): [Game Playing with MCTS and Deep Learning](Game%20Playing%20with%20MCTS%20and%20Deep%20Learning.md). 
 

@@ -2,7 +2,7 @@ RAG is a technique used in artificial intelligence, particularly in natural lang
 1. **Retrieval**: A retrieval module fetches relevant information or documents from an external database or knowledge base based on a query or context.
 2. **Generation**: A generative language model uses the retrieved information to produce a coherent and contextually appropriate response.
 
-This approach leads to the main feature of RAG: **Dynamic Knowledge Integration**. Instead of relying solely on pre-trained knowledge, RAG retrieves real-time, external information to enhance accuracy and relevance. Here is an example of how to implement RAG: [[RAG for Obsidian]].
+This approach leads to the main feature of RAG: **Dynamic Knowledge Integration**. Instead of relying solely on pre-trained knowledge, RAG retrieves real-time, external information to enhance accuracy and relevance. Here is an example of how to implement RAG: [RAG for Obsidian](RAG%20for%20Obsidian.md).
 ## **How Does RAG Work?**
 To make RAG work, we need two things:
 - **A retrieval method**

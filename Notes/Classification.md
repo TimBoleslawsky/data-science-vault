@@ -1,1 +1,1 @@
-Similarly to [[Regression]], the goal is to approximate a mapping. But his time the mapping is to a discrete set of labels $f: \mathcal{X} \to \{1, \dots, K\}$. This is often modeled probabilistically as $\hat{p}(Y|X)$, with a predicted label $\hat{Y} = \arg\max_k \hat{p}(Y=k|X)$.
+Similarly to [Regression](Regression.md), the goal is to approximate a mapping. But his time the mapping is to a discrete set of labels $f: \mathcal{X} \to \{1, \dots, K\}$. This is often modeled probabilistically as $\hat{p}(Y|X)$, with a predicted label $\hat{Y} = \arg\max_k \hat{p}(Y=k|X)$.

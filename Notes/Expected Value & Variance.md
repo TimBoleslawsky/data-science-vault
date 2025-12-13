@@ -12,7 +12,7 @@ Examples Let $𝑋, Y, Z ∼ Bernoulli(𝑝)$
 ### Expected Value of Geometric Distribution
 Let's say we have a geometric distribution of form $𝑋 ∼ Geometric(𝑛, 𝑝)$
 
-For the expected value of geometric distribution, we have to differentiate between the two interpretations mentioned here: [[Distribution#Geometric distribution]]
+For the expected value of geometric distribution, we have to differentiate between the two interpretations mentioned here: [Geometric distribution](Distribution.md#geometric-distribution)
 
 If we define the expected value as the first success we calculate the expected value like this: 
 $E[X] = {1-p \over p}$

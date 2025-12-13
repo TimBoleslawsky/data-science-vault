@@ -5,17 +5,17 @@ The field lies between linguistics and artificial intelligence, using probabilis
 2. **Search and Learning:** Combining optimization and inference techniques (e.g., Viterbi, CKY, beam search) with parameter learning (e.g., logistic regression, backpropagation).
 3. **Relational, Compositional, and Distributional Perspectives:** Understanding language as structured relations (syntax), compositional meaning (semantics), and statistical co-occurrence (distributional semantics).
 
-The most common tasks within the domain of NLP are autoregressive tasks (more on that here: [[Different Task Types for Mathematical Models]]). These involve predicting the next token based on previous ones:
+The most common tasks within the domain of NLP are autoregressive tasks (more on that here: [Different Task Types for Mathematical Models](Different%20Task%20Types%20for%20Mathematical%20Models.md)). These involve predicting the next token based on previous ones:
 - **Language modeling** (predict next word): GPT-style models.
-- [[Generating Text with LLM's|Text generation / completion]]: Write or continue text step by step.
+- [Text generation / completion](Generating%20Text%20with%20LLM%27s.md): Write or continue text step by step.
 - **Machine translation (decoder side):** Generate target sentence token by token.
 - **Speech recognition (in some setups):** Predict next phoneme or word autoregressively.
-- [[Retrieval-Augmented Generation (RAG)]]
-- [[Topic Modeling]]
+- [Retrieval-Augmented Generation (RAG)](Retrieval-Augmented%20Generation%20%28RAG%29.md)
+- [Topic Modeling](Topic%20Modeling.md)
 
-The two most common architectures that are used for NLP tasks, are RNN's and transformer models. More on these architectures, here: [[Key Architectures in Deep Learning]].
+The two most common architectures that are used for NLP tasks, are RNN's and transformer models. More on these architectures, here: [Key Architectures in Deep Learning](Key%20Architectures%20in%20Deep%20Learning.md).
 ## NLP Pipeline
-Deep learning models are combined with two important concepts to complete the NLP pipelines: [[Text Preprocessing & Tokenization|Tokenization]] and [[Word Embeddings|Embeddings]]. Without tokenization, the model wouldn’t know how to break text into processable parts; without embeddings, it couldn’t interpret those parts meaningfully. Here is how the three components work in tandem:
+Deep learning models are combined with two important concepts to complete the NLP pipelines: [Tokenization](Text%20Preprocessing%20%26%20Tokenization.md) and [Embeddings](Word%20Embeddings.md). Without tokenization, the model wouldn’t know how to break text into processable parts; without embeddings, it couldn’t interpret those parts meaningfully. Here is how the three components work in tandem:
 
 **Step 1 — Tokenization**
 - **Goal:** Convert raw text into discrete, standardized units (tokens).

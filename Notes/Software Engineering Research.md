@@ -107,6 +107,6 @@ Empirical research strategies in software engineering aim to connect **theory wi
 - **Case studies** provide deep, contextual evidence.
 => Together, they form the **methodological backbone** of empirical software engineering.
 
-More details in this note: [[Empirical Research Strategies]].
+More details in this note: [Empirical Research Strategies](Empirical%20Research%20Strategies.md).
 
-Additionally, meta-analyses complement experiments, surveys, and case studies — they don’t replace them. They sit “one level above,” turning the _results_ of many primary studies into evidence-based general insights. More on that here: [[Meta Analysis]].
+Additionally, meta-analyses complement experiments, surveys, and case studies — they don’t replace them. They sit “one level above,” turning the _results_ of many primary studies into evidence-based general insights. More on that here: [Meta Analysis](Meta%20Analysis.md).

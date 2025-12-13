@@ -10,7 +10,7 @@ Let’s assume the articles are analyzed for two keywords: **machine learning (M
 - **Article 1**: Contains 20 mentions of ML and 15 mentions of DS. This can be represented as the point  A = (20, 15).
 - **Article 2**: Contains 10 mentions of ML and 8 mentions of DS. This can be represented as the point  B = (10, 8).
 
-![[Pasted image 20241016194504.png|400]]
+![Pasted image 20241016194504.png](../Images/Pasted%20image%2020241016194504.png)
 
 These points give us the absolute frequencies of each keyword but don’t tell us much about how similar the two articles are in terms of topic distribution.
 
@@ -23,14 +23,14 @@ The key difference is that **vectors allow us to compare direction and magnitude
 - **Normalized Vector B**:  $\left(\frac{10}{\sqrt{10^2 + 8^2}}, \frac{8}{\sqrt{10^2 + 8^2}}\right)$
 This is also known as the $𝑳_𝟐$-norm and alternatively denoted $||𝑥||_2$. As with the $𝐿_𝑘$ distances, the $𝐿_𝑘$-norm generalizes to any 𝑘. After such normalization, the length of each vector will be 1, turning it into a point on the unit sphere about the origin.
 
-![[Pasted image 20241016194640.png|400]]
+![Pasted image 20241016194640.png](../Images/Pasted%20image%2020241016194640.png)
 
 By comparing these normalized vectors, we focus on the **topic distribution** (the proportion of keywords) rather than the raw counts. If the vectors have a similar direction, the articles are similar in topic distribution, even if one article is longer or contains more keywords overall.
 ## The $L_k$-Metric
 If we want to measure the distance of points in a space we have different metrics we can choose from. The most familiar one is the $L_k$-Metric (especially $L_2$ aka the Euclidean Distance). 
 
 The $L_k$-Metric is calculated like this: 
-![[Pasted image 20241016195625.png|400]]
+![Pasted image 20241016195625.png](../Images/Pasted%20image%2020241016195625.png)
 ### Euclidean Distance
 The Euclidean Distance is a special case of the $L_k$-Metric where $k = 2$. Distance is basically measured as a line between the two points.
 ### Manhattan Distance

@@ -1,4 +1,4 @@
-After defining a mathematical model and estimating its parameters ([[Basics of Probability and Statistics for Data Science#Connecting Probability and Statistics to Modeling]]) we can use it to do inference. Inference is the _interpretation of parameter estimates under uncertainty_:
+After defining a mathematical model and estimating its parameters ([Connecting Probability and Statistics to Modeling](Basics%20of%20Probability%20and%20Statistics%20for%20Data%20Science.md#connecting-probability-and-statistics-to-modeling)) we can use it to do inference. Inference is the _interpretation of parameter estimates under uncertainty_:
 - Frequentist → uncertainty comes from sampling distribution. 
 - Bayesian → uncertainty comes from both the sample and what you knew before seeing the data (the prior).
 ## Different Types of Inference
@@ -10,7 +10,7 @@ Now we want to also identify associations or correlations between variables, oft
 ### Causal Inference
 Goal here is to estimate the effect of interventions, counterfactual outcomes, or treatment effects. While correlational inference only tells us “$X$ and $Y$ move together", causal inference asks: _"What would $Y$ have been if we had intervened on $X$?"_.
 
-More on causal inference here: [[Causal Inference]].
+More on causal inference here: [Causal Inference](Causal%20Inference.md).
 ## Bayesian Inference
 In this example I describe the basic intuitions behind Bayesian inference and how it connects to the statistical modeling approach. 
 
@@ -18,7 +18,7 @@ In this example I describe the basic intuitions behind Bayesian inference and ho
 - Second, we define the random variables $y$ (target variable), $μ$ (population mean), $σ$ (population standard deviation). 
 - Third, we need to define the distribution underlying these random variables to model the uncertainty. Here we just take our best guess for now. This is the prior in Bayesian terms. For $μ$ and $σ$ we might define, for example: $\mu \sim \text{Normal}(4000, 500), \quad \sigma \sim \text{Exponential}(1/500)$.  This encodes our uncertainty about these parameters **before seeing data**. 
   => We now have our model or ‘function’ to infer or predict the typical body mass of Gentoo penguins.
-- Fourth, now we do parameter estimation. We here assume that $σ$ is known. In this case we use MCMC (for inference we usually do not use [[Parameter Estimation for Probabilistic Models#Maximum A Posteriori (MAP) Estimation|MAP]], because this only gives us a point estimate). The result in this case is not a point estimate for the parameters (like in the frequentist approach), but a posterior distribution for $μ$. In our example this looks like this: $\mu \mid y \sim \text{Normal}\Big(\frac{\frac{\mu_0}{\sigma_0^2} + \frac{n \bar{y}}{\sigma^2}}{\frac{1}{\sigma_0^2} + \frac{n}{\sigma^2}}, \;\; \frac{1}{\frac{1}{\sigma_0^2} + \frac{n}{\sigma^2}}\Big)$, where 
+- Fourth, now we do parameter estimation. We here assume that $σ$ is known. In this case we use MCMC (for inference we usually do not use [MAP](Parameter%20Estimation%20for%20Probabilistic%20Models.md#maximum-a-posteriori-map-estimation), because this only gives us a point estimate). The result in this case is not a point estimate for the parameters (like in the frequentist approach), but a posterior distribution for $μ$. In our example this looks like this: $\mu \mid y \sim \text{Normal}\Big(\frac{\frac{\mu_0}{\sigma_0^2} + \frac{n \bar{y}}{\sigma^2}}{\frac{1}{\sigma_0^2} + \frac{n}{\sigma^2}}, \;\; \frac{1}{\frac{1}{\sigma_0^2} + \frac{n}{\sigma^2}}\Big)$, where 
 	- $\mu_0$, $\sigma_0^2$ are the prior mean and variance of $μ$
 	•	$n$ is the sample size
 	•	$\bar{y}$ is the sample mean
@@ -35,7 +35,7 @@ In this example, I describe the basic intuitions behind frequentist inference an
 - Second, we define the random variables $y$ (target variable). The population mean $\mu$ and the population standard deviation $\sigma$ are constants describing the population but whose values we do not know.
 - Third, we need to define the distribution underlying these random variables to model the uncertainty. Here we take an assumption about the population, for example: $y_i \sim \text{Normal}(\mu, \sigma^2)$. This encodes our assumptions about the population before seeing data, but unlike Bayesian priors, these are fixed unknown parameters rather than probability distributions.
   => We now have our model or ‘function’ to infer or predict the typical body mass of Gentoo penguins.
-- Fourth, now we do parameter estimation. In the frequentist approach, this is usually done using [[Parameter Estimation for Probabilistic Models#Maximum Likelihood Estimation (MLE)|MLE]]. The goal is to find the parameter values that make the observed data most probable. Assuming $\sigma^2$ is known, the MLE for $\mu$ is: $\hat{\mu} = \bar{y} = \frac{1}{n}\sum_{i=1}^{n} y_i$
+- Fourth, now we do parameter estimation. In the frequentist approach, this is usually done using [MLE](Parameter%20Estimation%20for%20Probabilistic%20Models.md#maximum-likelihood-estimation-mle). The goal is to find the parameter values that make the observed data most probable. Assuming $\sigma^2$ is known, the MLE for $\mu$ is: $\hat{\mu} = \bar{y} = \frac{1}{n}\sum_{i=1}^{n} y_i$
 	Here:
 	- $n$ is the sample size
 	- $\bar{y}$ is the sample mean
@@ -47,10 +47,10 @@ In this example, I describe the basic intuitions behind frequentist inference an
 	- Hypothesis tests / probabilities: Here we need a **test statistics and a null models**. Here is how we construct this and how we test hypothesis with it:
 		- The null model is a restriction on the generative model we defined earlier. For example if our generative model is $y_i \sim \text{Normal}(\mu, \sigma^2)$, our null model could be $\mu = \mu_0$, with $\mu_0 = 4500g$. So this is just an "instance" of the generative model. 
 		- The test statistic is supposed to capture the difference between some estimated parameter and the corresponding parameter in the null model. This could for example be $\hat{y}-\mu_0$.
-		- To test the hypothesis described by the null model, we now calculate the probability of seeing a test statistic at least as extreme as the one we actually observed, given the null hypothesis: $p = P_{H_0}\big( |T| \ge |t_{\text{obs}}| \big)$. This corresponds to the [[Distribution#Cumulative Distribution Function for Continuous Random Variables|CDF]] in relation to $t_{obs}$!
+		- To test the hypothesis described by the null model, we now calculate the probability of seeing a test statistic at least as extreme as the one we actually observed, given the null hypothesis: $p = P_{H_0}\big( |T| \ge |t_{\text{obs}}| \big)$. This corresponds to the [CDF](Distribution.md#cumulative-distribution-function-for-continuous-random-variables) in relation to $t_{obs}$!
 			- Here $t_{obs}$ is the calculated test statistic with our data and $T$ is the random variable describing the test statistic according to the null model aka the sampling distribution. So we observe how $t_{obs}$ compares to the distribution $T$ would have, if the hypothesis would be true. 
 			- The p-value here measures how far out in the tail our point lies. So a p-value of $0.03$ for example could mean that if the null hypothesis were true, there would be a 3% probability of observing a test statistic as extreme or more extreme than what you actually observed. 
-		=> This whole hypothesis testing framework in the frequentist approach is pretty standardized. More on this here: [[Hypothesis Testing Framework in Frequentist Inference]] .
+		=> This whole hypothesis testing framework in the frequentist approach is pretty standardized. More on this here: [Hypothesis Testing Framework in Frequentist Inference](Hypothesis%20Testing%20Framework%20in%20Frequentist%20Inference.md) .
 => The results in this case are statements about the behavior of estimators over repeated sampling, not direct probabilities.
 ## Interpreting Inference
 Both Bayesian and frequentist inference can be thought of as providing three kinds of results:

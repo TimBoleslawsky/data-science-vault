@@ -1,4 +1,4 @@
-SLURM (Simple Linux Utility for Resource Management) is a widely used open-source job scheduler designed for HPC clusters. It enables [[Parallel Computing]] by allowing users to:
+SLURM (Simple Linux Utility for Resource Management) is a widely used open-source job scheduler designed for HPC clusters. It enables [Parallel Computing](Parallel%20Computing.md) by allowing users to:
 - Submit jobs to queues.
 - Request resources (CPUs, GPUs, memory, time limits).
 - Distribute parallel jobs efficiently.
