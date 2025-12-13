@@ -1,1 +1,1 @@
-Intro: [Atlas](Data Science.md)
+Intro: [Atlas](Data.md)
