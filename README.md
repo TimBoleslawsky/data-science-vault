@@ -1,1 +1,1 @@
-Intro: [Atlas](Data.md)
+Intro: [Atlas](Notes/Data.md)
