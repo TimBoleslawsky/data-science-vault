@@ -61,7 +61,6 @@ TBD:
 - rnns as language models
 - RNNs for other NLP tasks
 - Stacked and bidirectional RNNs
-- encoder-decoder framework (other note)
 ### LSTM
 TBD
 ### GRU

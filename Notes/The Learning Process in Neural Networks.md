@@ -12,14 +12,17 @@ Optimization is the process of adjusting a model’s weights to minimize the los
 
 To talk about optimization, we need to introduce two concepts: *objective functions* & *gradients*. 
 - Objective functions in machine learning models can have two forms: First, a *loss function* that measures how well the model fits the training data. Second, a *regularizer* that measures how simple/complex the model is.
-- In realistic ML, we will have many parameters! Let $w$ be the vector of these parameters. For a single parameter $w_i$, we can define the partial derivative. The vector of all partial derivatives is called the *gradient*.
+- If we think of the loss function as depended on all weights like so $L(w_1, w_2, \dots, w_n)$. Then finding the minimum to this, is just setting the derivation to zero. Because $L$ depends on more than one variable, we need to calculate the partial derivatives and generalize them: $\nabla_w L = \left(\frac{\partial L}{\partial w_1}, \frac{\partial L}{\partial w_2}, \dots, \frac{\partial L}{\partial w_n}\right)$. This is the gradient. 
 ### Gradient Descent
 The idea behind gradient descent is simple: 
 - To find the minimum:
 	- take a small step in the direction opposite to the gradient.
 	- repeat until the gradient is close enough to zero.
+More formally, we look at the gradient to find the direction the loss decreases the most. Each component $\frac{\partial L}{\partial w_i}$ tells us how steeply the loss rises if we change that particular parameter. The whole vector points in the direction of steepest increase of the loss. So if we go in the opposite direction of this vector (with a step size according to the *learning rate*), we will slowly approximate the minimum. 
 
 One major consideration here is the size of the steps. A smarter versions of gradient ascent/descent tries to adapt the step size so that we don’t go too slow in the beginning, or bounce around the top at the end. One simple solution: start fast, then gradually more slow.
+
+Importantly, this is much easier for models using a continuous latent representation rather than a discrete latent. A model uses a continuous latent representation when its hidden variables can take any value in a range, allowing smooth changes between states; in contrast, discrete latent variables can only take a limited set of separate values, like distinct categories, so changing them is abrupt rather than smooth.
 #### Stochastic Gradient Descent
 Gradient descent can be slow and computationally very expensive to perform on huge data. Stochastic gradient descent simplifies the computation by computing the gradient using just a small part (in the extreme case, a single training instance or a mini-batch: a few instances).
 

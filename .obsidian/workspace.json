@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "06cfe744572cd70d",
+        "id": "083de8bd8ea550a9",
         "type": "tabs",
         "children": [
           {
-            "id": "ef1e7e57203c0007",
+            "id": "858f5416da29ecbb",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "autoregressi",
+                "query": "RAG",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -90,6 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Notes/Key Architectures in Deep Learning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +100,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Key Architectures in Deep Learning"
             }
           },
           {
@@ -108,11 +109,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Notes/Key Architectures in Deep Learning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from Key Architectures in Deep Learning"
             }
           },
           {
@@ -136,12 +138,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Notes/Key Architectures in Deep Learning.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Key Architectures in Deep Learning"
             }
           },
           {
@@ -201,34 +204,34 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ef1e7e57203c0007",
+  "active": "285493115e5a7666",
   "lastOpenFiles": [
+    "Projects/Image Classification with CNN/Image Classification with CNN.py",
+    "Notes/Retrieval-Augmented Generation (RAG).md",
+    "Notes/RAG for Obsidian.md",
+    "Notes/Different Types of Hypothesis Tests.md",
+    "Notes/Descriptive Statistics.md",
+    "Notes/Data Transformation and Scaling.md",
+    "Notes/Data Preprocessing.md",
+    "Notes/Classification.md",
+    "Notes/Basics of Sets.md",
     "Notes/Foundations of Information Theory.md",
-    "Notes/Neural Compression.md",
-    "Notes/Deep Learning Design Patterns.md",
-    "Notes/Different Task Types for Mathematical Models.md",
     "Notes/Key Architectures in Deep Learning.md",
     "Deep learning topics.md",
-    "Notes/Supervised Fine-Tuning.md",
-    "Notes/RAG for Obsidian.md",
-    "Notes/Retrieval-Augmented Generation (RAG).md",
+    "Notes/The Learning Process in Neural Networks.md",
     "Notes/Deep Learning Models.md",
+    "Notes/Basic Structure of Neural Networks.md",
     "Notes/Different Method Types for Mathematical Models.md",
     "Atlas/Data Science.md",
-    "Notes/Learning Types in Machine Learning.md",
+    "Notes/Neural Compression.md",
+    "Notes/Different Task Types for Mathematical Models.md",
     "Notes/Dimensionality Reduction.md",
+    "Notes/Deep Learning Design Patterns.md",
+    "Notes/Supervised Fine-Tuning.md",
+    "Notes/Learning Types in Machine Learning.md",
     "Notes/Natural Language Processing.md",
     "Notes/Differentiating Data Science, Machine Learning and AI.md",
     "Notes/Types of Models.md",
-    "Notes/Deep Learning Paradigms and Building Blocks.md",
-    "Notes/Basic Structure of Neural Networks.md",
-    "Notes/The Learning Process in Neural Networks.md",
-    "Notes/Deep Learning Project Workflow.md",
-    "Notes/Cross-Domain AI Paradigms.md",
-    "Notes/Using Information Theory to Select Models.md",
-    "Notes/Parameter Estimation for Probabilistic Models.md",
-    "Notes/Data Usage in Model Selection and Evaluation.md",
-    "Notes/Principles of Model Construction.md",
     "Images/olmo2_overview.svg",
     "Projects/The Data Science Process in Python/The Data Science Process in Python - Script.pdf",
     "Projects/The Data Science Process in Python/The Data Science Process in Python - Report.pdf",
