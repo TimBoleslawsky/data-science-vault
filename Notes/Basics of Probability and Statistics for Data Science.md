@@ -8,8 +8,8 @@ Here is how **probability, inferential statistics, and descriptive statistics** 
 [Probability](Probability.md) is inherently theoretical. We use Probability to guess certain characteristics of the population. Probability is how likely a certain outcome of a random variable is.
 
 Through probability we can construct probabilistic concepts, describing relationships between random variables. These are then made concrete using statistics.
-- [Expected Value & Variance](Expected%20Value%20%26%20Variance.md)
-- [Correlation analysis](Covariance%20%26%20Correlation.md) examines the relationship between two or more variables and therefore identifies patterns between features (variables) in a dataset. 
+- [Expected Value & Variance](Expected%20Value%20&%20Variance.md)
+- [Correlation analysis](Covariance%20&%20Correlation.md) examines the relationship between two or more variables and therefore identifies patterns between features (variables) in a dataset. 
 
 While random variables define what is uncertain, distributions model uncertainty. More on distributions here: [Distribution](Distribution.md).
 

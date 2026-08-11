@@ -1,1 +1,9 @@
-Similarly to [Regression](Regression.md), the goal is to approximate a mapping. But his time the mapping is to a discrete set of labels $f: \mathcal{X} \to \{1, \dots, K\}$. This is often modeled probabilistically as $\hat{p}(Y|X)$, with a predicted label $\hat{Y} = \arg\max_k \hat{p}(Y=k|X)$.
+Similarly to [Regression](Regression.md), the goal is to approximate a mapping. But this time the mapping is to a discrete set of labels $f: \mathcal{X} \to {1, \dots, K}$. This is often modeled probabilistically as $\hat{p}(Y|X)$, with a predicted label $\hat{Y} = \arg\max_k \hat{p}(Y=k|X)$.
+## Time-Series Classification
+With time-series data we classify each window with a label. A time series is a sequence of observations $(x_1, x_2, \ldots, x_T)$ ordered in time, and the classification task assigns a single label to an entire sequence or to individual windows extracted from the sequence.
+
+Given a time series $X = (x_1, x_2, \ldots, x_T) \in \mathbb{R}^{T \times D}$ where $T$ is the sequence length and $D$ is the number of features, we aim to learn a function that maps this sequence to a class label $Y \in {1, \dots, K}$. This contrasts with point-wise classification, where we label individual time steps independently.
+### Approaches
+**Sliding Window Classification** is one common approach: we extract fixed-length windows from the time series and classify each window separately. A window $X_{[t:t+W]}$ of length $W$ starting at position $t$ receives its own label prediction. This enables fine-grained temporal analysis and is useful when the discriminative information is local.
+
+**Whole Sequence Classification** treats the entire time series as a single input and predicts one label for the whole sequence. This approach naturally captures long-range dependencies and global temporal patterns. It requires models that can handle variable-length sequences, such as recurrent neural networks (RNNs), temporal convolutional networks (TCNs), or Transformers.

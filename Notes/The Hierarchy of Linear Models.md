@@ -79,4 +79,4 @@ m_hier <- ulam(
 )
 ```
 
-More on multilevel/hierarchical models here: [Multilevel & Hierarchical Models](Multilevel%20%26%20Hierarchical%20Models.md).
+More on multilevel/hierarchical models here: [Multilevel & Hierarchical Models](Multilevel%20&%20Hierarchical%20Models.md).

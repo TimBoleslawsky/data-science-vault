@@ -15,7 +15,7 @@ The most common tasks within the domain of NLP are autoregressive tasks (more on
 
 The two most common architectures that are used for NLP tasks, are RNN's and transformer models. More on these architectures, here: [Key Architectures in Deep Learning](Key%20Architectures%20in%20Deep%20Learning.md).
 ## NLP Pipeline
-Deep learning models are combined with two important concepts to complete the NLP pipelines: [Tokenization](Text%20Preprocessing%20%26%20Tokenization.md) and [Embeddings](Word%20Embeddings.md). Without tokenization, the model wouldn’t know how to break text into processable parts; without embeddings, it couldn’t interpret those parts meaningfully. Here is how the three components work in tandem:
+Deep learning models are combined with two important concepts to complete the NLP pipelines: [Tokenization](Text%20Preprocessing%20&%20Tokenization.md) and [Embeddings](Word%20Embeddings.md). Without tokenization, the model wouldn’t know how to break text into processable parts; without embeddings, it couldn’t interpret those parts meaningfully. Here is how the three components work in tandem:
 
 **Step 1 — Tokenization**
 - **Goal:** Convert raw text into discrete, standardized units (tokens).

@@ -18,7 +18,7 @@ The difference between data science and AI can be very messy. But in it's most s
 
 3. **Problem-Specific Fields** → Domains that apply foundational methods to _particular modalities of data_ or _specific perception problems_. Examples:
 	- Natural Language Processing (NLP): Natural language processing is the set of methods for making human language accessible to computers. More on that here: [Natural Language Processing](Natural%20Language%20Processing.md).
-	- Computer Vision (CV): Image/video understanding, object detection, segmentation, generative models, neural compression of images/video.
+	- Computer Vision (CV): Image/video understanding, object detection, semantic segmentation, .... More on that here: [Computer Vision](Computer%20Vision.md).
 	- Speech & Audio Processing: Speech recognition, synthesis, audio classification, compression (lossy/lossless neural codecs).
 	- Reinforcement Learning / Control: Autonomous decision-making, robotics, games, planning.
 

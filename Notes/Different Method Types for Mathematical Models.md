@@ -12,6 +12,6 @@ Ensemble models in machine learning combine multiple base models to improve pred
 ## Neural Networks and Deep Learning
 I said that I would not make any distinctions between statistical methods and machine learning methods to implement model tasks, but I will make this distinction between deep learning methods. Here the difference are noticeable from the models to the project workflow. 
 
-As the basic pipeline management approach differs substantially when looking at deep learning projects compared to data science projects or "simple" machine learning projects, I want to describe the deep learning process in more detail: [Deep Learning Project Workflow](Deep%20Learning%20Project%20Workflow.md).
+As the basic pipeline management approach differs substantially when looking at deep learning projects compared to data science projects or "simple" machine learning projects, I want to describe the deep learning process in more detail: [Deep Learning Project Workflow](Deep%20Learning%20Project%20Workflow.md). Connected to this the tools and project structure also changes. More in this here: 
 
 Here I want to mainly focus on the theory behind deep learning. The models mentioned above struggle with complex, highly non-linear patterns, unstructured data like images, audio etc., and large-scale data. That's where deep learning and neural networks come in. Everything related to deep learning models can be found here: [Deep Learning Models](Deep%20Learning%20Models.md).

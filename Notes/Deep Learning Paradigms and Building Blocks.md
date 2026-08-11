@@ -47,6 +47,18 @@ Cross-attention means, that each token in a “target” sequence attends to tok
 - **Purpose:** Efficiently capture spatial or temporal hierarchies; translation-equivariant
 - **Used in:** CNNs, UNet, ResNet, video/audio processing
 => Input → Convolution → Activation → Pooling → Feature maps → Next layers! 
+
+**Dilation:** One problem that convolutional processing can run into is, that the receptive field of the convolutional layers is to narrow. Dilation is a technique to expand the receptive field of a convolution without adding parameters or computation. Here is a simple example of how this looks like: 
+- Regular Convolution: 
+	- Conv1d(kernel=7, dilation=1) => Receptive field: 7 time steps.
+	- Conv1d(kernel=7, dilation=1) => Receptive field: 7 time steps.
+	- Conv1d(kernel=7, dilation=1) => Receptive field: 7 time steps.
+	=> Total receptive field: 19 time steps (with one overlapping time step).
+- With Dilation:
+	- Conv1d(kernel=7, dilation=1) => Receptive field: 7 time steps.
+	- Conv1d(kernel=7, dilation=2) => Receptive field: 24 time steps.
+	- Conv1d(kernel=7, dilation=4) => Receptive field: 48 time steps.
+	=> Total receptive field: 79 time steps (with one overlapping time step).
 ## Residuals
 **Idea:** Allow layers to learn _refinements_ instead of complete transformations by adding the input of a layer back to its output. A residual block computes: $\text{output} = x + F(x)$; where $F(x)$ is a learnable transformation (e.g., a few layers of a network).
 
@@ -64,3 +76,12 @@ Cross-attention means, that each token in a “target” sequence attends to tok
 - Many modern architectures across vision, NLP, and multimodal models
 
 => Residuals act as “shortcut paths” that make optimization easier and enable very deep neural networks to converge.
+## Sub-/Downsampling
+ The core idea behind all subsampling methods is to reduce the spatial or temporal resolution of the feature maps (e.g., the height and width). 
+ 
+**Pooling.** The pooling layer serves to downsample the feature maps produced by e.g. the convolutional layers. It reduces the spatial size (height × width) of the input feature map, keeping only the most important information. This increases translation invariance — slight translations or distortions in the image don’t affect the output significantly.
+- Common types of pooling:
+	- Max pooling: Keeps the maximum value in each region.
+	- Average pooling: Takes the average of the values in the region.
+
+**Strides:** Basically decides how fast the entire kernel moves. With stride=1 we go one position forward each time. With stride=2 we go two position forwards each time and so on ...

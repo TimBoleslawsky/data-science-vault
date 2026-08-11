@@ -1,4 +1,4 @@
-In this chapter, we discuss the distribution functions of discrete and continuous variables as well as the different forms of distribution. For the expected values and the variance of the different distributions look here: [Expected Value & Variance](Expected%20Value%20%26%20Variance.md).
+In this chapter, we discuss the distribution functions of discrete and continuous variables as well as the different forms of distribution. For the expected values and the variance of the different distributions look here: [Expected Value & Variance](Expected%20Value%20&%20Variance.md).
 
 Two important concepts evolve from these probability distributions: [Likelihood and Posterior Distributions](Likelihood%20and%20Posterior%20Distributions.md).
 ## Distribution Functions

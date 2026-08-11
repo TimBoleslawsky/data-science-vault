@@ -1,5 +1,5 @@
 ## Ethical Concerns vs. Utility
-With everything we do we have to weigh up if the utility of something is worth the ethical concerns. This is especially relevant in terms of data science, because both the utility and the ethical concerns are so prevelant. 
+With everything we do we have to weigh up if the utility of something is worth the ethical concerns. This is especially relevant in terms of data science, because both the utility and the ethical concerns are so prevalent. 
 ## The FAT Model
 **Fairness**
 Fairness is defined as *treating people equally without favoritism or discrimination (the action of perceiving, noting, or making a distinction between things)*. There are multiple conflicting measures of fairness, like unfair bias or discrimination against a sensitive group.

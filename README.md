@@ -1,19 +1,17 @@
-Data Science is my main topic of study while studying at Gothenburg University. In this Map of Content everything from basic theory to relevant programming languages regarding the topic of "Data Science" is documented. 
+In this Map of Content everything from basic theory to relevant programming languages regarding the topic of "Data Science" is documented. 
 ## Theory
 ### Principles of Data Science
-Firstly a definition of what Data Science is: [Data Science, a Definition](Notes/Data%20Science%2C%20a%20Definition.md). Now we obviously need to take a closer look at what data is, and how we can describe it: [Data](Notes/Data.md).
-#### The Goals of Data Science
 Data science is about **building and using models of the world** to support decision-making. These models help us extract insights, forecast outcomes, and guide actions.
 
-A big part of data science is to mathematically represent real world problems. For this we use the already mentioned *mathematical modeling*. For more on mathematical modeling look here: [Mathematical Modeling](README.md#mathematical-modeling).
+A big part of data science is to mathematically represent real world problems. For this we use *mathematical modeling*. For more on mathematical modeling look here: [Mathematical Modeling](README.md#mathematical-modeling).
 
 Beyond modeling, data science also involves preparing data for analysis, ensuring ethical use, communicating findings effectively, and often generating new insights or questions through exploration.
 - [Data Munging](Notes/Data%20Munging.md)
 	- In my opinion, a big part of data munging is [Exploratory Data Analysis](Notes/Exploratory%20Data%20Analysis.md). It can be seen as informing the data cleaning process of data munging.
 - [Data Preprocessing](Notes/Data%20Preprocessing.md), builds on top of cleaned data and focuses on preparing data specifically for modeling.
 - [Data Visualization](Notes/Data%20Visualization.md)
-	- To convey our findings, we need [Visualization Tools](Notes/Visualization%20Tools.md).
-- There are a lot of reasons one might have ethical concerns when talking about data science. Here we discuss some of them: [Ethics in Data Science](Notes/Ethics%20in%20Data%20Science.md).
+
+There are a lot of reasons one might have ethical concerns when talking about data science. Here we discuss some of them: [Ethics in Data Science](Notes/Ethics%20in%20Data%20Science.md).
 ### Mathematical Modeling
 The inherent goal of mathematical modeling, statistical modeling, as well as machine learning, is to represent a underlying **data-generating process** via a model. In general (at least in probabilistic models) we have two frameworks to do this: Frequentist or Bayesian ([Two Approaches to Statistics](Notes/Two%20Approaches%20to%20Statistics.md)).
 
@@ -101,37 +99,20 @@ These concepts are less of a backbone and more serve more specific purposes. Non
 - Calculus / Optimization for learning models (gradient descent, likelihood maximization).
 - [Foundations of Information Theory](Notes/Foundations%20of%20Information%20Theory.md) provide formal, mathematically provable limits on what compression, communication, and inference systems can achieve.
 #### Mathematical Thinking
-As discussed here, [Data Science, a Definition](Notes/Data%20Science%2C%20a%20Definition.md), the purpose of data science is to tackle real-world problems. Mathematical thinking is the ability to formulate real-world problems and interpret the results of mathematical solutions in a meaningful way. It is not about solving mathematical problem XY, but how we arrive at that problem from a non-mathematical problem. That's why it is so important for data scientists to be able to apply mathematical thinking. The basics of mathematical thinking are described here: [Mathematical Thinking](Notes/Mathematical%20Thinking.md)
+The purpose of data science is to tackle real-world problems. Mathematical thinking is the ability to formulate real-world problems and interpret the results of mathematical solutions in a meaningful way. It is not about solving mathematical problem XY, but how we arrive at that problem from a non-mathematical problem. That's why it is so important for data scientists to be able to apply mathematical thinking. The basics of mathematical thinking are described here: [Mathematical Thinking](Notes/Mathematical%20Thinking.md)
 
 Some insights and lessons learned form the course *Applied Mathematical Thinking* are summarized in this report: [The Mathematical Thinking Handbook for Data Scientists](Notes/The%20Mathematical%20Thinking%20Handbook%20for%20Data%20Scientists.md).
-## Programming
-### Python
-Python is the main language used by data scientists. It provides a wide variety of supported libraries to do basically any analysis, inference, or machine learning task. The basics of Python, which are discussed in this chapter, are not specific to the domain of Data Science and are useful beyond that scope.
-- [Data Structures in Python](Notes/Data%20Structures%20in%20Python.md)
-	- [Advanced Data Structures in Python](Notes/Advanced%20Data%20Structures%20in%20Python.md)
-- [Different Method Types in Python](Notes/Different%20Method%20Types%20in%20Python.md)
-- [Special Functions in Python](Notes/Special%20Functions%20in%20Python.md)
-- [Documentation in Python](Notes/Documentation%20in%20Python.md)
-- [Runtimes in Python](Notes/Runtimes%20in%20Python.md)
-- [Inheritance in Python](Notes/Inheritance%20in%20Python.md)
-- [The Basic Principles of OOP in Python](Notes/The%20Basic%20Principles%20of%20OOP%20in%20Python.md)
-- [Pointers in Python](Notes/Pointers%20in%20Python.md)
-
-Furthermore, here are two extensive examples of machine learning tasks implemented in Python: [The Data Science Process in Python](Notes/The%20Data%20Science%20Process%20in%20Python.md), [Simple Machine Learning Task in Python](Notes/Simple%20Machine%20Learning%20Task%20in%20Python.md).
-### R (and SAS)
-R and SAS are primarily used in research and bioinformatics. Examples of how to do inference and data analysis with R can be seen throughout this vault. 
-### UNIX
-UNIX is an integral part of working with Python or any Data Science programming language. Why that is, and what it can do is discussed here: [Why use UNIX as a Data Scientist?](Notes/Why%20use%20UNIX%20as%20a%20Data%20Scientist%3F.md)
-#### Theory
-First let's discuss what UNIX it and what it does: [Basics of UNIX](Notes/Basics%20of%20UNIX.md). We can create scripts in UNIX by using [Shell Scripts](Notes/Shell%20Scripts.md).
-
-As discussed here [Motivation for Computational Methods for Large Scale Data](Notes/Motivation%20for%20Computational%20Methods%20for%20Large%20Scale%20Data.md), [parallel computing](Notes/Parallel%20Computing.md) is a necessary technique for many modern systems. Here is how we can implement parallel computing: [SLURM](Notes/SLURM.md).
 ## Research & Applications
 In this chapter I want to document how we do research as data scientist/ software engineers and how important theories described above connect to research and practice. 
 ### Empirical Software Engineering Research
 The basics for how we do research and what research is within a software engineering context is discussed here: [Software Engineering Research](Notes/Software%20Engineering%20Research.md).
 ### Machine Learning and AI In Practice
-In this part I want to differentiate the topics Data Science, Machine Learning and AI. I want to look at what Machine Learning and AI are, how they differ from Data Science, and what applications use ML and AI today: [Differentiating Data Science, Machine Learning and AI](Notes/Differentiating%20Data%20Science%2C%20Machine%20Learning%20and%20AI.md).
+How Data Science and Machine Learning is implemented (or can be implemented) in practice using Python, can be seen in the following two examples: 
+- [The Data Science Process](Notes/The%20Data%20Science%20Process%20in%20Python.md)
+- [Simple Machine Learning Task](Notes/Simple%20Machine%20Learning%20Task%20in%20Python.md)
+Because Machine Learning or Deep Learning projects usually have a similar structure, it is helpful to follow this standardized setup: [Deep Learning Project Structure](Notes/Deep%20Learning%20Project%20Structure.md)
+
+In this part I want to differentiate the topics Data Science, Machine Learning and AI. I want to look at what Machine Learning and AI are, how they differ from Data Science, and what applications use ML and AI today: [Differentiating Data Science, Machine Learning, and AI](Notes/Differentiating%20Data%20Science,%20Machine%20Learning,%20and%20AI.md).
 
 Right now most of the research done in this area is focused on model-centric AI. A promising new movement is called *data-centric AI*. More on that here: 
 [Data-Centric AI vs](Data-Centric%20AI%20vs.%20Model-Centric%20AI).

@@ -15,7 +15,7 @@ Right-hand side:
 There are at two possible criteria for computing a new estimate for the center point. When the data is numerical, we often talk about the cluster centers as **centroids**. The centroid is the geometric mean of a set of points using an appropriate $L_k$-metric. Sometimes this makes no sense, such as when some features are categorical; then instead of centroids, we can take the **medioids** as cluster centers. Unlike a **centroid**, which is the **average** of all points in the cluster and may not correspond to an actual data point, a **medioid** is always an **actual data point** from the dataset. Medioids minimize the **sum of distances** (or dissimilarities) to all other points in the cluster, making them less sensitive to outliers and noise compared to centroids. We are therefore flexible in which distance function we want to use and don't have to rely on an $L_k$-metric.
 
 **How to determine $k$ and our initial centroids/medioids?**
-For more on hyperparameter tuning, see here [Model Selection & Hyperparameter Tuning](Model%20Selection%20%26%20Hyperparameter%20Tuning.md).
+For more on hyperparameter tuning, see here [Model Selection & Hyperparameter Tuning](Model%20Selection%20&%20Hyperparameter%20Tuning.md).
 ## Distribution Clustering
 ### Gaussian Mixture Model (GMM)
 The idea behind the GMM is similar to the [naive Bayes classifier](Approaches%20for%20creating%20Classification%20Models.md#nave-bayes-classification). We calculate a set of K posterior probabilities. Each data point $x$ is assigned to all clusters with a posterior probability. One major difference between GMM and naïve Bayes, is that we do not assume independence for the feature dimensions in GMM! 
@@ -51,5 +51,5 @@ Right-hand side:
 - $θ$: k priors, k Gaussian likelihood
 
 **How to choose $K$?**
-The idea is to find the best K that balances the “error” and the complexity of the model - Occam’s Razor. There are two metrics, that we can use: Akaike Information Criterion (AIC) and Bayesian Information Criterion (BIC). BIC penalizes the complexity more than AIC - BIC increases more as $K$ gets larger. For more on hyperparameter tuning, see here [Model Selection & Hyperparameter Tuning](Model%20Selection%20%26%20Hyperparameter%20Tuning.md).
+The idea is to find the best K that balances the “error” and the complexity of the model - Occam’s Razor. There are two metrics, that we can use: Akaike Information Criterion (AIC) and Bayesian Information Criterion (BIC). BIC penalizes the complexity more than AIC - BIC increases more as $K$ gets larger. For more on hyperparameter tuning, see here [Model Selection & Hyperparameter Tuning](Model%20Selection%20&%20Hyperparameter%20Tuning.md).
 

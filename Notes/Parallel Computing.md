@@ -77,5 +77,3 @@ Parallel computing is commonly used in high-performance computing (HPC), data pr
 - Distributing workloads across multiple nodes.
 - Handling dependencies and scheduling optimizations.
 
-On popular job scheduler, especially in academia, is [SLURM](SLURM.md).
-

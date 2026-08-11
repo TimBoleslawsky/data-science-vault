@@ -8,7 +8,7 @@ An MLP is composed of:
 
 MLPs work well for tabular or low-dimensional data, but they do not scale efficiently to structured data like images or sequences. They ignore spatial or temporal relationships because every input is treated as independent — motivating architectures like CNNs and RNNs.
 ## Convolutional Neural Networks
-CNNs are designed for grid-like data (e.g., images) to detect local patterns (edges, textures, shapes). Instead of flattening an image, CNNs preserve its spatial structure by using filters (kernels) that scan through small patches of the image. For an example of how to do image classification using CNNs, look here [Image Classification with CNN](../Projects/Image%20Classification%20with%20CNN/Image%20Classification%20with%20CNN.py). 
+CNNs are designed for grid-like data (e.g., images) to detect local patterns (edges, textures, shapes). Instead of flattening an image, CNNs preserve its spatial structure by using filters (kernels) that scan through small patches of the image. 
 
 Here is how these kernels work. A kernel is basically a small window that is applied on different parts of an image. A kernel could for example look like this: 
 
@@ -23,13 +23,6 @@ These weights (-1,0,1) within this kernel are a representation of a pattern and 
 By taking the output of one convolutional layer as input to the next convolutional layer, we can increase the receptive field of the model even thought the size of the kernels stays the same (usually 3x3). By increasing the receptive field the complexity of the patterns we can detect also grows (e.g. from *edge* to *eye*).
 
 This whole process is just the feature extraction. We can think of it like this: The convolutional layers extract that the image contains two eyes, a nose, hair, ... and so on. These features are the input for the fully connected layer which then classifies the image based on these features.
-### Subsampling in CNNs
- The core idea behind all subsampling methods is to reduce the spatial size of the feature maps (i.e., the height and width). One popular one is pooling.
-
-The pooling layer serves to downsample the feature maps produced by the convolutional layers. It reduces the spatial size (height × width) of the input feature map, keeping only the most important information. This increases translation invariance — slight translations or distortions in the image don’t affect the output significantly.
-- Common types of pooling:
-	- Max pooling: Keeps the maximum value in each region.
-	- Average pooling: Takes the average of the values in the region.
 ### Architecture of CNNs
 The basic architecture of CNNs follows this principle:
 - Convolutional layer, for feature extraction as described above.
@@ -65,6 +58,8 @@ TBD:
 TBD
 ### GRU
 TBD
+## ODEs
+## SSMs
 ## Transformers
 The Transformer architecture was introduced in *Vaswani et al., 2017 – “Attention Is All You Need.”* The key motivation was to remove [recurrence](Deep%20Learning%20Paradigms%20and%20Building%20Blocks.md#recurrence) and [convolution](Deep%20Learning%20Paradigms%20and%20Building%20Blocks.md#convolutional-processing) from sequence models and rely entirely on [attention](Deep%20Learning%20Paradigms%20and%20Building%20Blocks.md#attention-mechanisms) for sequence mixing and long-range dependencies.
 

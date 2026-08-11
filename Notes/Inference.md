@@ -44,7 +44,7 @@ In this example, I describe the basic intuitions behind frequentist inference an
 	We use this distribution to make statements about the unknown parameter $\mu$:
 	- Point estimate: $\hat{\mu} = \bar{y}$
 	- Interval estimate (confidence interval): A 95% confidence interval for $\mu$ is $\bar{y} \pm 1.96 \frac{\sigma}{\sqrt{n}}$, which means that if we repeated the experiment many times, 95% of such intervals would contain the true $\mu$.
-	- Hypothesis tests / probabilities: Here we need a **test statistics and a null models**. Here is how we construct this and how we test hypothesis with it:
+	- Hypothesis tests / probabilities: Here we need a **test statistics and null models**. Here is how we construct this and how we test hypothesis with it:
 		- The null model is a restriction on the generative model we defined earlier. For example if our generative model is $y_i \sim \text{Normal}(\mu, \sigma^2)$, our null model could be $\mu = \mu_0$, with $\mu_0 = 4500g$. So this is just an "instance" of the generative model. 
 		- The test statistic is supposed to capture the difference between some estimated parameter and the corresponding parameter in the null model. This could for example be $\hat{y}-\mu_0$.
 		- To test the hypothesis described by the null model, we now calculate the probability of seeing a test statistic at least as extreme as the one we actually observed, given the null hypothesis: $p = P_{H_0}\big( |T| \ge |t_{\text{obs}}| \big)$. This corresponds to the [CDF](Distribution.md#cumulative-distribution-function-for-continuous-random-variables) in relation to $t_{obs}$!
